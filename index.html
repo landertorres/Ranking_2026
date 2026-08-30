@@ -229,6 +229,60 @@
     thead th, tbody td { padding: 5px 6px; }
     .table-wrap { max-height: 280px; }
   }
+
+  /* ---------- abas ---------- */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .tab-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #e5e3db;
+    background: #f7f6f2;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4a4a44;
+  }
+  .tab-btn.ativo {
+    background: #0B1F3A;
+    color: #ffffff;
+    border-color: #0B1F3A;
+  }
+  .aba { display: none; }
+  .aba.ativa { display: block; }
+
+  /* ---------- agrupamento por região ---------- */
+  .regiao-grupo { margin-bottom: 18px; }
+  .regiao-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f0efe9;
+    padding: 8px 12px;
+    border-radius: 8px 8px 0 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .regiao-header .contagem { font-weight: 400; color: #6b6a64; font-size: 12px; }
+  .regiao-tabela-wrap {
+    border: 1px solid #e5e3db;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow-x: auto;
+  }
+  .badge-area {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 10px;
+  }
+  .badge-area.avt { background: #F6E9EC; color: #7A1F35; }
+  .badge-area.dbv { background: #E6F1FB; color: #0C447C; }
 </style>
 </head>
 <body>
@@ -268,25 +322,36 @@
     </div>
   </div>
 
-  <div class="departments">
-    <div>
-      <p class="dept-col-title vinho">AVENTUREIROS <span class="dept-count" id="contagem-avt">(0 clubes · 5 estrelas)</span></p>
-      <div class="table-wrap vinho">
-        <table>
-          <thead><tr><th>Id</th><th>Clube</th><th>Região</th><th>SGC</th></tr></thead>
-          <tbody id="tabela-avt"></tbody>
-        </table>
+  <div class="tabs">
+    <button class="tab-btn ativo" id="tab-btn-departamentos" onclick="mostrarAba('departamentos')">Por Departamento</button>
+    <button class="tab-btn" id="tab-btn-regioes" onclick="mostrarAba('regioes')">Por Região</button>
+  </div>
+
+  <div id="aba-departamentos" class="aba ativa">
+    <div class="departments">
+      <div>
+        <p class="dept-col-title vinho">AVENTUREIROS <span class="dept-count" id="contagem-avt">(0 clubes · 5 estrelas)</span></p>
+        <div class="table-wrap vinho">
+          <table>
+            <thead><tr><th>Id</th><th>Clube</th><th>Região</th><th>SGC</th></tr></thead>
+            <tbody id="tabela-avt"></tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <p class="dept-col-title azul">DESBRAVADORES <span class="dept-count" id="contagem-dbv">(0 clubes · 5 estrelas)</span></p>
+        <div class="table-wrap azul">
+          <table>
+            <thead><tr><th>Id</th><th>Clube</th><th>Região</th><th>SGC</th></tr></thead>
+            <tbody id="tabela-dbv"></tbody>
+          </table>
+        </div>
       </div>
     </div>
-    <div>
-      <p class="dept-col-title azul">DESBRAVADORES <span class="dept-count" id="contagem-dbv">(0 clubes · 5 estrelas)</span></p>
-      <div class="table-wrap azul">
-        <table>
-          <thead><tr><th>Id</th><th>Clube</th><th>Região</th><th>SGC</th></tr></thead>
-          <tbody id="tabela-dbv"></tbody>
-        </table>
-      </div>
-    </div>
+  </div>
+
+  <div id="aba-regioes" class="aba">
+    <div id="regioes-container"></div>
   </div>
   </div>
 </div>
@@ -304,6 +369,59 @@ function escapeHtml(texto) {
 
 function linhaTabela(clube) {
   return `<tr><td>${clube.id}</td><td>${escapeHtml(clube.clube)}</td><td>${escapeHtml(clube.regiao)}</td><td>${clube.sgc.toFixed(2)}</td></tr>`;
+}
+
+/* extrai um nome de região "limpo", sem o sufixo de departamento/estado
+   ex: "01ª R – ÁREA 1 / DBV AM"  ->  "01ª R – ÁREA 1" */
+function nomeRegiao(regiaoCompleta) {
+  const partes = (regiaoCompleta || '').split('/');
+  return partes[0].trim() || 'Sem região informada';
+}
+
+function linhaTabelaRegiao(clube) {
+  const classeArea = clube.area === 'AVT' ? 'avt' : 'dbv';
+  return `<tr><td>${clube.id}</td><td>${escapeHtml(clube.clube)}</td><td><span class="badge-area ${classeArea}">${clube.area}</span></td><td>${clube.sgc.toFixed(2)}</td></tr>`;
+}
+
+function renderizarPorRegiao(cincoEstrelas) {
+  const grupos = {};
+  cincoEstrelas.forEach(c => {
+    const chave = nomeRegiao(c.regiao);
+    if (!grupos[chave]) grupos[chave] = [];
+    grupos[chave].push(c);
+  });
+
+  const chaves = Object.keys(grupos).sort((a, b) => a.localeCompare(b, 'pt-BR', { numeric: true }));
+  const container = document.getElementById('regioes-container');
+
+  if (chaves.length === 0) {
+    container.innerHTML = '<p class="vazio">Nenhum clube encontrado</p>';
+    return;
+  }
+
+  container.innerHTML = chaves.map(chave => {
+    const clubes = grupos[chave].sort((a, b) => b.sgc - a.sgc);
+    return `
+      <div class="regiao-grupo">
+        <div class="regiao-header">
+          <span>${escapeHtml(chave)}</span>
+          <span class="contagem">${clubes.length} clube${clubes.length > 1 ? 's' : ''} · 5 estrelas</span>
+        </div>
+        <div class="regiao-tabela-wrap">
+          <table>
+            <thead><tr><th>Id</th><th>Clube</th><th>Área</th><th>SGC</th></tr></thead>
+            <tbody>${clubes.map(linhaTabelaRegiao).join('')}</tbody>
+          </table>
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function mostrarAba(nome) {
+  document.getElementById('aba-departamentos').classList.toggle('ativa', nome === 'departamentos');
+  document.getElementById('aba-regioes').classList.toggle('ativa', nome === 'regioes');
+  document.getElementById('tab-btn-departamentos').classList.toggle('ativo', nome === 'departamentos');
+  document.getElementById('tab-btn-regioes').classList.toggle('ativo', nome === 'regioes');
 }
 
 function renderizar(lista) {
@@ -324,6 +442,8 @@ function renderizar(lista) {
   document.getElementById('tabela-dbv').innerHTML = dbv.length
     ? dbv.map(linhaTabela).join('')
     : '<tr><td colspan="4" class="vazio">Nenhum clube encontrado</td></tr>';
+
+  renderizarPorRegiao(cincoEstrelas);
 }
 
 /* renderiza com os dados padrão vindos de clubes-dados.js */
