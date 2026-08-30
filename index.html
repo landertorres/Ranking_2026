@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clubes 5 Estrelas 2026 — AAmaR</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 40px 16px;
+    background: #f5f4f0;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e3db;
+    padding: 24px;
+    max-width: 1000px;
+    width: 100%;
+  }
+  .header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 4px;
+    flex-wrap: wrap;
+  }
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .icon-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #FAEEDA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .icon-circle i {
+    font-size: 18px;
+    color: #854F0B;
+  }
+  .header p {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    color: #1a1a1a;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #6b6a64;
+    margin: 12px 0 20px;
+  }
+
+  /* ---------- importação ---------- */
+  .importar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .importar label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #854F0B;
+    border: 1px solid #854F0B;
+    border-radius: 8px;
+    padding: 7px 14px;
+    cursor: pointer;
+  }
+  .importar label:hover { background: #FAEEDA; }
+  .importar input[type="file"] { display: none; }
+  .status-import {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  .status-import.ok { color: #1F7A3D; }
+  .status-import.erro { color: #A32D2D; }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .stat-box {
+    background: #f7f6f2;
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .stat-box .label {
+    font-size: 13px;
+    color: #6b6a64;
+    margin: 0 0 6px;
+  }
+  .stat-box .value {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0;
+    color: #854F0B;
+  }
+  .stat-box.verde { background: #E9F5EC; }
+  .stat-box.verde .label { color: #2F6B45; }
+  .stat-box.verde .value { color: #1F7A3D; }
+  .stat-box.vinho { background: #F6E9EC; }
+  .stat-box.vinho .label { color: #7A2E3D; }
+  .stat-box.vinho .value { color: #7A1F35; }
+  .stat-box.azul { background: #E6F1FB; }
+  .stat-box.azul .label { color: #185FA5; }
+  .stat-box.azul .value { color: #0C447C; }
+
+  .departments {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e3db;
+  }
+  .dept-col-title {
+    text-align: center;
+    padding: 8px;
+    background: #f7f6f2;
+    border-radius: 8px 8px 0 0;
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #1a1a1a;
+  }
+  .dept-count { font-weight: 400; color: #6b6a64; }
+  .dept-col-title.vinho { background: #7A1F35; color: #F6E9EC; }
+  .dept-col-title.vinho .dept-count { color: #F0C9D2; }
+  .dept-col-title.azul { background: #0C447C; color: #E6F1FB; }
+  .dept-col-title.azul .dept-count { color: #BBDBF5; }
+  .table-wrap.vinho { border-color: #7A1F35; }
+  .table-wrap.vinho thead th { background: #F6E9EC; color: #7A1F35; }
+  .table-wrap.azul { border-color: #0C447C; }
+  .table-wrap.azul thead th { background: #E6F1FB; color: #0C447C; }
+  .table-wrap {
+    max-height: 420px;
+    overflow-y: auto;
+    border: 1px solid #e5e3db;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: #f0efe9;
+    text-align: left;
+    padding: 6px 8px;
+    font-weight: 600;
+    color: #4a4a44;
+    border-bottom: 1px solid #e5e3db;
+  }
+  tbody td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #f0efe9;
+    color: #1a1a1a;
+    white-space: nowrap;
+  }
+  tbody td:nth-child(2) { white-space: normal; }
+  tbody tr:nth-child(even) { background: #fafaf7; }
+  tbody td:last-child { text-align: right; font-weight: 600; color: #854F0B; }
+  .vazio { padding: 20px; text-align: center; font-size: 13px; color: #6b6a64; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="header-row">
+    <div class="header">
+      <div class="icon-circle"><i class="ti ti-star"></i></div>
+      <p>Clubes 5 Estrelas 2026 — AAmaR</p>
+    </div>
+    <div class="importar">
+      <label for="arquivo-csv"><i class="ti ti-upload"></i> Importar CSV</label>
+      <input type="file" id="arquivo-csv" accept=".csv" />
+    </div>
+  </div>
+  <p class="subtitle">Ranking Geral · Selo de 5 estrela</p>
+  <p id="status-import" class="status-import"></p>
+
+  <div class="stats">
+    <div class="stat-box verde">
+      <p class="label">Total 5 estrelas</p>
+      <p class="value" id="valor-total">0</p>
+    </div>
+    <div class="stat-box vinho">
+      <p class="label">Aventureiros</p>
+      <p class="value" id="valor-avt">0</p>
+    </div>
+    <div class="stat-box azul">
+      <p class="label">Desbravadores</p>
+      <p class="value" id="valor-dbv">0</p>
+    </div>
+  </div>
+
+  <div class="departments">
+    <div>
+      <p class="dept-col-title vinho">AVENTUREIROS <span class="dept-count" id="contagem-avt">(0 clubes · 5 estrelas)</span></p>
+      <div class="table-wrap vinho">
+        <table>
+          <thead><tr><th>Id</th><th>Clube</th><th>Região</th><th>SGC</th></tr></thead>
+          <tbody id="tabela-avt"></tbody>
+        </table>
+      </div>
+    </div>
+    <div>
+      <p class="dept-col-title azul">DESBRAVADORES <span class="dept-count" id="contagem-dbv">(0 clubes · 5 estrelas)</span></p>
+      <div class="table-wrap azul">
+        <table>
+          <thead><tr><th>Id</th><th>Clube</th><th>Região</th><th>SGC</th></tr></thead>
+          <tbody id="tabela-dbv"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="clubes-dados.js"></script>
+<script>
+/* PONTUAÇÃO MÍNIMA PARA 5 ESTRELAS */
+const PONTOS_5_ESTRELAS = 800;
+
+function escapeHtml(texto) {
+  const div = document.createElement('div');
+  div.textContent = texto;
+  return div.innerHTML;
+}
+
+function linhaTabela(clube) {
+  return `<tr><td>${clube.id}</td><td>${escapeHtml(clube.clube)}</td><td>${escapeHtml(clube.regiao)}</td><td>${clube.sgc.toFixed(2)}</td></tr>`;
+}
+
+function renderizar(lista) {
+  const cincoEstrelas = lista.filter(c => c.sgc >= PONTOS_5_ESTRELAS && (c.area === 'DBV' || c.area === 'AVT'));
+  const avt = cincoEstrelas.filter(c => c.area === 'AVT').sort((a, b) => b.sgc - a.sgc);
+  const dbv = cincoEstrelas.filter(c => c.area === 'DBV').sort((a, b) => b.sgc - a.sgc);
+
+  document.getElementById('valor-total').textContent = cincoEstrelas.length;
+  document.getElementById('valor-avt').textContent = avt.length;
+  document.getElementById('valor-dbv').textContent = dbv.length;
+  document.getElementById('contagem-avt').textContent = `(${avt.length} clubes · 5 estrelas)`;
+  document.getElementById('contagem-dbv').textContent = `(${dbv.length} clubes · 5 estrelas)`;
+
+  document.getElementById('tabela-avt').innerHTML = avt.length
+    ? avt.map(linhaTabela).join('')
+    : '<tr><td colspan="4" class="vazio">Nenhum clube encontrado</td></tr>';
+
+  document.getElementById('tabela-dbv').innerHTML = dbv.length
+    ? dbv.map(linhaTabela).join('')
+    : '<tr><td colspan="4" class="vazio">Nenhum clube encontrado</td></tr>';
+}
+
+/* renderiza com os dados padrão vindos de clubes-dados.js */
+renderizar(typeof CLUBES !== 'undefined' ? CLUBES : []);
+
+/* ---------- importação de CSV ---------- */
+/* Formato esperado (mesmo da planilha): Id;Clube;Área;Região;SGC  (separador ; ou ,) */
+function detectarSeparador(linha) {
+  return linha.includes(';') ? ';' : ',';
+}
+
+function normalizarCabecalho(campo) {
+  return campo.trim().toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function processarCsv(texto) {
+  const linhas = texto.split(/\r?\n/).filter(l => l.trim().length > 0);
+  if (linhas.length < 2) throw new Error('Arquivo vazio ou sem linhas de dados.');
+
+  const sep = detectarSeparador(linhas[0]);
+  const cabecalho = linhas[0].split(sep).map(normalizarCabecalho);
+
+  const idxId = cabecalho.findIndex(c => c === 'id');
+  const idxClube = cabecalho.findIndex(c => c === 'clube');
+  const idxArea = cabecalho.findIndex(c => c === 'area');
+  const idxRegiao = cabecalho.findIndex(c => c === 'regiao');
+  const idxSgc = cabecalho.findIndex(c => c === 'sgc');
+
+  if ([idxId, idxClube, idxArea, idxRegiao, idxSgc].includes(-1)) {
+    throw new Error('Cabeçalho esperado: Id;Clube;Área;Região;SGC');
+  }
+
+  const registros = [];
+  for (let i = 1; i < linhas.length; i++) {
+    const campos = linhas[i].split(sep);
+    const sgcTexto = (campos[idxSgc] || '').trim().replace(',', '.');
+    const sgc = parseFloat(sgcTexto);
+    if (isNaN(sgc)) continue;
+    registros.push({
+      id: campos[idxId] ? campos[idxId].trim() : '',
+      clube: campos[idxClube] ? campos[idxClube].trim() : '',
+      area: campos[idxArea] ? campos[idxArea].trim().toUpperCase() : '',
+      regiao: campos[idxRegiao] ? campos[idxRegiao].trim() : '',
+      sgc: sgc
+    });
+  }
+  return registros;
+}
+
+document.getElementById('arquivo-csv').addEventListener('change', function (evento) {
+  const arquivo = evento.target.files[0];
+  const status = document.getElementById('status-import');
+  if (!arquivo) return;
+
+  const leitor = new FileReader();
+  leitor.onload = function (e) {
+    try {
+      const registros = processarCsv(e.target.result);
+      renderizar(registros);
+      status.textContent = `${registros.length} registros carregados de "${arquivo.name}".`;
+      status.className = 'status-import ok';
+    } catch (erro) {
+      status.textContent = 'Erro ao ler o arquivo: ' + erro.message;
+      status.className = 'status-import erro';
+    }
+  };
+  leitor.onerror = function () {
+    status.textContent = 'Não foi possível ler o arquivo.';
+    status.className = 'status-import erro';
+  };
+  leitor.readAsText(arquivo, 'UTF-8');
+});
+</script>
+
+</body>
+</html>
