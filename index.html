@@ -152,6 +152,8 @@
   .table-wrap {
     max-height: 420px;
     overflow-y: auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border: 1px solid #e5e3db;
     border-top: none;
     border-radius: 0 0 8px 8px;
@@ -177,6 +179,35 @@
   tbody tr:nth-child(even) { background: #fafaf7; }
   tbody td:last-child { text-align: right; font-weight: 600; color: #854F0B; }
   .vazio { padding: 20px; text-align: center; font-size: 13px; color: #6b6a64; }
+
+  /* ---------- responsivo: tablet ---------- */
+  @media (max-width: 900px) {
+    body { padding: 24px 12px; }
+    .card { padding: 20px; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .stat-box.verde { grid-column: 1 / -1; }
+    .departments { grid-template-columns: 1fr; gap: 24px; }
+    .table-wrap { max-height: 320px; }
+  }
+
+  /* ---------- responsivo: smartphone ---------- */
+  @media (max-width: 520px) {
+    body { padding: 16px 8px; }
+    .card { padding: 16px; border-radius: 10px; }
+    .header-row { flex-direction: column; align-items: stretch; }
+    .header { justify-content: center; }
+    .importar { justify-content: center; }
+    .header p { font-size: 14px; }
+    .subtitle { text-align: center; }
+    .stats { grid-template-columns: 1fr; }
+    .stat-box.verde { grid-column: auto; }
+    .stat-box .value { font-size: 30px; }
+    .dept-col-title { font-size: 12px; }
+    .dept-count { display: block; font-size: 11px; }
+    table { font-size: 11px; }
+    thead th, tbody td { padding: 5px 6px; }
+    .table-wrap { max-height: 280px; }
+  }
 </style>
 </head>
 <body>
