@@ -283,6 +283,26 @@
   }
   .badge-area.avt { background: #F6E9EC; color: #7A1F35; }
   .badge-area.dbv { background: #E6F1FB; color: #0C447C; }
+
+  /* ---------- filtro de departamento (aba região) ---------- */
+  .filtro-depto {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .filtro-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid #e5e3db;
+    background: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a4a44;
+  }
+  .filtro-btn.ativo-todos { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
+  .filtro-btn.ativo-avt { background: #7A1F35; color: #fff; border-color: #7A1F35; }
+  .filtro-btn.ativo-dbv { background: #0C447C; color: #fff; border-color: #0C447C; }
 </style>
 </head>
 <body>
@@ -351,6 +371,11 @@
   </div>
 
   <div id="aba-regioes" class="aba">
+    <div class="filtro-depto">
+      <button class="filtro-btn" id="filtro-todos" onclick="filtrarPorDepartamento('TODOS')">Todos</button>
+      <button class="filtro-btn" id="filtro-avt" onclick="filtrarPorDepartamento('AVT')">Aventureiros (AVT)</button>
+      <button class="filtro-btn" id="filtro-dbv" onclick="filtrarPorDepartamento('DBV')">Desbravadores (DBV)</button>
+    </div>
     <div id="regioes-container"></div>
   </div>
   </div>
@@ -360,6 +385,10 @@
 <script>
 /* PONTUAÇÃO MÍNIMA PARA 5 ESTRELAS */
 const PONTOS_5_ESTRELAS = 800;
+
+/* guarda a última lista de 5 estrelas para permitir filtrar por departamento sem reprocessar tudo */
+let ultimaListaCincoEstrelas = [];
+let filtroDepartamentoAtual = 'TODOS';
 
 function escapeHtml(texto) {
   const div = document.createElement('div');
@@ -384,8 +413,17 @@ function linhaTabelaRegiao(clube) {
 }
 
 function renderizarPorRegiao(cincoEstrelas) {
+  ultimaListaCincoEstrelas = cincoEstrelas;
+  aplicarFiltroRegiao();
+}
+
+function aplicarFiltroRegiao() {
+  const lista = filtroDepartamentoAtual === 'TODOS'
+    ? ultimaListaCincoEstrelas
+    : ultimaListaCincoEstrelas.filter(c => c.area === filtroDepartamentoAtual);
+
   const grupos = {};
-  cincoEstrelas.forEach(c => {
+  lista.forEach(c => {
     const chave = nomeRegiao(c.regiao);
     if (!grupos[chave]) grupos[chave] = [];
     grupos[chave].push(c);
@@ -416,6 +454,16 @@ function renderizarPorRegiao(cincoEstrelas) {
       </div>`;
   }).join('');
 }
+
+function filtrarPorDepartamento(area) {
+  filtroDepartamentoAtual = area;
+  document.getElementById('filtro-todos').classList.toggle('ativo-todos', area === 'TODOS');
+  document.getElementById('filtro-avt').classList.toggle('ativo-avt', area === 'AVT');
+  document.getElementById('filtro-dbv').classList.toggle('ativo-dbv', area === 'DBV');
+  aplicarFiltroRegiao();
+}
+/* estado inicial do filtro: "Todos" selecionado */
+document.addEventListener('DOMContentLoaded', () => filtrarPorDepartamento('TODOS'));
 
 function mostrarAba(nome) {
   document.getElementById('aba-departamentos').classList.toggle('ativa', nome === 'departamentos');
