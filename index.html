@@ -228,6 +228,10 @@
     table { font-size: 11px; }
     thead th, tbody td { padding: 5px 6px; }
     .table-wrap { max-height: 280px; }
+    .regiao-tabela-wrap th:nth-child(1), .regiao-tabela-wrap td:nth-child(1) { width: 18%; }
+    .regiao-tabela-wrap th:nth-child(2), .regiao-tabela-wrap td:nth-child(2) { width: 40%; }
+    .regiao-tabela-wrap th:nth-child(3), .regiao-tabela-wrap td:nth-child(3) { width: 20%; }
+    .regiao-tabela-wrap th:nth-child(4), .regiao-tabela-wrap td:nth-child(4) { width: 22%; }
   }
 
   /* ---------- abas ---------- */
@@ -284,6 +288,14 @@
   .badge-area.avt { background: #F6E9EC; color: #7A1F35; }
   .badge-area.dbv { background: #E6F1FB; color: #0C447C; }
 
+  /* alinhamento consistente de colunas entre todas as tabelas de região */
+  .regiao-tabela-wrap table { table-layout: fixed; }
+  .regiao-tabela-wrap th:nth-child(1), .regiao-tabela-wrap td:nth-child(1) { width: 14%; text-align: center; }
+  .regiao-tabela-wrap th:nth-child(2), .regiao-tabela-wrap td:nth-child(2) { width: 48%; text-align: left; }
+  .regiao-tabela-wrap th:nth-child(3), .regiao-tabela-wrap td:nth-child(3) { width: 18%; text-align: center; }
+  .regiao-tabela-wrap th:nth-child(4), .regiao-tabela-wrap td:nth-child(4) { width: 20%; text-align: right; }
+  .regiao-tabela-wrap td:nth-child(1) { color: #6b6a64; }
+
   /* ---------- filtro de departamento (aba região) ---------- */
   .filtro-depto {
     display: flex;
@@ -324,7 +336,7 @@
   </div>
   </div>
   <div class="corpo">
-  <p class="subtitle">Ranking Geral · Selo de 5 estrela</p>
+  <p class="subtitle">Ranking Geral do SGC · Selo de 5 estrela</p>
   <p id="status-import" class="status-import"></p>
 
   <div class="stats">
@@ -373,8 +385,8 @@
   <div id="aba-regioes" class="aba">
     <div class="filtro-depto">
       <button class="filtro-btn" id="filtro-todos" onclick="filtrarPorDepartamento('TODOS')">Todos</button>
-      <button class="filtro-btn" id="filtro-avt" onclick="filtrarPorDepartamento('AVT')">Aventureiros (AVT)</button>
-      <button class="filtro-btn" id="filtro-dbv" onclick="filtrarPorDepartamento('DBV')">Desbravadores (DBV)</button>
+      <button class="filtro-btn" id="filtro-avt" onclick="filtrarPorDepartamento('AVT')">Aventureiros </button>
+      <button class="filtro-btn" id="filtro-dbv" onclick="filtrarPorDepartamento('DBV')">Desbravadores </button>
     </div>
     <div id="regioes-container"></div>
   </div>
