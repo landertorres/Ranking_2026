@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clubes  Estrelas 2026 — AAmaR</title>
+<title>Clubes 5 Estrelas 2026 — AAmaR</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
 <style>
   * { box-sizing: border-box; }
@@ -207,6 +207,7 @@
     .stat-box.verde { grid-column: 1 / -1; }
     .departments { grid-template-columns: 1fr; gap: 24px; }
     .table-wrap { max-height: 320px; }
+    .estrelas-grid { grid-template-columns: repeat(3, 1fr); }
   }
 
   /* ---------- responsivo: smartphone ---------- */
@@ -232,6 +233,8 @@
     .regiao-tabela-wrap th:nth-child(2), .regiao-tabela-wrap td:nth-child(2) { width: 40%; }
     .regiao-tabela-wrap th:nth-child(3), .regiao-tabela-wrap td:nth-child(3) { width: 20%; }
     .regiao-tabela-wrap th:nth-child(4), .regiao-tabela-wrap td:nth-child(4) { width: 22%; }
+    .estrelas-grid { grid-template-columns: repeat(2, 1fr); }
+    .estrela-card .qtd { font-size: 24px; }
   }
 
   /* ---------- abas ---------- */
@@ -315,6 +318,46 @@
   .filtro-btn.ativo-todos { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
   .filtro-btn.ativo-avt { background: #7A1F35; color: #fff; border-color: #7A1F35; }
   .filtro-btn.ativo-dbv { background: #0C447C; color: #fff; border-color: #0C447C; }
+
+  /* ---------- aba de classificação (1 a 5 estrelas) ---------- */
+  .resumo-total {
+    background: #f7f6f2;
+    border-radius: 8px;
+    padding: 16px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .resumo-total .label { font-size: 13px; color: #6b6a64; margin: 0 0 4px; }
+  .resumo-total .value { font-size: 34px; font-weight: 700; color: #1a1a1a; margin: 0; }
+  .estrelas-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .estrela-card { border-radius: 10px; padding: 16px 12px; text-align: center; color: #ffffff; }
+  .estrela-card .rotulo { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; opacity: 0.9; margin: 0 0 6px; }
+  .estrela-card .estrelas-icone { font-size: 13px; margin-bottom: 8px; letter-spacing: 2px; }
+  .estrela-card .qtd { font-size: 30px; font-weight: 700; margin: 0 0 4px; }
+  .estrela-card .faixa-pontos { font-size: 11px; opacity: 0.85; margin: 0; }
+  .estrela-card .detalhe { font-size: 11px; opacity: 0.85; margin-top: 6px; border-top: 1px solid rgba(255,255,255,0.25); padding-top: 6px; }
+  .e5 { background: linear-gradient(160deg, #1F7A3D, #2F6B45); }
+  .e4 { background: linear-gradient(160deg, #185FA5, #0C447C); }
+  .e3 { background: linear-gradient(160deg, #B08A1E, #8C6B12); }
+  .e2 { background: linear-gradient(160deg, #C06A24, #9C4F16); }
+  .e1 { background: linear-gradient(160deg, #A32D2D, #7A1F1F); }
+  .criterios { border-top: 1px solid #e5e3db; padding-top: 20px; }
+  .criterios h3 { font-size: 14px; font-weight: 700; color: #1a1a1a; margin: 0 0 6px; }
+  .criterios .explicacao { font-size: 13px; color: #5a6154; margin: 0 0 16px; max-width: 70ch; }
+  .tabela-criterios { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .tabela-criterios th { text-align: left; padding: 8px 10px; background: #f0efe9; font-weight: 600; color: #4a4a44; border-bottom: 1px solid #e5e3db; }
+  .tabela-criterios td { padding: 8px 10px; border-bottom: 1px solid #f0efe9; }
+  .estrela-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+  .dot-5 { background: #1F7A3D; }
+  .dot-4 { background: #0C447C; }
+  .dot-3 { background: #8C6B12; }
+  .dot-2 { background: #9C4F16; }
+  .dot-1 { background: #7A1F1F; }
 </style>
 </head>
 <body>
@@ -336,7 +379,7 @@
   </div>
   </div>
   <div class="corpo">
-  <p class="subtitle">Ranking Geral do SGC · Selo de 5 estrela</p>
+  <p class="subtitle">Ranking Geral · Selo de 5 estrela</p>
   <p id="status-import" class="status-import"></p>
 
   <div class="stats">
@@ -357,6 +400,7 @@
   <div class="tabs">
     <button class="tab-btn ativo" id="tab-btn-departamentos" onclick="mostrarAba('departamentos')">Por Departamento</button>
     <button class="tab-btn" id="tab-btn-regioes" onclick="mostrarAba('regioes')">Por Região</button>
+    <button class="tab-btn" id="tab-btn-classificacao" onclick="mostrarAba('classificacao')">Classificação</button>
   </div>
 
   <div id="aba-departamentos" class="aba ativa">
@@ -385,10 +429,73 @@
   <div id="aba-regioes" class="aba">
     <div class="filtro-depto">
       <button class="filtro-btn" id="filtro-todos" onclick="filtrarPorDepartamento('TODOS')">Todos</button>
-      <button class="filtro-btn" id="filtro-avt" onclick="filtrarPorDepartamento('AVT')">Aventureiros </button>
-      <button class="filtro-btn" id="filtro-dbv" onclick="filtrarPorDepartamento('DBV')">Desbravadores </button>
+      <button class="filtro-btn" id="filtro-avt" onclick="filtrarPorDepartamento('AVT')">Aventureiros (AVT)</button>
+      <button class="filtro-btn" id="filtro-dbv" onclick="filtrarPorDepartamento('DBV')">Desbravadores (DBV)</button>
     </div>
     <div id="regioes-container"></div>
+  </div>
+
+  <div id="aba-classificacao" class="aba">
+    <div class="resumo-total">
+      <p class="label">Total de clubes avaliados</p>
+      <p class="value" id="valor-total-geral">0</p>
+    </div>
+
+    <div class="estrelas-grid">
+      <div class="estrela-card e5">
+        <p class="rotulo">5 estrelas</p>
+        <p class="estrelas-icone">★★★★★</p>
+        <p class="qtd" id="qtd-5">0</p>
+        <p class="faixa-pontos">Acima de 800 pts</p>
+        <p class="detalhe" id="detalhe-5">AVT 0 · DBV 0</p>
+      </div>
+      <div class="estrela-card e4">
+        <p class="rotulo">4 estrelas</p>
+        <p class="estrelas-icone">★★★★☆</p>
+        <p class="qtd" id="qtd-4">0</p>
+        <p class="faixa-pontos">De 500 a 799 pts</p>
+        <p class="detalhe" id="detalhe-4">AVT 0 · DBV 0</p>
+      </div>
+      <div class="estrela-card e3">
+        <p class="rotulo">3 estrelas</p>
+        <p class="estrelas-icone">★★★☆☆</p>
+        <p class="qtd" id="qtd-3">0</p>
+        <p class="faixa-pontos">De 300 a 499 pts</p>
+        <p class="detalhe" id="detalhe-3">AVT 0 · DBV 0</p>
+      </div>
+      <div class="estrela-card e2">
+        <p class="rotulo">2 estrelas</p>
+        <p class="estrelas-icone">★★☆☆☆</p>
+        <p class="qtd" id="qtd-2">0</p>
+        <p class="faixa-pontos">De 150 a 299 pts</p>
+        <p class="detalhe" id="detalhe-2">AVT 0 · DBV 0</p>
+      </div>
+      <div class="estrela-card e1">
+        <p class="rotulo">1 estrela</p>
+        <p class="estrelas-icone">★☆☆☆☆</p>
+        <p class="qtd" id="qtd-1">0</p>
+        <p class="faixa-pontos">De 0 a 149 pts</p>
+        <p class="detalhe" id="detalhe-1">AVT 0 · DBV 0</p>
+      </div>
+    </div>
+
+    <div class="criterios">
+      <h3>Sobre a classificação — de 01 a 05 estrelas</h3>
+      <p class="explicacao">
+        Os clubes de Desbravadores e Aventureiros são avaliados de 01 a 05 estrelas pelo gerenciamento
+        e organização de sua secretaria e tesouraria no Sistema de Gerenciamento de Clubes (S.G.C).
+      </p>
+      <table class="tabela-criterios">
+        <thead><tr><th>Classificação</th><th>Faixa de pontuação</th></tr></thead>
+        <tbody>
+          <tr><td><span class="estrela-dot dot-5"></span>05 estrelas</td><td>Acima de 800 pontos</td></tr>
+          <tr><td><span class="estrela-dot dot-4"></span>04 estrelas</td><td>De 500 a 799 pontos</td></tr>
+          <tr><td><span class="estrela-dot dot-3"></span>03 estrelas</td><td>De 300 a 499 pontos</td></tr>
+          <tr><td><span class="estrela-dot dot-2"></span>02 estrelas</td><td>De 150 a 299 pontos</td></tr>
+          <tr><td><span class="estrela-dot dot-1"></span>01 estrela</td><td>De 0 a 149 pontos</td></tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   </div>
 </div>
@@ -480,8 +587,31 @@ document.addEventListener('DOMContentLoaded', () => filtrarPorDepartamento('TODO
 function mostrarAba(nome) {
   document.getElementById('aba-departamentos').classList.toggle('ativa', nome === 'departamentos');
   document.getElementById('aba-regioes').classList.toggle('ativa', nome === 'regioes');
+  document.getElementById('aba-classificacao').classList.toggle('ativa', nome === 'classificacao');
   document.getElementById('tab-btn-departamentos').classList.toggle('ativo', nome === 'departamentos');
   document.getElementById('tab-btn-regioes').classList.toggle('ativo', nome === 'regioes');
+  document.getElementById('tab-btn-classificacao').classList.toggle('ativo', nome === 'classificacao');
+}
+
+function classificarEstrelas(sgc) {
+  if (sgc >= 800) return 5;
+  if (sgc >= 500) return 4;
+  if (sgc >= 300) return 3;
+  if (sgc >= 150) return 2;
+  return 1;
+}
+
+function renderizarClassificacao(listaCompleta) {
+  const validos = listaCompleta.filter(c => (c.area === 'DBV' || c.area === 'AVT') && typeof c.sgc === 'number');
+  document.getElementById('valor-total-geral').textContent = validos.length;
+
+  for (let n = 1; n <= 5; n++) {
+    const doGrupo = validos.filter(c => classificarEstrelas(c.sgc) === n);
+    const avt = doGrupo.filter(c => c.area === 'AVT').length;
+    const dbv = doGrupo.filter(c => c.area === 'DBV').length;
+    document.getElementById('qtd-' + n).textContent = doGrupo.length;
+    document.getElementById('detalhe-' + n).textContent = `AVT ${avt} · DBV ${dbv}`;
+  }
 }
 
 function renderizar(lista) {
@@ -504,6 +634,7 @@ function renderizar(lista) {
     : '<tr><td colspan="4" class="vazio">Nenhum clube encontrado</td></tr>';
 
   renderizarPorRegiao(cincoEstrelas);
+  renderizarClassificacao(lista);
 }
 
 /* renderiza com os dados padrão vindos de clubes-dados.js */
