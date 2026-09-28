@@ -408,10 +408,6 @@
     .regiao-tabela-wrap th:nth-child(3), .regiao-tabela-wrap td:nth-child(3) { width: 20%; }
     .regiao-tabela-wrap th:nth-child(4), .regiao-tabela-wrap td:nth-child(4) { width: 22%; }
   }
-  .stat-box.neutro { background: #f0efe9; }
-  .stat-box.neutro .label { color: #6b6a64; }
-  .stat-box.neutro .value { color: #1a1a1a; }
-  .stat-box.neutro .sub { color: #6b6a64; }
 </style>
 </head>
 <body>
@@ -460,7 +456,7 @@
     <button class="tab-btn ativo" id="tab-btn-departamentos" onclick="mostrarAba('departamentos')">Por Departamento</button>
     <button class="tab-btn" id="tab-btn-regioes" onclick="mostrarAba('regioes')">Por Região</button>
     <button class="tab-btn" id="tab-btn-classificacao" onclick="mostrarAba('classificacao')">Classificação</button>
-    <button class="tab-btn" id="tab-btn-jovens" onclick="mostrarAba('jovens')">Jovens</button>
+    <button class="tab-btn" id="tab-btn-jovens" onclick="mostrarAba('jovens')">Ranking do AAmaR</button>
   </div>
 
   <div id="aba-departamentos" class="aba ativa">
@@ -570,7 +566,7 @@
 
   <div id="aba-jovens" class="aba">
     <div class="header-row" style="margin-bottom: 4px;">
-      <p class="subtitle" style="margin: 0;">Jovens · Resultados Classificação Geral 2026 (MRNT) · CSV: Id;Clube;Área;Região;Classificação;Pontos (só as linhas JA são exibidas)</p>
+      <p class="subtitle" style="margin: 0;">Ranking do AAmaR · Resultados Classificação Geral 2026 · CSV: Id;Clube;Área;Região;Classificação;Pontos</p>
       <div class="importar">
         <label for="arquivo-csv-jovens"><i class="ti ti-upload"></i> Importar CSV</label>
         <input type="file" id="arquivo-csv-jovens" accept=".csv" />
@@ -579,28 +575,49 @@
     <p id="status-import-jovens" class="status-import"></p>
 
     <div class="stats quatro">
-      <div class="stat-box neutro">
-        <p class="label">Jovens classificados</p>
+      <div class="stat-box verde">
+        <p class="label">Total classificados</p>
         <p class="value" id="valor-total-jovens">0</p>
         <p class="sub" id="sub-total-jovens"></p>
       </div>
-      <div class="stat-box verde">
-        <p class="label">MRNT Advance</p>
-        <p class="value" id="valor-advance-jovens">0</p>
+      <div class="stat-box vinho">
+        <p class="label">Aventureiros</p>
+        <p class="value" id="valor-avt-jovens">0</p>
+        <p class="sub" id="sub-avt-jovens"></p>
       </div>
       <div class="stat-box azul">
-        <p class="label">MRNT Standard</p>
-        <p class="value" id="valor-standard-jovens">0</p>
+        <p class="label">Desbravadores</p>
+        <p class="value" id="valor-dbv-jovens">0</p>
+        <p class="sub" id="sub-dbv-jovens"></p>
       </div>
       <div class="stat-box ambar">
-        <p class="label">MRNT Basic</p>
-        <p class="value" id="valor-basic-jovens">0</p>
+        <p class="label">Jovens</p>
+        <p class="value" id="valor-ja-jovens">0</p>
+        <p class="sub" id="sub-ja-jovens"></p>
       </div>
     </div>
 
     <label class="opcao-jovens"><input type="checkbox" id="mostrar-todos-jovens"> Mostrar também clubes sem classificação</label>
 
     <div class="departments">
+      <div>
+        <p class="dept-col-title vinho">AVENTUREIROS <span class="dept-count" id="contagem-avt-jovens"></span></p>
+        <div class="table-wrap vinho">
+          <table class="tabela-jovens">
+            <thead><tr><th>Id</th><th>Clube</th><th>Região</th><th>Nível</th><th>Pontos</th></tr></thead>
+            <tbody id="tabela-avt-jovens"></tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <p class="dept-col-title azul">DESBRAVADORES <span class="dept-count" id="contagem-dbv-jovens"></span></p>
+        <div class="table-wrap azul">
+          <table class="tabela-jovens">
+            <thead><tr><th>Id</th><th>Clube</th><th>Região</th><th>Nível</th><th>Pontos</th></tr></thead>
+            <tbody id="tabela-dbv-jovens"></tbody>
+          </table>
+        </div>
+      </div>
       <div class="largura-total">
         <p class="dept-col-title ambar">JOVENS <span class="dept-count" id="contagem-ja-jovens"></span></p>
         <div class="table-wrap ambar">
@@ -869,27 +886,24 @@ function resumoNiveis(grupo) {
 function renderizarJovens(lista) {
   listaJovens = lista;
   const mostrarTodos = document.getElementById('mostrar-todos-jovens').checked;
-  const todos = lista.filter(c => c.area === 'JA');
-  const classificados = todos.filter(c => c.classificacao);
-
-  const porNivel = { Advance: 0, Standard: 0, Basic: 0 };
-  classificados.forEach(c => {
-    const n = NIVEIS_JOVENS[(c.classificacao || '').toUpperCase()];
-    if (n && porNivel[n[0]] !== undefined) porNivel[n[0]]++;
-  });
+  const validos = lista.filter(c => ['AVT', 'DBV', 'JA'].includes(c.area));
+  const classificados = validos.filter(c => c.classificacao);
 
   document.getElementById('valor-total-jovens').textContent = classificados.length;
-  document.getElementById('sub-total-jovens').textContent = `de ${todos.length} clubes`;
-  document.getElementById('valor-advance-jovens').textContent = porNivel.Advance;
-  document.getElementById('valor-standard-jovens').textContent = porNivel.Standard;
-  document.getElementById('valor-basic-jovens').textContent = porNivel.Basic;
-  document.getElementById('contagem-ja-jovens').textContent = `(${classificados.length} classificados de ${todos.length} clubes)`;
+  document.getElementById('sub-total-jovens').textContent = `de ${validos.length} clubes`;
 
-  const exibir = (mostrarTodos ? todos : classificados).slice().sort((a, b) => b.pontos - a.pontos);
-  document.getElementById('tabela-ja-jovens').innerHTML = exibir.length
-    ? exibir.map(linhaJovens).join('')
-    : '<tr><td colspan="5" class="vazio">Nenhum jovem encontrado</td></tr>';
+  [['AVT', 'avt'], ['DBV', 'dbv'], ['JA', 'ja']].forEach(([area, id]) => {
+    const todosArea = validos.filter(c => c.area === area);
+    const classArea = todosArea.filter(c => c.classificacao);
+    const exibir = (mostrarTodos ? todosArea : classArea).slice().sort((a, b) => b.pontos - a.pontos);
 
+    document.getElementById('valor-' + id + '-jovens').textContent = classArea.length;
+    document.getElementById('sub-' + id + '-jovens').textContent = resumoNiveis(classArea) || 'sem classificados';
+    document.getElementById('contagem-' + id + '-jovens').textContent = `(${classArea.length} classificados de ${todosArea.length} clubes)`;
+    document.getElementById('tabela-' + id + '-jovens').innerHTML = exibir.length
+      ? exibir.map(linhaJovens).join('')
+      : '<tr><td colspan="5" class="vazio">Nenhum clube encontrado</td></tr>';
+  });
   atualizarJovensNasAbas();
 }
 
