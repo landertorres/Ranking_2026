@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ranking SGC e Ranking do Campo AAmaR - 2026</title>
+<title>Clubes 5 Estrelas 2026 — AAmaR</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
 <style>
   * { box-sizing: border-box; }
@@ -408,6 +408,124 @@
     .regiao-tabela-wrap th:nth-child(3), .regiao-tabela-wrap td:nth-child(3) { width: 20%; }
     .regiao-tabela-wrap th:nth-child(4), .regiao-tabela-wrap td:nth-child(4) { width: 22%; }
   }
+
+  /* ---------- ícone discreto e painel administrativo ---------- */
+  .admin-icone {
+    background: none;
+    border: none;
+    color: #E8B84B;
+    opacity: 0.45;
+    font-size: 15px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 2px;
+    transition: opacity 0.15s ease, background 0.15s ease;
+  }
+  .admin-icone:hover { opacity: 1; background: rgba(232, 184, 75, 0.15); }
+
+  .admin-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(11, 31, 58, 0.55);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+  .admin-overlay.aberto { display: flex; }
+  .admin-modal {
+    background: #ffffff;
+    border-radius: 12px;
+    max-width: 420px;
+    width: 100%;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  }
+  .admin-fechar {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #6b6a64;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+  }
+  .admin-modal h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 4px;
+  }
+  .admin-modal .admin-desc {
+    font-size: 12px;
+    color: #6b6a64;
+    margin: 0 0 18px;
+  }
+  .admin-campo { margin-bottom: 14px; }
+  .admin-campo label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4a4a44;
+    margin-bottom: 6px;
+  }
+  .admin-campo input[type="password"],
+  .admin-campo select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #e5e3db;
+    border-radius: 8px;
+    font-size: 13px;
+    background: #fff;
+  }
+  .admin-botao {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #0B1F3A;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .admin-botao:hover { background: #122a4d; }
+  .admin-erro { font-size: 12px; color: #A32D2D; margin-top: 8px; min-height: 14px; }
+  .admin-ok { font-size: 12px; color: #1F7A3D; margin-top: 8px; min-height: 14px; }
+  .admin-avancado { display: none; }
+  .admin-avancado.visivel { display: block; }
+  .admin-divisor { border-top: 1px solid #e5e3db; margin: 16px 0; }
+  .admin-arquivo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px dashed #c9c5b8;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    color: #4a4a44;
+    cursor: pointer;
+    margin-bottom: 14px;
+  }
+  .admin-arquivo input { display: none; }
+  .admin-aviso {
+    font-size: 11px;
+    color: #9c7a1e;
+    background: #FAEEDA;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-top: 14px;
+  }
 </style>
 </head>
 <body>
@@ -425,6 +543,7 @@
     <div class="importar">
       <label for="arquivo-csv"><i class="ti ti-upload"></i> Importar CSV</label>
       <input type="file" id="arquivo-csv" accept=".csv" />
+      <button class="admin-icone" id="botao-admin" onclick="abrirAdmin()" title="Área administrativa" aria-label="Área administrativa"><i class="ti ti-settings"></i></button>
     </div>
   </div>
   </div>
@@ -456,7 +575,7 @@
     <button class="tab-btn ativo" id="tab-btn-departamentos" onclick="mostrarAba('departamentos')">Por Departamento</button>
     <button class="tab-btn" id="tab-btn-regioes" onclick="mostrarAba('regioes')">Por Região</button>
     <button class="tab-btn" id="tab-btn-classificacao" onclick="mostrarAba('classificacao')">Classificação</button>
-    <button class="tab-btn" id="tab-btn-jovens" onclick="mostrarAba('jovens')">Ranking AAmaR</button>
+    <button class="tab-btn" id="tab-btn-jovens" onclick="mostrarAba('jovens')">Ranking do AAmaR</button>
   </div>
 
   <div id="aba-departamentos" class="aba ativa">
@@ -566,7 +685,7 @@
 
   <div id="aba-jovens" class="aba">
     <div class="header-row" style="margin-bottom: 4px;">
-      <p class="subtitle" style="margin: 0;"> Resultados da Classificação Geral MDA E MJA 2026</p>
+      <p class="subtitle" style="margin: 0;">Ranking do AAmaR · Resultados Classificação Geral 2026 · CSV: Id;Clube;Área;Região;Classificação;Pontos</p>
       <div class="importar">
         <label for="arquivo-csv-jovens"><i class="ti ti-upload"></i> Importar CSV</label>
         <input type="file" id="arquivo-csv-jovens" accept=".csv" />
@@ -629,6 +748,46 @@
       </div>
     </div>
   </div>
+  </div>
+</div>
+
+<div class="admin-overlay" id="admin-overlay">
+  <div class="admin-modal">
+    <button class="admin-fechar" onclick="fecharAdmin()" aria-label="Fechar">✕</button>
+
+    <div id="admin-login">
+      <h3>Área administrativa</h3>
+      <p class="admin-desc">Acesso restrito ao coordenador.</p>
+      <div class="admin-campo">
+        <label for="admin-senha">Senha</label>
+        <input type="password" id="admin-senha" autocomplete="off" />
+      </div>
+      <button class="admin-botao" onclick="verificarSenhaAdmin()">Entrar</button>
+      <p class="admin-erro" id="admin-erro"></p>
+    </div>
+
+    <div id="admin-painel" class="admin-avancado">
+      <h3>Converter CSV em .js</h3>
+      <p class="admin-desc">Escolha o tipo de base, selecione o CSV e baixe o arquivo pronto para subir no GitHub.</p>
+
+      <div class="admin-campo">
+        <label for="admin-tipo">Tipo de base</label>
+        <select id="admin-tipo">
+          <option value="clubes">clubes-dados.js — Id;Clube;Área;Região;SGC</option>
+          <option value="jovens">jovens-dados.js — Id;Clube;Área;Região;Classificação;Pontos</option>
+        </select>
+      </div>
+
+      <label class="admin-arquivo" for="admin-arquivo-csv">
+        <i class="ti ti-file-upload"></i> <span id="admin-arquivo-nome">Clique para escolher o arquivo CSV</span>
+        <input type="file" id="admin-arquivo-csv" accept=".csv" />
+      </label>
+
+      <button class="admin-botao" onclick="converterEBaixar()">Converter e baixar .js</button>
+      <p class="admin-erro" id="admin-conv-erro"></p>
+      <p class="admin-ok" id="admin-conv-ok"></p>
+      <p class="admin-aviso">Isso só gera o arquivo para download. Para o dashboard atualizar no GitHub Pages, substitua o arquivo correspondente no repositório e faça o commit.</p>
+    </div>
   </div>
 </div>
 
@@ -839,6 +998,125 @@ function processarCsv(texto) {
     });
   }
   return registros;
+}
+
+/* ---------- área administrativa: converter CSV em .js, protegida por senha ---------- */
+const SENHA_ADMIN = 'CoordenadorSGG2026';
+let adminAutenticado = false;
+let arquivoAdminSelecionado = null;
+
+function abrirAdmin() {
+  document.getElementById('admin-overlay').classList.add('aberto');
+  if (adminAutenticado) {
+    document.getElementById('admin-login').style.display = 'none';
+    document.getElementById('admin-painel').classList.add('visivel');
+  } else {
+    document.getElementById('admin-login').style.display = 'block';
+    document.getElementById('admin-painel').classList.remove('visivel');
+    document.getElementById('admin-senha').value = '';
+    document.getElementById('admin-erro').textContent = '';
+    setTimeout(() => document.getElementById('admin-senha').focus(), 50);
+  }
+}
+
+function fecharAdmin() {
+  document.getElementById('admin-overlay').classList.remove('aberto');
+}
+
+document.getElementById('admin-overlay').addEventListener('click', function (e) {
+  if (e.target === this) fecharAdmin();
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') fecharAdmin();
+});
+
+function verificarSenhaAdmin() {
+  const campo = document.getElementById('admin-senha');
+  if (campo.value === SENHA_ADMIN) {
+    adminAutenticado = true;
+    document.getElementById('admin-login').style.display = 'none';
+    document.getElementById('admin-painel').classList.add('visivel');
+  } else {
+    document.getElementById('admin-erro').textContent = 'Senha incorreta.';
+  }
+}
+document.getElementById('admin-senha').addEventListener('keydown', function (e) {
+  if (e.key === 'Enter') verificarSenhaAdmin();
+});
+
+document.getElementById('admin-arquivo-csv').addEventListener('change', function (evento) {
+  arquivoAdminSelecionado = evento.target.files[0] || null;
+  document.getElementById('admin-arquivo-nome').textContent = arquivoAdminSelecionado
+    ? arquivoAdminSelecionado.name
+    : 'Clique para escolher o arquivo CSV';
+  document.getElementById('admin-conv-erro').textContent = '';
+  document.getElementById('admin-conv-ok').textContent = '';
+});
+
+function baixarArquivoTexto(nomeArquivo, conteudo) {
+  const blob = new Blob([conteudo], { type: 'text/javascript;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = nomeArquivo;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function numeroOuTexto(valor) {
+  const n = Number(valor);
+  return (valor !== '' && !isNaN(n)) ? n : valor;
+}
+
+function gerarConteudoClubesJs(registros) {
+  const limpos = registros.map(r => ({ id: numeroOuTexto(r.id), clube: r.clube, area: r.area, regiao: r.regiao, sgc: r.sgc }));
+  return '// Dados dos clubes — edite esta lista para atualizar o dashboard\n'
+       + '// area: "DBV" = Desbravadores | "AVT" = Aventureiros\n'
+       + 'const CLUBES = ' + JSON.stringify(limpos, null, 2) + ';\n';
+}
+
+function gerarConteudoJovensJs(registros) {
+  const limpos = registros.map(r => ({ id: numeroOuTexto(r.id), clube: r.clube, area: r.area, regiao: r.regiao, classificacao: r.classificacao || '', pontos: r.pontos }));
+  return '// Base de dados da aba Jovens — Resultados Classificação Geral\n'
+       + '// area: "AVT" = Aventureiros | "DBV" = Desbravadores | "JA" = Jovens\n'
+       + '// classificacao: vazio = clube ainda sem classificação\n'
+       + 'const JOVENS_DADOS = ' + JSON.stringify(limpos, null, 2) + ';\n';
+}
+
+function converterEBaixar() {
+  const erro = document.getElementById('admin-conv-erro');
+  const ok = document.getElementById('admin-conv-ok');
+  erro.textContent = '';
+  ok.textContent = '';
+
+  if (!arquivoAdminSelecionado) {
+    erro.textContent = 'Escolha um arquivo CSV primeiro.';
+    return;
+  }
+  const tipo = document.getElementById('admin-tipo').value;
+  const leitor = new FileReader();
+  leitor.onload = function (e) {
+    try {
+      if (tipo === 'clubes') {
+        const registros = processarCsv(e.target.result);
+        if (!registros.length) throw new Error('Nenhum registro válido encontrado no CSV.');
+        baixarArquivoTexto('clubes-dados.js', gerarConteudoClubesJs(registros));
+      } else {
+        const registros = processarCsvJovens(e.target.result);
+        if (!registros.length) throw new Error('Nenhum registro válido encontrado no CSV.');
+        baixarArquivoTexto('jovens-dados.js', gerarConteudoJovensJs(registros));
+      }
+      ok.textContent = `Arquivo gerado e baixado (${arquivoAdminSelecionado.name}).`;
+    } catch (erroConv) {
+      erro.textContent = 'Erro ao converter: ' + erroConv.message;
+    }
+  };
+  leitor.onerror = function () {
+    erro.textContent = 'Não foi possível ler o arquivo.';
+  };
+  leitor.readAsText(arquivoAdminSelecionado, 'UTF-8');
 }
 
 document.getElementById('arquivo-csv').addEventListener('change', function (evento) {
