@@ -381,6 +381,7 @@
   .badge-nivel.nv1 { background: #FAEEDA; color: #854F0B; }
   .badge-nivel.nv2 { background: #E6F1FB; color: #0C447C; }
   .badge-nivel.nv3 { background: #E9F5EC; color: #1F7A3D; }
+  .badge-nivel.nv4 { background: #EEEDFE; color: #3C3489; }
   .badge-nivel.nv0 { background: #f0efe9; color: #6b6a64; }
   .opcao-jovens { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #4a4a44; margin: 0 0 14px; cursor: pointer; }
   .tabela-jovens th:nth-child(1), .tabela-jovens td:nth-child(1) { width: 13%; }
@@ -526,6 +527,7 @@
     padding: 8px 10px;
     margin-top: 14px;
   }
+  .dica-filtro { font-size: 12px; color: #6b6a64; margin: -6px 0 14px; min-height: 14px; }
 </style>
 </head>
 <body>
@@ -541,8 +543,6 @@
       </div>
     </div>
     <div class="importar">
-      <label for="arquivo-csv"><i class="ti ti-upload"></i> Importar CSV</label>
-      <input type="file" id="arquivo-csv" accept=".csv" />
       <button class="admin-icone" id="botao-admin" onclick="abrirAdmin()" title="Área administrativa" aria-label="Área administrativa"><i class="ti ti-settings"></i></button>
     </div>
   </div>
@@ -617,6 +617,7 @@
       <button class="filtro-btn" id="filtro-dbv" onclick="filtrarPorDepartamento('DBV')">Desbravadores (DBV)</button>
       <button class="filtro-btn" id="filtro-ja" onclick="filtrarPorDepartamento('JA')">Jovens (JA)</button>
     </div>
+    <p class="dica-filtro" id="dica-regiao"></p>
     <div id="regioes-container"></div>
   </div>
 
@@ -684,13 +685,7 @@
   </div>
 
   <div id="aba-jovens" class="aba">
-    <div class="header-row" style="margin-bottom: 4px;">
-      <p class="subtitle" style="margin: 0;">Ranking do AAmaR · Resultados Classificação Geral 2026</p>
-      <div class="importar">
-        <label for="arquivo-csv-jovens"><i class="ti ti-upload"></i> Importar CSV</label>
-        <input type="file" id="arquivo-csv-jovens" accept=".csv" />
-      </div>
-    </div>
+    <p class="subtitle" style="margin: 0 0 4px;">Ranking do AAmaR · Resultados Classificação Geral 2026</p>
     <p id="status-import-jovens" class="status-import"></p>
 
     <div class="stats quatro">
@@ -805,9 +800,24 @@ let filtroDepartamentoAtual = 'TODOS';
 let listaJovens = [];
 let jovensClassificados = [];
 const NIVEIS_JOVENS = {
-  'CLUBE INICIANTE': ['Iniciante', 'nv1'], 'CLUBE MODELO': ['Modelo', 'nv2'], 'CLUBE DESTAQUE': ['Destaque', 'nv3'], 'CLUBE EXCELÊNCIA': ['Excelência', 'nv4'],
-  'MRNT BASIC': ['Basic', 'nv1'], 'MRNT STANDARD': ['Standard', 'nv2'], 'MRNT ADVANCE': ['Advance', 'nv3'], 'MRNT PRO': ['MRNT PRO', 'nv4'],
+  'CLUBE INICIANTE': ['Iniciante', 'nv1'], 'CLUBE MODELO': ['Modelo', 'nv2'], 'CLUBE DESTAQUE': ['Destaque', 'nv3'],
+  'MRNT BASIC': ['Basic', 'nv1'], 'MRNT STANDARD': ['Standard', 'nv2'], 'MRNT ADVANCE': ['Advance', 'nv3'],
+  'MRNT PRO': ['Pro', 'nv4']
 };
+/* ordem dos níveis, do mais baixo ao mais alto (usada para ordenar os resumos) */
+const ORDEM_NIVEIS = ['Iniciante', 'Modelo', 'Destaque', 'Basic', 'Standard', 'Advance', 'Pro'];
+
+/* interpreta a classificação: aceita maiúsculas/minúsculas, espaços extras e o nome sem o prefixo "MRNT".
+   Se o rótulo for novo (ainda não mapeado), mostra o texto original em vez de escondê-lo. */
+function infoNivel(classificacao) {
+  const bruto = (classificacao || '').toString().trim();
+  if (!bruto) return null;
+  const chave = bruto.toUpperCase().replace(/\s+/g, ' ');
+  const n = NIVEIS_JOVENS[chave] || NIVEIS_JOVENS['MRNT ' + chave.replace(/^MRNT\s+/, '')];
+  if (n) return { rotulo: n[0], classe: n[1], bruto: bruto };
+  const limpo = bruto.replace(/^(MRNT|CLUBE)\s+/i, '');
+  return { rotulo: limpo.charAt(0).toUpperCase() + limpo.slice(1).toLowerCase(), classe: 'nv0', bruto: bruto };
+}
 
 function escapeHtml(texto) {
   const div = document.createElement('div');
@@ -828,8 +838,8 @@ function nomeRegiao(regiaoCompleta) {
 
 function linhaTabelaRegiao(clube) {
   if (clube.area === 'JA') {
-    const n = NIVEIS_JOVENS[(clube.classificacao || '').toUpperCase()];
-    const nivel = n ? `<div class="sub-nivel">MRNT ${n[0]}</div>` : '';
+    const n = infoNivel(clube.classificacao);
+    const nivel = n ? `<div class="sub-nivel">${escapeHtml(n.classe === 'nv0' ? n.bruto : 'MRNT ' + n.rotulo)}</div>` : '';
     return `<tr><td>${escapeHtml(String(clube.id))}</td><td>${escapeHtml(clube.clube)}${nivel}</td><td><span class="badge-area ja">JA</span></td><td>${clube.pontos.toLocaleString('pt-BR')}</td></tr>`;
   }
   const classeArea = clube.area === 'AVT' ? 'avt' : 'dbv';
@@ -842,10 +852,15 @@ function renderizarPorRegiao(cincoEstrelas) {
 }
 
 function aplicarFiltroRegiao() {
-  const base = ultimaListaCincoEstrelas.concat(jovensClassificados);
-  const lista = filtroDepartamentoAtual === 'TODOS'
-    ? base
-    : base.filter(c => c.area === filtroDepartamentoAtual);
+  const ehMrntPro = c => { const n = infoNivel(c.classificacao); return !!n && n.classe === 'nv4'; };
+  const todos = filtroDepartamentoAtual === 'TODOS';
+  /* "Todos": clubes 5 estrelas (AVT/DBV) + somente os Jovens com nível MRNT Pro; no filtro "Jovens (JA)" aparecem todos os classificados */
+  const lista = todos
+    ? ultimaListaCincoEstrelas.concat(jovensClassificados.filter(ehMrntPro))
+    : ultimaListaCincoEstrelas.concat(jovensClassificados).filter(c => c.area === filtroDepartamentoAtual);
+  document.getElementById('dica-regiao').textContent = todos
+    ? 'Em "Todos": clubes 5 estrelas (AVT e DBV) e os Jovens de nível MRNT Pro.'
+    : '';
 
   const grupos = {};
   lista.forEach(c => {
@@ -869,7 +884,7 @@ function aplicarFiltroRegiao() {
     const nCinco = clubes.length - nJa;
     const partes = [];
     if (nCinco) partes.push(`${nCinco} clube${nCinco > 1 ? 's' : ''} 5 estrelas`);
-    if (nJa) partes.push(`${nJa} clube${nJa > 1 ? 's' : ''} de Jovens`);
+    if (nJa) partes.push(`${nJa} clube${nJa > 1 ? 's' : ''} de Jovens${todos ? ' MRNT Pro' : ''}`);
     return `
       <div class="regiao-grupo">
         <div class="regiao-header">
@@ -957,46 +972,132 @@ renderizar(typeof CLUBES !== 'undefined' ? CLUBES : []);
 
 /* ---------- importação de CSV ---------- */
 /* Formato esperado (mesmo da planilha): Id;Clube;Área;Região;SGC  (separador ; ou ,) */
-function detectarSeparador(linha) {
-  return linha.includes(';') ? ';' : ',';
+/* (leitura de CSV: ver bloco "leitura robusta de CSV" abaixo) */
+
+
+
+/* ---------- leitura robusta de CSV (Excel, Google Planilhas, UTF-8 ou Windows-1252) ---------- */
+function normalizarTexto(s) {
+  return (s || '').toString().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
 }
 
-function normalizarCabecalho(campo) {
-  return campo.trim().toLowerCase()
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+/* lê o arquivo como texto: tenta UTF-8 e, se os acentos estiverem quebrados, usa Windows-1252 (padrão do Excel no Brasil) */
+function lerArquivoComoTexto(arquivo, aoLer, aoErro) {
+  const leitor = new FileReader();
+  leitor.onload = function (e) {
+    let texto;
+    try { texto = new TextDecoder('utf-8', { fatal: true }).decode(e.target.result); }
+    catch (_) { texto = new TextDecoder('windows-1252').decode(e.target.result); }
+    aoLer(texto.replace(/^\uFEFF/, ''));
+  };
+  leitor.onerror = aoErro;
+  leitor.readAsArrayBuffer(arquivo);
 }
 
+/* divide o CSV em linhas e campos: separador ; , ou TAB detectado automaticamente; aceita aspas e vírgula dentro de aspas */
+function parseCsv(texto) {
+  const primeira = texto.split(/\r?\n/, 1)[0];
+  const contar = c => primeira.split(c).length - 1;
+  const sep = [';', '\t', ','].reduce((melhor, c) => contar(c) > contar(melhor) ? c : melhor, ',');
+  const linhas = [];
+  let campo = '', linha = [], dentroAspas = false;
+  for (let i = 0; i < texto.length; i++) {
+    const ch = texto[i];
+    if (dentroAspas) {
+      if (ch === '"') { if (texto[i + 1] === '"') { campo += '"'; i++; } else dentroAspas = false; }
+      else campo += ch;
+    } else if (ch === '"') {
+      dentroAspas = true;
+    } else if (ch === sep) {
+      linha.push(campo); campo = '';
+    } else if (ch === '\n' || ch === '\r') {
+      if (ch === '\r' && texto[i + 1] === '\n') i++;
+      linha.push(campo); campo = '';
+      if (linha.some(c => c.trim() !== '')) linhas.push(linha);
+      linha = [];
+    } else {
+      campo += ch;
+    }
+  }
+  linha.push(campo);
+  if (linha.some(c => c.trim() !== '')) linhas.push(linha);
+  return linhas.map(l => l.map(c => c.trim()));
+}
+
+/* nomes aceitos para cada coluna (sem acento/maiúsculas) */
+const COLUNAS_CSV = {
+  id: ['id', 'codigo', 'cod'],
+  clube: ['clube', 'nome do clube', 'nome'],
+  area: ['area', 'departamento', 'depto', 'dep'],
+  regiao: ['regiao', 'nome da regiao', 'regional'],
+  sgc: ['sgc', 'pontuacao sgc', 'pontos sgc'],
+  classificacao: ['classificacao', 'classificacao geral', 'nivel', 'nivel mrnt', 'mrnt'],
+  pontos: ['pontos', 'pts', 'pontuacao', 'total', 'total 4', 'total pontos']
+};
+
+function lerTabelaCsv(texto) {
+  const linhas = parseCsv(texto);
+  if (linhas.length < 2) throw new Error('arquivo vazio ou sem linhas de dados.');
+  return { cabecalho: linhas[0], cab: linhas[0].map(normalizarTexto), dados: linhas.slice(1) };
+}
+
+function mapearColunas(tabela, nomes) {
+  const idx = {};
+  nomes.forEach(n => {
+    idx[n] = -1;
+    for (const apelido of COLUNAS_CSV[n]) { const i = tabela.cab.indexOf(apelido); if (i !== -1) { idx[n] = i; break; } }
+  });
+  const faltando = nomes.filter(n => idx[n] === -1);
+  if (faltando.length) {
+    throw new Error('coluna(s) não encontrada(s): ' + faltando.join(', ') + '. Colunas lidas no arquivo: ' + tabela.cabecalho.join(' | '));
+  }
+  return idx;
+}
+
+function normalizarArea(valor) {
+  const t = normalizarTexto(valor);
+  if (['dbv', 'desbravadores', 'desbravador'].includes(t)) return 'DBV';
+  if (['avt', 'aventureiros', 'aventureiro'].includes(t)) return 'AVT';
+  if (['ja', 'jovens', 'jovem', 'mj', 'jovens adventistas'].includes(t)) return 'JA';
+  return (valor || '').toString().trim().toUpperCase();
+}
+
+/* números em formato brasileiro: 254,17 | 7.300 | 1.234,5 | 980.88 */
+function numeroBR(valor) {
+  let s = (valor || '').toString().trim().replace(/\s/g, '');
+  if (!s || s === '-') return NaN;
+  if (s.includes(',') && s.includes('.')) s = s.replace(/\./g, '').replace(',', '.');
+  else if (s.includes(',')) s = s.replace(',', '.');
+  else if (/^\d{1,3}(\.\d{3})+$/.test(s)) s = s.replace(/\./g, '');
+  return parseFloat(s);
+}
+
+/* CSV de clubes (SGC): Id;Clube;Área;Região;SGC */
 function processarCsv(texto) {
-  const linhas = texto.split(/\r?\n/).filter(l => l.trim().length > 0);
-  if (linhas.length < 2) throw new Error('Arquivo vazio ou sem linhas de dados.');
-
-  const sep = detectarSeparador(linhas[0]);
-  const cabecalho = linhas[0].split(sep).map(normalizarCabecalho);
-
-  const idxId = cabecalho.findIndex(c => c === 'id');
-  const idxClube = cabecalho.findIndex(c => c === 'clube');
-  const idxArea = cabecalho.findIndex(c => c === 'area');
-  const idxRegiao = cabecalho.findIndex(c => c === 'regiao');
-  const idxSgc = cabecalho.findIndex(c => c === 'sgc');
-
-  if ([idxId, idxClube, idxArea, idxRegiao, idxSgc].includes(-1)) {
-    throw new Error('Cabeçalho esperado: Id;Clube;Área;Região;SGC');
-  }
-
+  const tabela = lerTabelaCsv(texto);
+  const c = mapearColunas(tabela, ['id', 'clube', 'area', 'regiao', 'sgc']);
   const registros = [];
-  for (let i = 1; i < linhas.length; i++) {
-    const campos = linhas[i].split(sep);
-    const sgcTexto = (campos[idxSgc] || '').trim().replace(',', '.');
-    const sgc = parseFloat(sgcTexto);
-    if (isNaN(sgc)) continue;
-    registros.push({
-      id: campos[idxId] ? campos[idxId].trim() : '',
-      clube: campos[idxClube] ? campos[idxClube].trim() : '',
-      area: campos[idxArea] ? campos[idxArea].trim().toUpperCase() : '',
-      regiao: campos[idxRegiao] ? campos[idxRegiao].trim() : '',
-      sgc: sgc
-    });
-  }
+  tabela.dados.forEach(l => {
+    const sgc = numeroBR(l[c.sgc]);
+    const area = normalizarArea(l[c.area]);
+    if (isNaN(sgc) || (area !== 'DBV' && area !== 'AVT')) return;
+    registros.push({ id: l[c.id] || '', clube: l[c.clube] || '', area: area, regiao: l[c.regiao] || '', sgc: sgc });
+  });
+  return registros;
+}
+
+/* CSV do Ranking (Jovens): Id;Clube;Área;Região;Classificação;Pontos */
+function processarCsvJovens(texto) {
+  const tabela = lerTabelaCsv(texto);
+  const c = mapearColunas(tabela, ['id', 'clube', 'area', 'regiao', 'classificacao', 'pontos']);
+  const registros = [];
+  tabela.dados.forEach(l => {
+    const area = normalizarArea(l[c.area]);
+    if (!['AVT', 'DBV', 'JA'].includes(area) || !(l[c.clube] || '').trim()) return;
+    const pontos = numeroBR(l[c.pontos]);
+    registros.push({ id: l[c.id] || '', clube: l[c.clube], area: area, regiao: l[c.regiao] || '', classificacao: l[c.classificacao] || '', pontos: isNaN(pontos) ? 0 : pontos });
+  });
   return registros;
 }
 
@@ -1096,59 +1197,38 @@ function converterEBaixar() {
     return;
   }
   const tipo = document.getElementById('admin-tipo').value;
-  const leitor = new FileReader();
-  leitor.onload = function (e) {
+  lerArquivoComoTexto(arquivoAdminSelecionado, function (texto) {
     try {
       if (tipo === 'clubes') {
-        const registros = processarCsv(e.target.result);
-        if (!registros.length) throw new Error('Nenhum registro válido encontrado no CSV.');
+        const registros = processarCsv(texto);
+        if (!registros.length) throw new Error('nenhum clube com pontuação SGC válida foi encontrado.');
+        const cinco = registros.filter(r => r.sgc >= PONTOS_5_ESTRELAS).length;
         baixarArquivoTexto('clubes-dados.js', gerarConteudoClubesJs(registros));
+        ok.textContent = `clubes-dados.js gerado: ${registros.length} clubes, ${cinco} com 5 estrelas (a partir de ${PONTOS_5_ESTRELAS} pts).`;
       } else {
-        const registros = processarCsvJovens(e.target.result);
-        if (!registros.length) throw new Error('Nenhum registro válido encontrado no CSV.');
+        const registros = processarCsvJovens(texto);
+        if (!registros.length) throw new Error('nenhum clube de AVT, DBV ou JA foi encontrado.');
+        const classificados = registros.filter(r => r.classificacao);
+        if (!classificados.length) throw new Error('nenhum clube com classificação foi encontrado; confira a coluna Classificação. Nada foi baixado.');
         baixarArquivoTexto('jovens-dados.js', gerarConteudoJovensJs(registros));
+        const jovens = classificados.filter(r => r.area === 'JA');
+        ok.textContent = `jovens-dados.js gerado: ${registros.length} clubes, ${classificados.length} classificados. Jovens: ${resumoNiveis(jovens) || 'nenhum classificado'}.`;
       }
-      ok.textContent = `Arquivo gerado e baixado (${arquivoAdminSelecionado.name}).`;
     } catch (erroConv) {
       erro.textContent = 'Erro ao converter: ' + erroConv.message;
     }
-  };
-  leitor.onerror = function () {
+  }, function () {
     erro.textContent = 'Não foi possível ler o arquivo.';
-  };
-  leitor.readAsText(arquivoAdminSelecionado, 'UTF-8');
+  });
 }
 
-document.getElementById('arquivo-csv').addEventListener('change', function (evento) {
-  const arquivo = evento.target.files[0];
-  const status = document.getElementById('status-import');
-  if (!arquivo) return;
-
-  const leitor = new FileReader();
-  leitor.onload = function (e) {
-    try {
-      const registros = processarCsv(e.target.result);
-      renderizar(registros);
-      status.textContent = `${registros.length} registros carregados de "${arquivo.name}".`;
-      status.className = 'status-import ok';
-    } catch (erro) {
-      status.textContent = 'Erro ao ler o arquivo: ' + erro.message;
-      status.className = 'status-import erro';
-    }
-  };
-  leitor.onerror = function () {
-    status.textContent = 'Não foi possível ler o arquivo.';
-    status.className = 'status-import erro';
-  };
-  leitor.readAsText(arquivo, 'UTF-8');
-});
 
 /* ---------- aba Jovens: Resultados Classificação Geral (base própria: jovens-dados.js) ---------- */
 
 function badgeNivel(classificacao) {
-  const n = NIVEIS_JOVENS[(classificacao || '').toUpperCase()];
+  const n = infoNivel(classificacao);
   if (!n) return '<span class="badge-nivel nv0">—</span>';
-  return `<span class="badge-nivel ${n[1]}" title="${escapeHtml(classificacao)}">${n[0]}</span>`;
+  return `<span class="badge-nivel ${n.classe}" title="${escapeHtml(n.bruto)}">${escapeHtml(n.rotulo)}</span>`;
 }
 
 function linhaJovens(c) {
@@ -1157,8 +1237,10 @@ function linhaJovens(c) {
 
 function resumoNiveis(grupo) {
   const cont = {};
-  grupo.forEach(c => { const n = NIVEIS_JOVENS[(c.classificacao || '').toUpperCase()]; if (n) cont[n[0]] = (cont[n[0]] || 0) + 1; });
-  return Object.keys(cont).map(k => `${cont[k]} ${k}`).join(' · ');
+  grupo.forEach(c => { const n = infoNivel(c.classificacao); if (n) cont[n.rotulo] = (cont[n.rotulo] || 0) + 1; });
+  return Object.keys(cont)
+    .sort((a, b) => ORDEM_NIVEIS.indexOf(b) - ORDEM_NIVEIS.indexOf(a))
+    .map(k => `${cont[k]} ${k}`).join(' · ');
 }
 
 function renderizarJovens(lista) {
@@ -1199,59 +1281,28 @@ function atualizarJovensNasAbas() {
   aplicarFiltroRegiao();
 }
 
-/* CSV da aba Jovens — cabeçalho: Id;Clube;Área;Região;Classificação;Pontos */
-function processarCsvJovens(texto) {
-  const linhas = texto.split(/\r?\n/).filter(l => l.trim().length > 0);
-  if (linhas.length < 2) throw new Error('Arquivo vazio ou sem linhas de dados.');
-  const sep = detectarSeparador(linhas[0]);
-  const cab = linhas[0].split(sep).map(normalizarCabecalho);
-  const idx = nome => cab.findIndex(c => c === nome);
-  const iId = idx('id'), iClube = idx('clube'), iArea = idx('area'), iReg = idx('regiao'), iClass = idx('classificacao');
-  const iPts = cab.findIndex(c => c === 'pontos' || c === 'pts');
-  if ([iId, iClube, iArea, iReg, iPts].includes(-1)) {
-    throw new Error('Cabeçalho esperado: Id;Clube;Área;Região;Classificação;Pontos');
-  }
-  const registros = [];
-  for (let i = 1; i < linhas.length; i++) {
-    const campos = linhas[i].split(sep).map(s => s.trim().replace(/^"|"$/g, ''));
-    const pontos = parseFloat((campos[iPts] || '').replace(/\./g, '').replace(',', '.'));
-    if (isNaN(pontos)) continue;
-    registros.push({
-      id: campos[iId] || '', clube: campos[iClube] || '',
-      area: (campos[iArea] || '').toUpperCase(), regiao: campos[iReg] || '',
-      classificacao: iClass === -1 ? '' : (campos[iClass] || ''), pontos: pontos
-    });
-  }
-  return registros;
-}
+
 
 document.getElementById('mostrar-todos-jovens').addEventListener('change', () => renderizarJovens(listaJovens));
 
-document.getElementById('arquivo-csv-jovens').addEventListener('change', function (evento) {
-  const arquivo = evento.target.files[0];
-  const status = document.getElementById('status-import-jovens');
-  if (!arquivo) return;
-  const leitor = new FileReader();
-  leitor.onload = function (e) {
-    try {
-      const registros = processarCsvJovens(e.target.result);
-      renderizarJovens(registros);
-      status.textContent = `${registros.length} registros carregados de "${arquivo.name}".`;
-      status.className = 'status-import ok';
-    } catch (erro) {
-      status.textContent = 'Erro ao ler o arquivo: ' + erro.message;
-      status.className = 'status-import erro';
-    }
-  };
-  leitor.onerror = function () {
-    status.textContent = 'Não foi possível ler o arquivo.';
-    status.className = 'status-import erro';
-  };
-  leitor.readAsText(arquivo, 'UTF-8');
-});
 
 /* dados padrão vindos de jovens-dados.js */
 renderizarJovens(typeof JOVENS_DADOS !== 'undefined' ? JOVENS_DADOS : []);
+
+/* avisos visíveis quando um arquivo de dados não foi carregado (ex.: não foi enviado ao GitHub) */
+function mostrarAviso(idElemento, texto) {
+  const el = document.getElementById(idElemento);
+  el.textContent = texto;
+  el.className = 'status-import erro';
+}
+if (typeof CLUBES === 'undefined' || !CLUBES.length) {
+  mostrarAviso('status-import', 'Não foi possível carregar os dados dos clubes (clubes-dados.js). Confirme se o arquivo está na mesma pasta do dashboard.');
+}
+if (typeof JOVENS_DADOS === 'undefined' || !JOVENS_DADOS.length) {
+  mostrarAviso('status-import-jovens', 'Não foi possível carregar a classificação (jovens-dados.js). Confirme se o arquivo está na mesma pasta do dashboard.');
+} else if (!JOVENS_DADOS.some(c => c.classificacao)) {
+  mostrarAviso('status-import-jovens', 'O jovens-dados.js foi carregado, mas nenhum clube tem classificação. Gere o arquivo novamente pelo painel administrativo (⚙️).');
+}
 </script>
 
 </body>
