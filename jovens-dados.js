@@ -80,7 +80,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8800
+    "pontos": 10100
   },
   {
     "id": 8061,
@@ -128,7 +128,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7700
+    "pontos": 9600
   },
   {
     "id": 8088,
@@ -144,7 +144,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 5900
+    "pontos": 8400
   },
   {
     "id": 8092,
@@ -240,7 +240,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4300
+    "pontos": 9600
   },
   {
     "id": 8123,
@@ -272,7 +272,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7600
+    "pontos": 9100
   },
   {
     "id": 8308,
@@ -280,7 +280,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4700
+    "pontos": 6200
   },
   {
     "id": 8310,
@@ -560,7 +560,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 7700
+    "pontos": 12700
   },
   {
     "id": 17572,
@@ -984,7 +984,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 12000
+    "pontos": 13500
   },
   {
     "id": 34907,
@@ -1016,7 +1016,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "",
-    "pontos": 500
+    "pontos": 4000
   },
   {
     "id": 39188,
@@ -1024,7 +1024,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11400
+    "pontos": 13200
   },
   {
     "id": 39448,
@@ -1312,7 +1312,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7600
+    "pontos": 9400
   },
   {
     "id": 51657,
@@ -1395,6 +1395,14 @@ const JOVENS_DADOS = [
     "pontos": 1800
   },
   {
+    "id": 57782,
+    "clube": "PEQUENOS EMBAIXADORES",
+    "area": "AVT",
+    "regiao": "23ª R – ÁREA 10 / AVT RR",
+    "classificacao": "",
+    "pontos": 0
+  },
+  {
     "id": 8028,
     "clube": "EBENÉZER",
     "area": "DBV",
@@ -1448,7 +1456,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8300
+    "pontos": 9300
   },
   {
     "id": 8138,
@@ -1480,7 +1488,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 10700
+    "pontos": 11200
   },
   {
     "id": 8142,
@@ -1584,7 +1592,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "17ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 9000
+    "pontos": 9800
   },
   {
     "id": 8172,
@@ -1664,7 +1672,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
     "classificacao": "",
-    "pontos": 0
+    "pontos": 500
   },
   {
     "id": 8194,
@@ -1688,7 +1696,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 6800
+    "pontos": 7800
   },
   {
     "id": 8198,
@@ -1712,7 +1720,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "17ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 10500
+    "pontos": 11000
   },
   {
     "id": 8205,
@@ -1744,7 +1752,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "07ª R – ÁREA 3 / DBV AM",
     "classificacao": "",
-    "pontos": 1300
+    "pontos": 1800
   },
   {
     "id": 8210,
@@ -1816,7 +1824,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7800
+    "pontos": 8300
   },
   {
     "id": 8233,
@@ -1840,7 +1848,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4800
+    "pontos": 8700
   },
   {
     "id": 8251,
@@ -2104,7 +2112,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "03ª R – ÁREA 2 / DBV AM",
     "classificacao": "",
-    "pontos": 1300
+    "pontos": 3800
   },
   {
     "id": 8413,
@@ -2128,7 +2136,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 9400
+    "pontos": 9900
   },
   {
     "id": 8449,
@@ -2424,7 +2432,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 5700
+    "pontos": 8800
   },
   {
     "id": 21670,
@@ -2520,7 +2528,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "17ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 6900
+    "pontos": 8200
   },
   {
     "id": 24069,
@@ -2744,7 +2752,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
     "classificacao": "",
-    "pontos": 500
+    "pontos": 2000
   },
   {
     "id": 33518,
@@ -2752,7 +2760,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "15ª R – ÁREA 6 / DBV RR",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11300
+    "pontos": 11800
   },
   {
     "id": 33654,
@@ -2952,7 +2960,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "19ª R – ÁREA 8 / DBV RR",
     "classificacao": "",
-    "pontos": 500
+    "pontos": 1000
   },
   {
     "id": 43124,
@@ -2984,7 +2992,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "17ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 10500
+    "pontos": 11200
   },
   {
     "id": 43729,
@@ -3120,7 +3128,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "17ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4000
+    "pontos": 6800
   },
   {
     "id": 49388,
@@ -3144,7 +3152,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
     "classificacao": "",
-    "pontos": 500
+    "pontos": 1000
   },
   {
     "id": 50267,
@@ -3280,7 +3288,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "03ª R – ÁREA 2 / DBV AM",
     "classificacao": "",
-    "pontos": 0
+    "pontos": 2800
   },
   {
     "id": 57045,
@@ -3307,12 +3315,36 @@ const JOVENS_DADOS = [
     "pontos": 0
   },
   {
+    "id": 57358,
+    "clube": "RAÍZES FIRMES",
+    "area": "DBV",
+    "regiao": "15ª R – ÁREA 6 / DBV RR",
+    "classificacao": "",
+    "pontos": 0
+  },
+  {
     "id": 57382,
     "clube": "GUARDIÕES DA ESPERANÇA",
     "area": "DBV",
     "regiao": "16ª R – ÁREA 6 / DBV RR",
     "classificacao": "",
     "pontos": 800
+  },
+  {
+    "id": 57795,
+    "clube": "VALENTES DE SIÃO",
+    "area": "DBV",
+    "regiao": "15ª R – ÁREA 6 / DBV RR",
+    "classificacao": "",
+    "pontos": 0
+  },
+  {
+    "id": 57796,
+    "clube": "GUERREIROS DO REINO",
+    "area": "DBV",
+    "regiao": "15ª R – ÁREA 6 / DBV RR",
+    "classificacao": "",
+    "pontos": 0
   },
   {
     "id": 598,
@@ -3480,7 +3512,7 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "01ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT ADVANCE",
-    "pontos": 10000
+    "pontos": 10300
   },
   {
     "id": 748,
@@ -3872,7 +3904,7 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "01ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT ADVANCE",
-    "pontos": 10300
+    "pontos": 11100
   },
   {
     "id": 1009,
@@ -6008,7 +6040,7 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "01ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT STANDARD",
-    "pontos": 4600
+    "pontos": 4900
   },
   {
     "id": 70510,
