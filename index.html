@@ -22,11 +22,12 @@
     padding: 0;
     max-width: 1000px;
     width: 100%;
-    overflow: hidden;
+    min-width: 0;
   }
   .faixa {
     background: #0B1F3A;
     padding: 18px 24px;
+    border-radius: 11px 11px 0 0;
   }
   .corpo {
     padding: 24px;
@@ -528,6 +529,20 @@
     margin-top: 14px;
   }
   .dica-filtro { font-size: 12px; color: #6b6a64; margin: -6px 0 14px; min-height: 14px; }
+
+  /* ---------- rolagem lateral: nada fica cortado, tudo pode ser visto deslizando ---------- */
+  .tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    padding-bottom: 6px;
+  }
+  .tab-btn { flex: 0 0 auto; white-space: nowrap; }
+  .departments > div { min-width: 0; }
+  .regiao-tabela-wrap table { min-width: 420px; }
+  .regiao-header { flex-wrap: wrap; gap: 4px 12px; }
+  .table-wrap, .regiao-tabela-wrap { scrollbar-width: thin; }
 </style>
 </head>
 <body>
@@ -551,7 +566,7 @@
   <p class="subtitle">Ranking Geral · Selo de 5 estrela</p>
   <p id="status-import" class="status-import"></p>
 
-  <div class="stats quatro">
+  <div class="stats">
     <div class="stat-box verde">
       <p class="label">Total 5 estrelas</p>
       <p class="value" id="valor-total">0</p>
@@ -563,11 +578,6 @@
     <div class="stat-box azul">
       <p class="label">Desbravadores</p>
       <p class="value" id="valor-dbv">0</p>
-    </div>
-    <div class="stat-box ambar">
-      <p class="label">Jovens (MRNT)</p>
-      <p class="value" id="valor-ja">0</p>
-      <p class="sub" id="sub-ja"></p>
     </div>
   </div>
 
@@ -1272,8 +1282,6 @@ function atualizarJovensNasAbas() {
   jovensClassificados = listaJovens
     .filter(c => c.area === 'JA' && c.classificacao)
     .sort((a, b) => b.pontos - a.pontos);
-  document.getElementById('valor-ja').textContent = jovensClassificados.length;
-  document.getElementById('sub-ja').textContent = resumoNiveis(jovensClassificados) || 'sem classificados';
   document.getElementById('contagem-ja-dep').textContent = `(${jovensClassificados.length} classificados no MRNT)`;
   document.getElementById('tabela-ja-dep').innerHTML = jovensClassificados.length
     ? jovensClassificados.map(linhaJovens).join('')
