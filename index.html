@@ -543,6 +543,12 @@
   .regiao-tabela-wrap table { min-width: 420px; }
   .regiao-header { flex-wrap: wrap; gap: 4px 12px; }
   .table-wrap, .regiao-tabela-wrap { scrollbar-width: thin; }
+  .criterios-ranking { margin-top: 20px; border-top: 1px solid #e5e3db; padding-top: 14px; }
+  .criterios-ranking summary { cursor: pointer; font-size: 13px; font-weight: 700; color: #4a4a44; margin-bottom: 10px; }
+  .criterios-ranking .rolagem-x { overflow-x: auto; }
+  .criterios-ranking .tabela-criterios { min-width: 560px; }
+  .criterios-ranking .tabela-criterios td:last-child { text-align: left; font-weight: 400; color: inherit; }
+  .crit-pts { font-weight: 700; color: #854F0B; margin-right: 4px; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -752,6 +758,11 @@
         </div>
       </div>
     </div>
+
+    <details class="criterios-ranking">
+      <summary>Critérios de classificação do Ranking</summary>
+      <div id="criterios-ranking"></div>
+    </details>
   </div>
   </div>
 </div>
@@ -779,7 +790,7 @@
         <label for="admin-tipo">Tipo de base</label>
         <select id="admin-tipo">
           <option value="clubes">clubes-dados.js — Id;Clube;Área;Região;SGC</option>
-          <option value="jovens">jovens-dados.js — Id;Clube;Área;Região;Classificação;Pontos</option>
+          <option value="jovens">jovens-dados.js — Id;Clube;Área;Região;Pontos (ou Total)</option>
         </select>
       </div>
 
@@ -812,17 +823,38 @@ let jovensClassificados = [];
 const NIVEIS_JOVENS = {
   'CLUBE INICIANTE': ['Iniciante', 'nv1'], 'CLUBE MODELO': ['Modelo', 'nv2'], 'CLUBE DESTAQUE': ['Destaque', 'nv3'],
   'MRNT BASIC': ['Basic', 'nv1'], 'MRNT STANDARD': ['Standard', 'nv2'], 'MRNT ADVANCE': ['Advance', 'nv3'],
-  'MRNT PRO': ['Pro', 'nv4']
+  'MRNT PRO': ['Pro', 'nv4'],
+  'PADRAO EXCELENCIA': ['Excelência', 'nv4']
 };
 /* ordem dos níveis, do mais baixo ao mais alto (usada para ordenar os resumos) */
-const ORDEM_NIVEIS = ['Iniciante', 'Modelo', 'Destaque', 'Basic', 'Standard', 'Advance', 'Pro'];
+const ORDEM_NIVEIS = ['Iniciante', 'Modelo', 'Destaque', 'Excelência', 'Basic', 'Standard', 'Advance', 'Pro'];
+
+/* ---------- regras de classificação do Ranking do AAmaR (pela pontuação total) ----------
+   cada lista vai do nível mais alto ao mais baixo: [pontuação mínima, classificação] */
+const RANKING_REGRAS = {
+  AVT: [[13050, 'PADRÃO EXCELÊNCIA'], [10876, 'CLUBE DESTAQUE'], [7250, 'CLUBE MODELO'], [2000, 'CLUBE INICIANTE']],
+  DBV: [[12690, 'PADRÃO EXCELÊNCIA'], [10575, 'CLUBE DESTAQUE'], [7050, 'CLUBE MODELO'], [2000, 'CLUBE INICIANTE']],
+  JA:  [[11250, 'MRNT PRO'], [7500, 'MRNT ADVANCE'], [4500, 'MRNT STANDARD'], [2000, 'MRNT BASIC']]
+};
+
+function classificarRanking(area, pontos) {
+  const regras = RANKING_REGRAS[area];
+  if (!regras || typeof pontos !== 'number' || isNaN(pontos)) return '';
+  for (const [minimo, nome] of regras) { if (pontos >= minimo) return nome; }
+  return '';
+}
+
+/* a classificação sempre é recalculada a partir dos pontos, qualquer que seja a origem dos dados */
+function aplicarRegrasRanking(lista) {
+  return lista.map(c => Object.assign({}, c, { classificacao: classificarRanking(c.area, Number(c.pontos)) }));
+}
 
 /* interpreta a classificação: aceita maiúsculas/minúsculas, espaços extras e o nome sem o prefixo "MRNT".
    Se o rótulo for novo (ainda não mapeado), mostra o texto original em vez de escondê-lo. */
 function infoNivel(classificacao) {
   const bruto = (classificacao || '').toString().trim();
   if (!bruto) return null;
-  const chave = bruto.toUpperCase().replace(/\s+/g, ' ');
+  const chave = normalizarTexto(bruto).toUpperCase();
   const n = NIVEIS_JOVENS[chave] || NIVEIS_JOVENS['MRNT ' + chave.replace(/^MRNT\s+/, '')];
   if (n) return { rotulo: n[0], classe: n[1], bruto: bruto };
   const limpo = bruto.replace(/^(MRNT|CLUBE)\s+/i, '');
@@ -862,7 +894,7 @@ function renderizarPorRegiao(cincoEstrelas) {
 }
 
 function aplicarFiltroRegiao() {
-  const ehMrntPro = c => { const n = infoNivel(c.classificacao); return !!n && n.classe === 'nv4'; };
+  const ehMrntPro = c => { const n = infoNivel(c.classificacao); return !!n && n.rotulo === 'Pro'; };
   const todos = filtroDepartamentoAtual === 'TODOS';
   /* "Todos": clubes 5 estrelas (AVT/DBV) + somente os Jovens com nível MRNT Pro; no filtro "Jovens (JA)" aparecem todos os classificados */
   const lista = todos
@@ -1043,7 +1075,7 @@ const COLUNAS_CSV = {
   regiao: ['regiao', 'nome da regiao', 'regional'],
   sgc: ['sgc', 'pontuacao sgc', 'pontos sgc'],
   classificacao: ['classificacao', 'classificacao geral', 'nivel', 'nivel mrnt', 'mrnt'],
-  pontos: ['pontos', 'pts', 'pontuacao', 'total', 'total 4', 'total pontos']
+  pontos: ['pontos', 'pts', 'pontuacao', 'total', 'total geral', 'total 4', 'total pontos']
 };
 
 function lerTabelaCsv(texto) {
@@ -1100,13 +1132,14 @@ function processarCsv(texto) {
 /* CSV do Ranking (Jovens): Id;Clube;Área;Região;Classificação;Pontos */
 function processarCsvJovens(texto) {
   const tabela = lerTabelaCsv(texto);
-  const c = mapearColunas(tabela, ['id', 'clube', 'area', 'regiao', 'classificacao', 'pontos']);
+  const c = mapearColunas(tabela, ['id', 'clube', 'area', 'regiao', 'pontos']);
   const registros = [];
   tabela.dados.forEach(l => {
     const area = normalizarArea(l[c.area]);
     if (!['AVT', 'DBV', 'JA'].includes(area) || !(l[c.clube] || '').trim()) return;
     const pontos = numeroBR(l[c.pontos]);
-    registros.push({ id: l[c.id] || '', clube: l[c.clube], area: area, regiao: l[c.regiao] || '', classificacao: l[c.classificacao] || '', pontos: isNaN(pontos) ? 0 : pontos });
+    const total = isNaN(pontos) ? 0 : pontos;
+    registros.push({ id: l[c.id] || '', clube: l[c.clube], area: area, regiao: l[c.regiao] || '', classificacao: classificarRanking(area, total), pontos: total });
   });
   return registros;
 }
@@ -1192,7 +1225,7 @@ function gerarConteudoJovensJs(registros) {
   const limpos = registros.map(r => ({ id: numeroOuTexto(r.id), clube: r.clube, area: r.area, regiao: r.regiao, classificacao: r.classificacao || '', pontos: r.pontos }));
   return '// Base de dados da aba Jovens — Resultados Classificação Geral\n'
        + '// area: "AVT" = Aventureiros | "DBV" = Desbravadores | "JA" = Jovens\n'
-       + '// classificacao: vazio = clube ainda sem classificação\n'
+       + '// classificacao: calculada pelos pontos (regras do Ranking do AAmaR); vazio = abaixo de 2.000 pontos\n'
        + 'const JOVENS_DADOS = ' + JSON.stringify(limpos, null, 2) + ';\n';
 }
 
@@ -1219,10 +1252,10 @@ function converterEBaixar() {
         const registros = processarCsvJovens(texto);
         if (!registros.length) throw new Error('nenhum clube de AVT, DBV ou JA foi encontrado.');
         const classificados = registros.filter(r => r.classificacao);
-        if (!classificados.length) throw new Error('nenhum clube com classificação foi encontrado; confira a coluna Classificação. Nada foi baixado.');
+        if (!classificados.length) throw new Error('nenhum clube atingiu 2.000 pontos (mínimo do primeiro nível); confira a coluna Pontos/Total. Nada foi baixado.');
         baixarArquivoTexto('jovens-dados.js', gerarConteudoJovensJs(registros));
-        const jovens = classificados.filter(r => r.area === 'JA');
-        ok.textContent = `jovens-dados.js gerado: ${registros.length} clubes, ${classificados.length} classificados. Jovens: ${resumoNiveis(jovens) || 'nenhum classificado'}.`;
+        const por = area => resumoNiveis(classificados.filter(r => r.area === area)) || 'nenhum';
+        ok.textContent = `jovens-dados.js gerado: ${registros.length} clubes, ${classificados.length} classificados. Aventureiros: ${por('AVT')}. Desbravadores: ${por('DBV')}. Jovens: ${por('JA')}.`;
       }
     } catch (erroConv) {
       erro.textContent = 'Erro ao converter: ' + erroConv.message;
@@ -1254,6 +1287,7 @@ function resumoNiveis(grupo) {
 }
 
 function renderizarJovens(lista) {
+  lista = aplicarRegrasRanking(lista);
   listaJovens = lista;
   const mostrarTodos = document.getElementById('mostrar-todos-jovens').checked;
   const validos = lista.filter(c => ['AVT', 'DBV', 'JA'].includes(c.area));
@@ -1294,6 +1328,19 @@ function atualizarJovensNasAbas() {
 document.getElementById('mostrar-todos-jovens').addEventListener('change', () => renderizarJovens(listaJovens));
 
 
+/* tabela de critérios (montada a partir de RANKING_REGRAS, a mesma fonte usada no cálculo) */
+function renderizarCriteriosRanking() {
+  const celula = (area, i) => {
+    const [minimo, nome] = RANKING_REGRAS[area].slice().reverse()[i];
+    return `<span class="crit-pts">≥ ${minimo.toLocaleString('pt-BR')} pts</span> ${escapeHtml(nome)}`;
+  };
+  document.getElementById('criterios-ranking').innerHTML =
+    '<div class="rolagem-x"><table class="tabela-criterios"><thead><tr><th>Nível</th><th>Aventureiros</th><th>Desbravadores</th><th>Jovens</th></tr></thead><tbody>'
+    + [0, 1, 2, 3].map(i => `<tr><td>${i + 1}</td><td>${celula('AVT', i)}</td><td>${celula('DBV', i)}</td><td>${celula('JA', i)}</td></tr>`).join('')
+    + '</tbody></table></div>';
+}
+renderizarCriteriosRanking();
+
 /* dados padrão vindos de jovens-dados.js */
 renderizarJovens(typeof JOVENS_DADOS !== 'undefined' ? JOVENS_DADOS : []);
 
@@ -1308,8 +1355,8 @@ if (typeof CLUBES === 'undefined' || !CLUBES.length) {
 }
 if (typeof JOVENS_DADOS === 'undefined' || !JOVENS_DADOS.length) {
   mostrarAviso('status-import-jovens', 'Não foi possível carregar a classificação (jovens-dados.js). Confirme se o arquivo está na mesma pasta do dashboard.');
-} else if (!JOVENS_DADOS.some(c => c.classificacao)) {
-  mostrarAviso('status-import-jovens', 'O jovens-dados.js foi carregado, mas nenhum clube tem classificação. Gere o arquivo novamente pelo painel administrativo (⚙️).');
+} else if (!listaJovens.some(c => c.classificacao)) {
+  mostrarAviso('status-import-jovens', 'O jovens-dados.js foi carregado, mas nenhum clube atingiu a pontuação mínima (2.000 pontos). Confira a coluna de pontos do arquivo.');
 }
 </script>
 
