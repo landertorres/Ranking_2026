@@ -1514,6 +1514,8 @@ function hojeISO() {
 }
 function dataBR(iso) { const p = (iso || '').split('-'); return p.length === 3 ? `${p[2]}/${p[1]}/${p[0]}` : iso; }
 function dataCurta(iso) { const p = (iso || '').split('-'); return p.length === 3 ? `${p[2]}/${p[1]}` : iso; }
+function rotuloData(s) { return s.atual ? 'Atual' : dataBR(s.data); }
+function rotuloCurto(s) { return s.atual ? 'Atual' : dataCurta(s.data); }
 function cincoDe(snap, uf) { return snap[uf] ? snap[uf].estrelas[4] : 0; }
 function totalCinco(snap) { return cincoDe(snap, 'AM') + cincoDe(snap, 'RR') + cincoDe(snap, 'ND'); }
 function porcento(parte, todo) { return todo > 0 ? Math.round(parte / todo * 100) : 0; }
@@ -1549,7 +1551,7 @@ function desenharGraficoEvolucao(atualiz) {
     svg += `<text x="${L - 8}" y="${y(v) + 4}" text-anchor="end" font-size="11" fill="#6b6a64">${v}</text>`;
   }
   atualiz.forEach((s, i) => {
-    svg += `<text x="${x(i)}" y="${H - 14}" text-anchor="middle" font-size="11" fill="#4a4a44">${dataCurta(s.data)}</text>`;
+    svg += `<text x="${x(i)}" y="${H - 14}" text-anchor="middle" font-size="11" fill="#4a4a44">${rotuloCurto(s)}</text>`;
   });
   series.forEach(se => {
     const pontos = se.valores.map((v, i) => `${x(i)},${y(v)}`).join(' ');
@@ -1574,9 +1576,9 @@ function renderizarEstado(uf, atualiz) {
   const e = ultimo[uf];
   document.getElementById('ev-' + id + '-cont').textContent = `(${e.avaliados} clubes avaliados · ${porcento(e.estrelas[4], e.avaliados)}% com 5 estrelas)`;
   document.getElementById('ev-' + id + '-tabela').innerHTML = atualiz.map((s, i) => ({ s: s, ant: atualiz[i - 1] })).reverse().map(o =>
-    `<tr><td>${dataBR(o.s.data)}</td><td>${cincoDe(o.s, uf)}</td><td>${o.s[uf].cinco.AVT}</td><td>${o.s[uf].cinco.DBV}</td><td>${variacaoHtml(cincoDe(o.s, uf), o.ant ? cincoDe(o.ant, uf) : undefined)}</td></tr>`).join('');
+    `<tr><td>${rotuloData(o.s)}</td><td>${cincoDe(o.s, uf)}</td><td>${o.s[uf].cinco.AVT}</td><td>${o.s[uf].cinco.DBV}</td><td>${variacaoHtml(cincoDe(o.s, uf), o.ant ? cincoDe(o.ant, uf) : undefined)}</td></tr>`).join('');
   document.getElementById('ev-' + id + '-dist').innerHTML =
-    `<p class="ev-dist-titulo">Distribuição por estrelas · ${dataBR(ultimo.data)}</p>`
+    `<p class="ev-dist-titulo">Distribuição por estrelas · ${ultimo.atual ? 'dados atuais' : dataBR(ultimo.data)}</p>`
     + [5, 4, 3, 2, 1].map(n => {
         const q = e.estrelas[n - 1], pct = porcento(q, e.avaliados);
         return `<div class="ev-dist-linha"><span>${n}★</span><div class="ev-barra"><div style="width:${pct}%;background:${cor}"></div></div><span class="ev-dist-valor">${q} · ${pct}%</span></div>`;
@@ -1588,8 +1590,20 @@ function renderizarEvolucao() {
   status.textContent = '';
   status.className = 'status-import';
   const hist = (typeof EVOLUCAO_HISTORICO !== 'undefined') ? EVOLUCAO_HISTORICO : null;
-  const atualiz = hist && Array.isArray(hist.atualizacoes)
+  const historicoOk = !!(hist && Array.isArray(hist.atualizacoes) && hist.atualizacoes.length);
+  const atualiz = historicoOk
     ? hist.atualizacoes.slice().sort((a, b) => a.data < b.data ? -1 : a.data > b.data ? 1 : 0) : [];
+  const ultimoRegistrado = atualiz[atualiz.length - 1];
+
+  /* o último ponto ("Atual") vem sempre do clubes-dados.js, os mesmos dados das outras abas;
+     só é acrescentado se for diferente da última atualização registrada no histórico */
+  let pontoAtual = false;
+  if (typeof CLUBES !== 'undefined' && CLUBES.length) {
+    const vivo = montarSnapshot(CLUBES, null);
+    vivo.atual = true;
+    const igual = !!ultimoRegistrado && ['AM', 'RR', 'ND'].every(uf => JSON.stringify(vivo[uf]) === JSON.stringify(ultimoRegistrado[uf]));
+    if (!igual) { atualiz.push(vivo); pontoAtual = true; }
+  }
   if (!atualiz.length) {
     mostrarAviso('status-evolucao', 'Não foi possível carregar o histórico (historico-dados.js). Confirme se o arquivo está na mesma pasta do dashboard.');
     return;
@@ -1599,15 +1613,15 @@ function renderizarEvolucao() {
 
   const cartao = (idValor, idSub, atual, ant, linhaExtra) => {
     document.getElementById(idValor).textContent = atual;
-    const v = anterior ? variacaoTexto(atual, ant) + ` desde ${dataCurta(anterior.data)}` : '';
+    const v = anterior ? variacaoTexto(atual, ant) + ` desde ${rotuloCurto(anterior)}` : '';
     document.getElementById(idSub).textContent = [v, linhaExtra].filter(Boolean).join('\n');
   };
-  cartao('ev-total', 'ev-total-sub', totalCinco(ultimo), anterior && totalCinco(anterior), `atualizado em ${dataBR(ultimo.data)}`);
+  cartao('ev-total', 'ev-total-sub', totalCinco(ultimo), anterior && totalCinco(anterior), ultimo.atual ? 'dados atuais (clubes-dados.js)' : `atualizado em ${dataBR(ultimo.data)}`);
   cartao('ev-am', 'ev-am-sub', cincoDe(ultimo, 'AM'), anterior && cincoDe(anterior, 'AM'), `AVT ${ultimo.AM.cinco.AVT} · DBV ${ultimo.AM.cinco.DBV}`);
   cartao('ev-rr', 'ev-rr-sub', cincoDe(ultimo, 'RR'), anterior && cincoDe(anterior, 'RR'), `AVT ${ultimo.RR.cinco.AVT} · DBV ${ultimo.RR.cinco.DBV}`);
 
   /* referência 2025 (mesmo desenho do comparativo anual) */
-  const meta = hist.meta2025 || {};
+  const meta = (hist && hist.meta2025) || {};
   const total25 = Number(meta.total) || 0;
   const meta2025Html = () => {
     if (!total25) return '';
@@ -1628,18 +1642,20 @@ function renderizarEvolucao() {
   renderizarEstado('AM', atualiz);
   renderizarEstado('RR', atualiz);
 
-  /* avisos: histórico desatualizado em relação ao clubes-dados.js e clubes sem estado identificado */
+  /* avisos: ponto "Atual" ainda fora do histórico e clubes sem estado identificado */
   const avisos = [];
-  if (typeof CLUBES !== 'undefined' && CLUBES.length) {
-    const vivos = CLUBES.filter(c => (c.area === 'AVT' || c.area === 'DBV') && c.sgc >= PONTOS_5_ESTRELAS).length;
-    if (vivos !== totalCinco(ultimo)) {
-      avisos.push(`O clubes-dados.js tem ${vivos} clubes 5 estrelas, mas a última atualização do histórico (${dataBR(ultimo.data)}) registra ${totalCinco(ultimo)}. Registre a nova atualização pelo painel ⚙️ (historico-dados.js).`);
-    }
+  if (pontoAtual) {
+    avisos.push(ultimoRegistrado
+      ? `O ponto "Atual" (${totalCinco(ultimo)} clubes 5 estrelas) vem do clubes-dados.js, o mesmo das outras abas. A última atualização guardada no histórico é de ${dataBR(ultimoRegistrado.data)}, com ${totalCinco(ultimoRegistrado)}. Para guardar os dados atuais com uma data, registre-os pelo painel ⚙️ (historico-dados.js).`
+      : `Mostrando só os dados atuais do clubes-dados.js (${totalCinco(ultimo)} clubes 5 estrelas). Para guardar o histórico, registre as atualizações pelo painel ⚙️ (historico-dados.js).`);
   }
   if (ultimo.ND && ultimo.ND.avaliados > 0) {
     avisos.push(`${ultimo.ND.avaliados} clubes não têm AM nem RR na Região e ficam fora dos painéis por estado.`);
   }
   if (avisos.length) { status.textContent = avisos.join(' '); status.className = 'status-import aviso'; }
+  if (!historicoOk) {
+    mostrarAviso('status-evolucao', 'Não foi possível carregar o histórico (historico-dados.js). Confirme se o arquivo está na mesma pasta do dashboard. Abaixo, só os dados atuais.');
+  }
 }
 
 /* avisos visíveis quando um arquivo de dados não foi carregado (ex.: não foi enviado ao GitHub) */
