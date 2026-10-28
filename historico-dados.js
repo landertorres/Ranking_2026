@@ -101,7 +101,7 @@ const EVOLUCAO_HISTORICO = {
       }
     },
     {
-      "data": "2026-09-27",
+      "data": "2026-10-28",
       "AM": {
         "avaliados": 258,
         "estrelas": [
