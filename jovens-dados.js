@@ -3,22 +3,6 @@
 // classificacao: calculada pelos pontos (regras do Ranking do AAmaR); vazio = abaixo de 2.000 pontos
 const JOVENS_DADOS = [
   {
-    "id": 8030,
-    "clube": "CASTELO FORTE - PRES. FIGUEREDO I",
-    "area": "AVT",
-    "regiao": "07ª R – ÁREA 3 / AVT AM",
-    "classificacao": "",
-    "pontos": 1300
-  },
-  {
-    "id": 8034,
-    "clube": "MANÁ",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8036,
     "clube": "ESTRELINHA DO REI",
     "area": "AVT",
@@ -35,14 +19,6 @@ const JOVENS_DADOS = [
     "pontos": 2300
   },
   {
-    "id": 8048,
-    "clube": "PIONEIROS DA FÉ",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8051,
     "clube": "TESOUROS DE JESUS",
     "area": "AVT",
@@ -56,7 +32,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11900
+    "pontos": 12400
   },
   {
     "id": 8054,
@@ -91,52 +67,12 @@ const JOVENS_DADOS = [
     "pontos": 7100
   },
   {
-    "id": 8063,
-    "clube": "RAIOS DE LUZ",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8070,
-    "clube": "FONTE DE ÁGUA VIVA",
-    "area": "AVT",
-    "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 1800
-  },
-  {
-    "id": 8073,
-    "clube": "DEFENSORES DA NATUREZA",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8084,
-    "clube": "CORDEIROS DO REI",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8086,
     "clube": "QUERUBINS DO ÉDEN",
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE MODELO",
     "pontos": 9600
-  },
-  {
-    "id": 8088,
-    "clube": "PEQUENOS ADORADORES",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 8091,
@@ -160,7 +96,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7900
+    "pontos": 9900
   },
   {
     "id": 8094,
@@ -195,28 +131,12 @@ const JOVENS_DADOS = [
     "pontos": 5100
   },
   {
-    "id": 8104,
-    "clube": "BRILHO DO SOL",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 8108,
-    "clube": "LUZ DO SENHOR",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8110,
     "clube": "ARCO-ÍRIS",
     "area": "AVT",
     "regiao": "02ª R – ÁREA 1 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2000
+    "pontos": 2500
   },
   {
     "id": 8111,
@@ -227,36 +147,12 @@ const JOVENS_DADOS = [
     "pontos": 8200
   },
   {
-    "id": 8119,
-    "clube": "CORDEIRINHOS DE JESUS",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8121,
     "clube": "ESTRELA",
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 9900
-  },
-  {
-    "id": 8123,
-    "clube": "PUREZA DE CRISTO",
-    "area": "AVT",
-    "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8178,
-    "clube": "ESTRELINHAS DE JESUS",
-    "area": "AVT",
-    "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 500
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11900
   },
   {
     "id": 8304,
@@ -299,14 +195,6 @@ const JOVENS_DADOS = [
     "pontos": 2600
   },
   {
-    "id": 8316,
-    "clube": "TRILHA DOS AMIGUINHOS",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
     "id": 8318,
     "clube": "JÓIAS DE CRISTO - BEIJA FLOR",
     "area": "AVT",
@@ -319,40 +207,8 @@ const JOVENS_DADOS = [
     "clube": "PEQUENOS MENSAGEIROS",
     "area": "AVT",
     "regiao": "25ª R – ÁREA 11 / AVT RR",
-    "classificacao": "",
-    "pontos": 1300
-  },
-  {
-    "id": 8348,
-    "clube": "PEQUENOS CALEBES",
-    "area": "AVT",
-    "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
-    "id": 8375,
-    "clube": "GERAÇÃO LUZ",
-    "area": "AVT",
-    "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8389,
-    "clube": "NASCIDOS PARA BRILHAR - 49º",
-    "area": "AVT",
-    "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8411,
-    "clube": "JÓIAS DO SENHOR",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 3700
   },
   {
     "id": 8415,
@@ -371,36 +227,12 @@ const JOVENS_DADOS = [
     "pontos": 10000
   },
   {
-    "id": 8463,
-    "clube": "ZIP-ZAP LUZ",
-    "area": "AVT",
-    "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 8464,
-    "clube": "LUZEIROS DO VALE",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8468,
     "clube": "ANAVILHANAS",
     "area": "AVT",
     "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 7900
-  },
-  {
-    "id": 8473,
-    "clube": "PEQUENINOS DE CRISTO",
-    "area": "AVT",
-    "regiao": "25ª R – ÁREA 11 / AVT RR",
-    "classificacao": "",
-    "pontos": 500
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 12200
   },
   {
     "id": 8477,
@@ -419,70 +251,6 @@ const JOVENS_DADOS = [
     "pontos": 2000
   },
   {
-    "id": 8495,
-    "clube": "MARANATA",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8499,
-    "clube": "GERAÇÃO LUZ - RP",
-    "area": "AVT",
-    "regiao": "03ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8526,
-    "clube": "GERAÇÃO DE DAVI",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 8535,
-    "clube": "ESTRELA GUIA",
-    "area": "AVT",
-    "regiao": "09ª R – ÁREA 4 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8553,
-    "clube": "PEQUENOS CURIOSOS",
-    "area": "AVT",
-    "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8570,
-    "clube": "JÓIAS DE CRISTO - 19ª",
-    "area": "AVT",
-    "regiao": "23ª R – ÁREA 10 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8575,
-    "clube": "ARCO ÍRIS DA ESPERANÇA",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8578,
-    "clube": "HERÓIS DA FÉ - 13 DE SETEMBRO",
-    "area": "AVT",
-    "regiao": "15ª R – ÁREA 6 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 14806,
     "clube": "SEMEADORES",
     "area": "AVT",
@@ -499,30 +267,6 @@ const JOVENS_DADOS = [
     "pontos": 6000
   },
   {
-    "id": 17070,
-    "clube": "ABELHINHAS DO REI",
-    "area": "AVT",
-    "regiao": "15ª R – ÁREA 6 / AVT RR",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 17075,
-    "clube": "FRUTOS DO ESPÍRITO",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 17112,
-    "clube": "SOLDADINHOS DE CRISTO",
-    "area": "AVT",
-    "regiao": "25ª R – ÁREA 11 / AVT RR",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
     "id": 17509,
     "clube": "PEQUENOS SENTINELAS",
     "area": "AVT",
@@ -537,14 +281,6 @@ const JOVENS_DADOS = [
     "regiao": "15ª R – ÁREA 6 / AVT RR",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2300
-  },
-  {
-    "id": 17536,
-    "clube": "MISSIONEIROS KIDS",
-    "area": "AVT",
-    "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "",
-    "pontos": 1800
   },
   {
     "id": 17541,
@@ -579,28 +315,12 @@ const JOVENS_DADOS = [
     "pontos": 8200
   },
   {
-    "id": 17608,
-    "clube": "PEQUENOS CORAJOSOS",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 1800
-  },
-  {
-    "id": 17639,
-    "clube": "HERDEIROS DO REI - SILVIO LEITE",
-    "area": "AVT",
-    "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 1800
-  },
-  {
     "id": 17860,
     "clube": "ANDORINHAS",
     "area": "AVT",
     "regiao": "25ª R – ÁREA 11 / AVT RR",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2100
+    "pontos": 4100
   },
   {
     "id": 17869,
@@ -609,14 +329,6 @@ const JOVENS_DADOS = [
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 3100
-  },
-  {
-    "id": 19174,
-    "clube": "MISSIONEIROS",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 21045,
@@ -635,52 +347,12 @@ const JOVENS_DADOS = [
     "pontos": 2300
   },
   {
-    "id": 21141,
-    "clube": "TESOUROS DE CRISTO",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 21148,
     "clube": "ANJOS CELESTES",
     "area": "AVT",
     "regiao": "17ª R – ÁREA 7 / AVT RR",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 4300
-  },
-  {
-    "id": 21219,
-    "clube": "AMIGOS DE JESUS - 66°",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 21521,
-    "clube": "PEDRAS DE JASPE",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 21544,
-    "clube": "QUERUBINS - ITAUNA",
-    "area": "AVT",
-    "regiao": "14ª R – ÁREA 5 / AVT AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
-    "id": 21575,
-    "clube": "HERDEIROS DO CÉU (AVT)",
-    "area": "AVT",
-    "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 21587,
@@ -699,44 +371,12 @@ const JOVENS_DADOS = [
     "pontos": 2800
   },
   {
-    "id": 21592,
-    "clube": "VAGA - LUMES",
-    "area": "AVT",
-    "regiao": "07ª R – ÁREA 3 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 21593,
-    "clube": "ABELHINHAS",
-    "area": "AVT",
-    "regiao": "07ª R – ÁREA 3 / AVT AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
     "id": 21682,
     "clube": "CRIANÇAS MISSIONARIAS",
     "area": "AVT",
     "regiao": "01ª R – ÁREA 1 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2500
-  },
-  {
-    "id": 21691,
-    "clube": "MONTE MORIÁ",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22316,
-    "clube": "PEQUENOS ADORADORES -  PARINTINS I",
-    "area": "AVT",
-    "regiao": "14ª R – ÁREA 5 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 22326,
@@ -747,28 +387,12 @@ const JOVENS_DADOS = [
     "pontos": 7900
   },
   {
-    "id": 22376,
-    "clube": "UNIVERSO - PARINTINS CENTRAL",
-    "area": "AVT",
-    "regiao": "14ª R – ÁREA 5 / AVT AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
     "id": 23368,
     "clube": "CRISÓLITO - ITAÚNA III",
     "area": "AVT",
     "regiao": "14ª R – ÁREA 5 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2000
-  },
-  {
-    "id": 23748,
-    "clube": "ESTRELINHA DE DAVI",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 24682,
@@ -787,86 +411,6 @@ const JOVENS_DADOS = [
     "pontos": 6400
   },
   {
-    "id": 24687,
-    "clube": "ESTRELINHAS DO NORTE KIDS",
-    "area": "AVT",
-    "regiao": "22ª R – ÁREA 9 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24689,
-    "clube": "AMIGUINHOS DO REI",
-    "area": "AVT",
-    "regiao": "20ª R – ÁREA 8 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24690,
-    "clube": "VALENTES",
-    "area": "AVT",
-    "regiao": "20ª R – ÁREA 8 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24799,
-    "clube": "ESTRELINHAS DE DAVI",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 25431,
-    "clube": "DESCENDENTES DE ABRAÃO",
-    "area": "AVT",
-    "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26552,
-    "clube": "PEQUENINOS DO PAI",
-    "area": "AVT",
-    "regiao": "24ª R – ÁREA 10 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26619,
-    "clube": "ESTRELAS DO NORTE 55ª",
-    "area": "AVT",
-    "regiao": "24ª R – ÁREA 10 / AVT RR",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
-    "id": 26777,
-    "clube": "PEQUENOS GUERREIROS 5ª REGIÃO",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 28616,
-    "clube": "PEQUENOS SEMEADORES",
-    "area": "AVT",
-    "regiao": "07ª R – ÁREA 3 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 28758,
-    "clube": "EMBAIXADORES MIRINS",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 28852,
     "clube": "HERÓIS DA BÍBLIA",
     "area": "AVT",
@@ -883,52 +427,12 @@ const JOVENS_DADOS = [
     "pontos": 3500
   },
   {
-    "id": 29309,
-    "clube": "ADORADORES DO REI 16° (PARINTINS)",
-    "area": "AVT",
-    "regiao": "14ª R – ÁREA 5 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 29315,
     "clube": "PEQUENO HERDEIROS",
     "area": "AVT",
     "regiao": "14ª R – ÁREA 5 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2000
-  },
-  {
-    "id": 29367,
-    "clube": "PEROLAS DE JESUS",
-    "area": "AVT",
-    "regiao": "11ª R – ÁREA 4 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 29755,
-    "clube": "QUERUBINS",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 29935,
-    "clube": "CORDEIRINHOS DE JESUS RR",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 30006,
-    "clube": "UNGIDOS DO REI",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 30933,
@@ -963,14 +467,6 @@ const JOVENS_DADOS = [
     "pontos": 3300
   },
   {
-    "id": 34585,
-    "clube": "JÓIAS PRECIOSAS - BVR",
-    "area": "AVT",
-    "regiao": "09ª R – ÁREA 4 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 34614,
     "clube": "ÁGAPE KIDS",
     "area": "AVT",
@@ -985,22 +481,6 @@ const JOVENS_DADOS = [
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "PADRÃO EXCELÊNCIA",
     "pontos": 13500
-  },
-  {
-    "id": 34907,
-    "clube": "ANJINHOS DA ESPERANÇA",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 37644,
-    "clube": "GUARDIÕES DO ÉDEN - PSP",
-    "area": "AVT",
-    "regiao": "03ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 38096,
@@ -1035,22 +515,6 @@ const JOVENS_DADOS = [
     "pontos": 2500
   },
   {
-    "id": 39621,
-    "clube": "PEQUENOS SERVOS",
-    "area": "AVT",
-    "regiao": "22ª R – ÁREA 9 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 39862,
-    "clube": "SEMEADORES MIRINS",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 41671,
     "clube": "GIGANTES DO REI",
     "area": "AVT",
@@ -1065,38 +529,6 @@ const JOVENS_DADOS = [
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2800
-  },
-  {
-    "id": 42119,
-    "clube": "TESOUROS DO JARDIM",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 42768,
-    "clube": "GUARDIÕES DA VERDADE - RR",
-    "area": "AVT",
-    "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 43227,
-    "clube": "JASPE - PEROLA II",
-    "area": "AVT",
-    "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 43269,
-    "clube": "ATALAIAS DO RIO NEGRO",
-    "area": "AVT",
-    "regiao": "08ª R – ÁREA 3 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 43946,
@@ -1123,52 +555,12 @@ const JOVENS_DADOS = [
     "pontos": 2000
   },
   {
-    "id": 44123,
-    "clube": "BRUNIR",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
     "id": 44205,
     "clube": "JÓIAS DE CRISTO BELA VISTA",
     "area": "AVT",
     "regiao": "19ª R – ÁREA 8 / AVT RR",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 3300
-  },
-  {
-    "id": 44207,
-    "clube": "FILHINHOS DO REI",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
-    "id": 44475,
-    "clube": "GUARDIÕES DO  REI",
-    "area": "AVT",
-    "regiao": "11ª R – ÁREA 4 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 44515,
-    "clube": "OVELHINHAS DE CRISTO",
-    "area": "AVT",
-    "regiao": "11ª R – ÁREA 4 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 44911,
-    "clube": "SEMENTINHAS DE CRISTO",
-    "area": "AVT",
-    "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 45129,
@@ -1184,7 +576,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "15ª R – ÁREA 6 / AVT RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8500
+    "pontos": 9000
   },
   {
     "id": 46316,
@@ -1195,52 +587,12 @@ const JOVENS_DADOS = [
     "pontos": 5900
   },
   {
-    "id": 47377,
-    "clube": "BRILHO CELESTE - BC",
-    "area": "AVT",
-    "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "",
-    "pontos": 1600
-  },
-  {
-    "id": 47594,
-    "clube": "ÁGUIA DO NORTE KIDS",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 47605,
-    "clube": "PEQUENOS DICIPULOS DE JESUS",
-    "area": "AVT",
-    "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 48128,
-    "clube": "ESTRELAS LUZENTES",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 48165,
     "clube": "NASCIDOS PARA CRISTO",
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8000
-  },
-  {
-    "id": 48460,
-    "clube": "JARDIN DE DEUS - VALE DO SINAI",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
+    "pontos": 8500
   },
   {
     "id": 48496,
@@ -1249,30 +601,6 @@ const JOVENS_DADOS = [
     "regiao": "17ª R – ÁREA 7 / AVT RR",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 3800
-  },
-  {
-    "id": 48769,
-    "clube": "SEGUNDO CORAÇÃO DE DEUS",
-    "area": "AVT",
-    "regiao": "24ª R – ÁREA 10 / AVT RR",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 49061,
-    "clube": "ATALAIAS KIDS - BARCELOS",
-    "area": "AVT",
-    "regiao": "08ª R – ÁREA 3 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 49180,
-    "clube": "AMIGUINHOS DO REI - PACARAIMA",
-    "area": "AVT",
-    "regiao": "25ª R – ÁREA 11 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 49199,
@@ -1299,20 +627,12 @@ const JOVENS_DADOS = [
     "pontos": 7400
   },
   {
-    "id": 51269,
-    "clube": "LUZEIRINHOS",
-    "area": "AVT",
-    "regiao": "06ª R – ÁREA 3 / AVT AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
     "id": 51431,
     "clube": "LUZES DA AURORA",
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 9400
+    "pontos": 10400
   },
   {
     "id": 51657,
@@ -1331,76 +651,12 @@ const JOVENS_DADOS = [
     "pontos": 8200
   },
   {
-    "id": 52805,
-    "clube": "O PEQUENO CIDADÃO DOS CÉUS",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 600
-  },
-  {
-    "id": 52885,
-    "clube": "PEQUENO GUARDIÃO DO ADVETHUS",
-    "area": "AVT",
-    "regiao": "11ª R – ÁREA 4 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 53747,
     "clube": "PEQUENOS GUARDIÕES",
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
     "classificacao": "CLUBE DESTAQUE",
     "pontos": 11200
-  },
-  {
-    "id": 55044,
-    "clube": "AMIGUINHOS DE JESUS",
-    "area": "AVT",
-    "regiao": "09ª R – ÁREA 4 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 55997,
-    "clube": "PEQUENOS DO ALTISSIMO",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "classificacao": "",
-    "pontos": 1300
-  },
-  {
-    "id": 56452,
-    "clube": "LUZEIROS DO REINO",
-    "area": "AVT",
-    "regiao": "14ª R – ÁREA 5 / AVT AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 57274,
-    "clube": "ÁGUA DA VIDA",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "",
-    "pontos": 1300
-  },
-  {
-    "id": 57432,
-    "clube": "QUERUBINS DO ADVENTO",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "",
-    "pontos": 1800
-  },
-  {
-    "id": 57782,
-    "clube": "PEQUENOS EMBAIXADORES",
-    "area": "AVT",
-    "regiao": "23ª R – ÁREA 10 / AVT RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 8028,
@@ -1417,14 +673,6 @@ const JOVENS_DADOS = [
     "regiao": "04ª R – ÁREA 2 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 4800
-  },
-  {
-    "id": 8083,
-    "clube": "CORDEIROS DE DEUS",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 8128,
@@ -1459,60 +707,12 @@ const JOVENS_DADOS = [
     "pontos": 9300
   },
   {
-    "id": 8138,
-    "clube": "HERÓIS DA FÉ",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8139,
-    "clube": "EXÉRCITO REAL",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 800
-  },
-  {
-    "id": 8140,
-    "clube": "RAIOS DO NORTE",
-    "area": "DBV",
-    "regiao": "22ª R – ÁREA 9 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8141,
     "clube": "LEÕES DA MONTANHA",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11200
-  },
-  {
-    "id": 8142,
-    "clube": "FALCÕES CELESTES",
-    "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8145,
-    "clube": "ABRAÃO",
-    "area": "DBV",
-    "regiao": "23ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8149,
-    "clube": "BEIJA-FLOR",
-    "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 12700
   },
   {
     "id": 8152,
@@ -1523,36 +723,12 @@ const JOVENS_DADOS = [
     "pontos": 6200
   },
   {
-    "id": 8154,
-    "clube": "RUMO AO ÓRION",
-    "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8159,
     "clube": "OS VALDENSES",
     "area": "DBV",
     "regiao": "05ª R – ÁREA 2 / DBV AM",
     "classificacao": "CLUBE MODELO",
     "pontos": 7100
-  },
-  {
-    "id": 8160,
-    "clube": "GUERREIROS DA VERDADE",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8161,
-    "clube": "BANDEIRANTES DA FÉ",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
   },
   {
     "id": 8163,
@@ -1563,44 +739,12 @@ const JOVENS_DADOS = [
     "pontos": 11000
   },
   {
-    "id": 8164,
-    "clube": "PILARES DE ESPERANÇA",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8167,
-    "clube": "DYNAMUS",
-    "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 1800
-  },
-  {
-    "id": 8170,
-    "clube": "RAIO DE LUZ",
-    "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8171,
     "clube": "ARAUTOS DO REI",
     "area": "DBV",
     "regiao": "17ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE MODELO",
     "pontos": 9800
-  },
-  {
-    "id": 8172,
-    "clube": "MENSAGEIROS DA FÉ",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 8173,
@@ -1619,20 +763,12 @@ const JOVENS_DADOS = [
     "pontos": 4500
   },
   {
-    "id": 8175,
-    "clube": "PRIMÍCIAS DO UNIVERSO",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 800
-  },
-  {
     "id": 8179,
     "clube": "IDE",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11500
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 12800
   },
   {
     "id": 8186,
@@ -1643,14 +779,6 @@ const JOVENS_DADOS = [
     "pontos": 9100
   },
   {
-    "id": 8187,
-    "clube": "ESTRELA DA MANHÃ",
-    "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8188,
     "clube": "ARAUTOS DA VERDADE",
     "area": "DBV",
@@ -1659,28 +787,12 @@ const JOVENS_DADOS = [
     "pontos": 3500
   },
   {
-    "id": 8191,
-    "clube": "PIONEIROS DO ADVENTO",
-    "area": "DBV",
-    "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8192,
     "clube": "FRUTOS DO ESPIRITO",
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 8194,
-    "clube": "ISRAEL",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 1300
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 4500
   },
   {
     "id": 8195,
@@ -1704,15 +816,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 10800
-  },
-  {
-    "id": 8200,
-    "clube": "NOVO TEMPO",
-    "area": "DBV",
-    "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 1300
+    "pontos": 11300
   },
   {
     "id": 8203,
@@ -1731,44 +835,12 @@ const JOVENS_DADOS = [
     "pontos": 7300
   },
   {
-    "id": 8206,
-    "clube": "HERDEIROS DA PROMESSA",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8207,
     "clube": "VANGUARDA DO REI",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 4600
-  },
-  {
-    "id": 8208,
-    "clube": "FALCÕES DA SERRA",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 1800
-  },
-  {
-    "id": 8210,
-    "clube": "GUERREIROS DE JUDÁ",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 1400
-  },
-  {
-    "id": 8211,
-    "clube": "SOL DA JUSTIÇA",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 8213,
@@ -1784,7 +856,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2900
+    "pontos": 6900
   },
   {
     "id": 8215,
@@ -1793,22 +865,6 @@ const JOVENS_DADOS = [
     "regiao": "12ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE MODELO",
     "pontos": 9000
-  },
-  {
-    "id": 8219,
-    "clube": "AMAZÔNIA",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
-    "id": 8223,
-    "clube": "GUARDIÕES DA FÉ",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 900
   },
   {
     "id": 8226,
@@ -1835,28 +891,12 @@ const JOVENS_DADOS = [
     "pontos": 4300
   },
   {
-    "id": 8234,
-    "clube": "PROFETAS DE CRISTO",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
     "id": 8244,
     "clube": "PEDRA ANGULAR",
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 8700
-  },
-  {
-    "id": 8251,
-    "clube": "ESTRELA DO MAR",
-    "area": "DBV",
-    "regiao": "13ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11000
   },
   {
     "id": 8253,
@@ -1864,39 +904,15 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "10ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8400
-  },
-  {
-    "id": 8266,
-    "clube": "ALFA E ÔMEGA-BV",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8269,
-    "clube": "GAVIÕES DO NORTE - REDENÇÃO",
-    "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
+    "pontos": 9700
   },
   {
     "id": 8270,
     "clube": "TRILHA DOS PIONEIROS",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 5300
-  },
-  {
-    "id": 8273,
-    "clube": "ROCHA ETERNA",
-    "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "CLUBE MODELO",
+    "pontos": 7300
   },
   {
     "id": 8278,
@@ -1904,7 +920,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4400
+    "pontos": 4900
   },
   {
     "id": 8279,
@@ -1915,52 +931,12 @@ const JOVENS_DADOS = [
     "pontos": 4300
   },
   {
-    "id": 8281,
-    "clube": "RESGATE",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8288,
     "clube": "MONTE SINAI",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 10600
-  },
-  {
-    "id": 8302,
-    "clube": "AMIGOS DA NATUREZA",
-    "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8332,
-    "clube": "EMBAIXADORES DO ADVENTO",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 8334,
-    "clube": "SOLDADOS DO REI",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8342,
-    "clube": "ARAUTOS DA TRINDADE",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
+    "pontos": 11100
   },
   {
     "id": 8355,
@@ -1971,14 +947,6 @@ const JOVENS_DADOS = [
     "pontos": 5500
   },
   {
-    "id": 8356,
-    "clube": "EMBAIXADORES DE CRISTO - BV",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8357,
     "clube": "GUARDIÕES DO GENESIS",
     "area": "DBV",
@@ -1987,60 +955,12 @@ const JOVENS_DADOS = [
     "pontos": 5200
   },
   {
-    "id": 8371,
-    "clube": "ÁGUIA DA PAZ",
-    "area": "DBV",
-    "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8374,
     "clube": "MENSAGEIROS  DAS NAÇÕES",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE DESTAQUE",
     "pontos": 12100
-  },
-  {
-    "id": 8377,
-    "clube": "REDENÇÃO",
-    "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 8384,
-    "clube": "ÁGUIAS DE FOGO - PALMARES",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8387,
-    "clube": "PIONEIROS DA FLORESTA-IAAI",
-    "area": "DBV",
-    "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8392,
-    "clube": "FALCÕES DA AMAZÔNIA",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8394,
-    "clube": "GUERREIROS DA FÉ",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 8396,
@@ -2075,22 +995,6 @@ const JOVENS_DADOS = [
     "pontos": 3800
   },
   {
-    "id": 8402,
-    "clube": "ASTROS",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
-    "id": 8405,
-    "clube": "ARIRAMBA",
-    "area": "DBV",
-    "regiao": "13ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8406,
     "clube": "ARMADURA DE DEUS",
     "area": "DBV",
@@ -2119,8 +1023,8 @@ const JOVENS_DADOS = [
     "clube": "APOCALIPSE",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 5800
+    "classificacao": "CLUBE MODELO",
+    "pontos": 7400
   },
   {
     "id": 8421,
@@ -2147,38 +1051,6 @@ const JOVENS_DADOS = [
     "pontos": 3100
   },
   {
-    "id": 8456,
-    "clube": "GUARDIÕES DA ALIANÇA",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8458,
-    "clube": "AGUELLÓS",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8460,
-    "clube": "PAKARAIMÃ",
-    "area": "DBV",
-    "regiao": "25ª R – ÁREA 11 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8492,
-    "clube": "FALCÕES DA ILHA",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8502,
     "clube": "GETSÊMANI - RP",
     "area": "DBV",
@@ -2192,7 +1064,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "10ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4700
+    "pontos": 5700
   },
   {
     "id": 8545,
@@ -2203,14 +1075,6 @@ const JOVENS_DADOS = [
     "pontos": 5000
   },
   {
-    "id": 8552,
-    "clube": "ARAUTOS DA AMAZÔNIA",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8569,
     "clube": "GUERREIROS DE ISRAEL - ISMAIL AZIZ",
     "area": "DBV",
@@ -2219,60 +1083,12 @@ const JOVENS_DADOS = [
     "pontos": 10500
   },
   {
-    "id": 8572,
-    "clube": "GUERREIROS",
-    "area": "DBV",
-    "regiao": "13ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 8579,
-    "clube": "PORTAL DE ÓRION",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8598,
-    "clube": "TRIBOS",
-    "area": "DBV",
-    "regiao": "25ª R – ÁREA 11 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8599,
-    "clube": "GERAÇÃO DE HÉROIS",
-    "area": "DBV",
-    "regiao": "25ª R – ÁREA 11 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 8601,
     "clube": "EMUNAH",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 1100
-  },
-  {
-    "id": 8605,
-    "clube": "ANJOS DO REI",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 14150,
-    "clube": "MALAKHIM",
-    "area": "DBV",
-    "regiao": "20ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 6600
   },
   {
     "id": 14152,
@@ -2307,46 +1123,6 @@ const JOVENS_DADOS = [
     "pontos": 4400
   },
   {
-    "id": 14829,
-    "clube": "PIONEIROS DA FÉ - 5°",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 14838,
-    "clube": "GUARDIÕES DE ÓRION",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 14981,
-    "clube": "AMIGOS DA FAUNA E FLORA",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 15639,
-    "clube": "GERAÇÃO ANJOS DE CRISTO",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 15982,
-    "clube": "CORAÇÃO DE DAVI",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 15984,
     "clube": "PÉROLAS DO REI",
     "area": "DBV",
@@ -2355,44 +1131,12 @@ const JOVENS_DADOS = [
     "pontos": 2300
   },
   {
-    "id": 17393,
-    "clube": "ÁGUIA BRANCA SENEI",
-    "area": "DBV",
-    "regiao": "25ª R – ÁREA 11 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 17576,
     "clube": "EXÉRCITO CELESTIAL",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE DESTAQUE",
-    "pontos": 12100
-  },
-  {
-    "id": 18885,
-    "clube": "SANSERAI",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 20674,
-    "clube": "FILHOS DE ISRAEL - ITAPIRANGA II",
-    "area": "DBV",
-    "regiao": "11ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 20980,
-    "clube": "HERDEIROS DE ISRAEL - NOVO MILÊNIO",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 13100
   },
   {
     "id": 21098,
@@ -2401,22 +1145,6 @@ const JOVENS_DADOS = [
     "regiao": "13ª R – ÁREA 5 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2800
-  },
-  {
-    "id": 21099,
-    "clube": "JAPIIM DO ANDIRÁ",
-    "area": "DBV",
-    "regiao": "13ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 21188,
-    "clube": "CONSTELAÇÃO",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 21649,
@@ -2443,36 +1171,12 @@ const JOVENS_DADOS = [
     "pontos": 11500
   },
   {
-    "id": 22123,
-    "clube": "KADOSH",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
     "id": 22129,
     "clube": "GUERREIROS DO SENHOR - BVR",
     "area": "DBV",
     "regiao": "09ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2300
-  },
-  {
-    "id": 22375,
-    "clube": "GUARDIÕES DA PALAVRA - LIBERDADE",
-    "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
-    "id": 22761,
-    "clube": "GUERREIROS DO VALE",
-    "area": "DBV",
-    "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 23053,
@@ -2483,44 +1187,12 @@ const JOVENS_DADOS = [
     "pontos": 4200
   },
   {
-    "id": 23064,
-    "clube": "REMANESCENTES DO MONTE",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 23248,
-    "clube": "CASTELO FORTE - ITACOATIARA",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
     "id": 23849,
     "clube": "CASTELO FORTE - 13 DE SETEMBRO",
     "area": "DBV",
     "regiao": "15ª R – ÁREA 6 / DBV RR",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 5000
-  },
-  {
-    "id": 23953,
-    "clube": "ÁGUIA REAL",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 23974,
-    "clube": "REMANESCENTES -52º",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
+    "pontos": 6000
   },
   {
     "id": 24045,
@@ -2531,36 +1203,12 @@ const JOVENS_DADOS = [
     "pontos": 8200
   },
   {
-    "id": 24069,
-    "clube": "ATALAIAS DE CRISTO",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 24684,
     "clube": "ASES DE RORAIMA",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE MODELO",
     "pontos": 8500
-  },
-  {
-    "id": 24691,
-    "clube": "BRAVOS",
-    "area": "DBV",
-    "regiao": "20ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24786,
-    "clube": "HARPIA - ARAÚJO COSTA",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 24958,
@@ -2579,30 +1227,6 @@ const JOVENS_DADOS = [
     "pontos": 5600
   },
   {
-    "id": 25033,
-    "clube": "MENSAGEIROS DO REI - 3ª R",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
-    "id": 25177,
-    "clube": "RUMO CERTO",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 25342,
-    "clube": "PUMA",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
     "id": 25410,
     "clube": "ANGÉLON PHOS",
     "area": "DBV",
@@ -2615,24 +1239,8 @@ const JOVENS_DADOS = [
     "clube": "ADVENTHUS",
     "area": "DBV",
     "regiao": "10ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26061,
-    "clube": "REMANESCENTE (PARINTINS)",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
-    "id": 26094,
-    "clube": "MONTANHA",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 5300
   },
   {
     "id": 26228,
@@ -2640,7 +1248,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "10ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7400
+    "pontos": 9400
   },
   {
     "id": 26278,
@@ -2651,46 +1259,6 @@ const JOVENS_DADOS = [
     "pontos": 7000
   },
   {
-    "id": 26944,
-    "clube": "ACARÍ",
-    "area": "DBV",
-    "regiao": "24ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 28466,
-    "clube": "LUZEIROS DO MASSAUARI",
-    "area": "DBV",
-    "regiao": "13ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 28894,
-    "clube": "ESPERANÇA",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 29012,
-    "clube": "GUERREIROS DE DEUS",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 29221,
-    "clube": "ILUMINADOS EM CRISTO",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
     "id": 29325,
     "clube": "LOCOMOTIVA",
     "area": "DBV",
@@ -2699,52 +1267,12 @@ const JOVENS_DADOS = [
     "pontos": 7700
   },
   {
-    "id": 29365,
-    "clube": "HERDEIROS DO REI - ITAPIRANGA",
-    "area": "DBV",
-    "regiao": "11ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 29581,
-    "clube": "SEVENTH DAY",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 30002,
     "clube": "LEÕES DO NORTE",
     "area": "DBV",
     "regiao": "19ª R – ÁREA 8 / DBV RR",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 3000
-  },
-  {
-    "id": 32788,
-    "clube": "GUERREIROS DE CRISTO",
-    "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 33038,
-    "clube": "ATALAIA DE DEUS",
-    "area": "DBV",
-    "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 33040,
-    "clube": "GUARDIÕES DA LIBERDADE",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 33216,
@@ -2771,84 +1299,12 @@ const JOVENS_DADOS = [
     "pontos": 2100
   },
   {
-    "id": 34204,
-    "clube": "GUARDIÕES NA FÉ",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 34559,
-    "clube": "CONEXÃO CELESTE",
-    "area": "DBV",
-    "regiao": "08ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 34619,
     "clube": "ÁGUIA DO NORTE",
     "area": "DBV",
     "regiao": "04ª R – ÁREA 2 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2800
-  },
-  {
-    "id": 34635,
-    "clube": "SÉTIMUS",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 1300
-  },
-  {
-    "id": 34700,
-    "clube": "SETE ESTRELO",
-    "area": "DBV",
-    "regiao": "09ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 35043,
-    "clube": "MENSAGEIROS DO REI- AC",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 35138,
-    "clube": "GUARDIÕES DA FÉ - CARACARAÍ",
-    "area": "DBV",
-    "regiao": "21ª R – ÁREA 9 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 35931,
-    "clube": "ÁGUIA CENTRAL",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 36121,
-    "clube": "MENSAGEIRO DO APOCALIPSE",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 36459,
-    "clube": "GUARDIÕES DA MORADA",
-    "area": "DBV",
-    "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 36561,
@@ -2867,30 +1323,6 @@ const JOVENS_DADOS = [
     "pontos": 2500
   },
   {
-    "id": 37545,
-    "clube": "GUERREIRO DO REI",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
-    "id": 39164,
-    "clube": "ATALAIA",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
-    "id": 39420,
-    "clube": "REI DA GLÓRIA",
-    "area": "DBV",
-    "regiao": "23ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 39542,
     "clube": "ÁGUIAS DO MONTE",
     "area": "DBV",
@@ -2899,108 +1331,12 @@ const JOVENS_DADOS = [
     "pontos": 3000
   },
   {
-    "id": 40957,
-    "clube": "LUZEIROS DO UATUMÃ",
-    "area": "DBV",
-    "regiao": "10ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 41279,
-    "clube": "O CIDADÃO DOS CÉUS",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 41785,
-    "clube": "UNGIDOS DO SENHOR",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 300
-  },
-  {
-    "id": 41823,
-    "clube": "WOLF PACK",
-    "area": "DBV",
-    "regiao": "21ª R – ÁREA 9 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 41857,
-    "clube": "EMBAIXADORES DO REI",
-    "area": "DBV",
-    "regiao": "11ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 42015,
-    "clube": "SANTUÁRIO CELESTIAL",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 42118,
-    "clube": "HERDEIROS DA ETERNIDADE",
-    "area": "DBV",
-    "regiao": "22ª R – ÁREA 9 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 43113,
-    "clube": "NOVA JERUSALÉM CDNJ",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
-    "id": 43124,
-    "clube": "SANTOS DO SENHOR",
-    "area": "DBV",
-    "regiao": "13ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 43238,
-    "clube": "JASPE RR",
-    "area": "DBV",
-    "regiao": "23ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 43400,
-    "clube": "BEER LAAI ROI",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 43672,
     "clube": "FILHOS DO REINO",
     "area": "DBV",
     "regiao": "17ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE DESTAQUE",
     "pontos": 11200
-  },
-  {
-    "id": 43729,
-    "clube": "ESQUADRÃO ÁGUIA",
-    "area": "DBV",
-    "regiao": "10ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 43944,
@@ -3019,108 +1355,12 @@ const JOVENS_DADOS = [
     "pontos": 5400
   },
   {
-    "id": 44924,
-    "clube": "BETELGEUSE",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
-    "id": 44963,
-    "clube": "ÁGUIA DE FOGO - SANTO ANTÔNIO",
-    "area": "DBV",
-    "regiao": "21ª R – ÁREA 9 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 46207,
-    "clube": "GUARDIÕES CELESTES - BONFIM",
-    "area": "DBV",
-    "regiao": "16ª R – ÁREA 6 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 46585,
-    "clube": "BEM-TE-VIS",
-    "area": "DBV",
-    "regiao": "25ª R – ÁREA 11 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 46963,
-    "clube": "EXÉRCITO DO NORTE",
-    "area": "DBV",
-    "regiao": "23ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 46983,
-    "clube": "JEOVÁ SHAMMAH",
-    "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 47572,
-    "clube": "TOCHA DA LIBERDADE",
-    "area": "DBV",
-    "regiao": "20ª R – ÁREA 8 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 47600,
-    "clube": "PIONEIRO",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 47676,
-    "clube": "VALDENSES DE MOURA",
-    "area": "DBV",
-    "regiao": "08ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 47681,
-    "clube": "GUARDIÕES DO REINO",
-    "area": "DBV",
-    "regiao": "23ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 800
-  },
-  {
-    "id": 47853,
-    "clube": "FALCÕES DO REINO",
-    "area": "DBV",
-    "regiao": "11ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
     "id": 47860,
     "clube": "ESCUDEIROS DA PALAVRA",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2800
-  },
-  {
-    "id": 47902,
-    "clube": "GUERREIROS DE ÓRION RR",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "",
-    "pontos": 1000
+    "pontos": 4100
   },
   {
     "id": 48486,
@@ -3131,44 +1371,12 @@ const JOVENS_DADOS = [
     "pontos": 6800
   },
   {
-    "id": 49388,
-    "clube": "AJURICABA",
-    "area": "DBV",
-    "regiao": "08ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 49554,
-    "clube": "UNIVERSO PARA CRISTO",
-    "area": "DBV",
-    "regiao": "24ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 49741,
-    "clube": "PIONEIROS DA SUDAM",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
     "id": 50267,
     "clube": "ALVORECER",
     "area": "DBV",
     "regiao": "19ª R – ÁREA 8 / DBV RR",
     "classificacao": "CLUBE DESTAQUE",
     "pontos": 12300
-  },
-  {
-    "id": 50390,
-    "clube": "FILHOS DA LUZ",
-    "area": "DBV",
-    "regiao": "23ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 51018,
@@ -3179,60 +1387,12 @@ const JOVENS_DADOS = [
     "pontos": 4100
   },
   {
-    "id": 51120,
-    "clube": "PIONEIROS DO REI ETERNO",
-    "area": "DBV",
-    "regiao": "24ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 51655,
-    "clube": "GERAÇÃO CELESTIAL",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 51952,
-    "clube": "PEDRAS LAPIDADAS",
-    "area": "DBV",
-    "regiao": "24ª R – ÁREA 10 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 52030,
-    "clube": "ESCOLHIDOS",
-    "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 52086,
     "clube": "ALFORJE",
     "area": "DBV",
     "regiao": "05ª R – ÁREA 2 / DBV AM",
     "classificacao": "CLUBE MODELO",
     "pontos": 7700
-  },
-  {
-    "id": 53099,
-    "clube": "FALCÕES DA FÉ",
-    "area": "DBV",
-    "regiao": "22ª R – ÁREA 9 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 53270,
-    "clube": "ESTRELAS DO RIO BRANCO",
-    "area": "DBV",
-    "regiao": "21ª R – ÁREA 9 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 54136,
@@ -3251,20 +1411,12 @@ const JOVENS_DADOS = [
     "pontos": 6600
   },
   {
-    "id": 55103,
-    "clube": "JAGUAR",
-    "area": "DBV",
-    "regiao": "13ª R – ÁREA 5 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 55572,
     "clube": "GUARDIÕES DA VERDADE",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 10200
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11000
   },
   {
     "id": 55677,
@@ -3299,76 +1451,12 @@ const JOVENS_DADOS = [
     "pontos": 9500
   },
   {
-    "id": 57102,
-    "clube": "FORTALEZA DA FÉ",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 57103,
-    "clube": "HERDEIROS DO ADVENTO",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 57358,
-    "clube": "RAÍZES FIRMES",
-    "area": "DBV",
-    "regiao": "15ª R – ÁREA 6 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 57382,
     "clube": "GUARDIÕES DA ESPERANÇA",
     "area": "DBV",
     "regiao": "16ª R – ÁREA 6 / DBV RR",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 5600
-  },
-  {
-    "id": 57795,
-    "clube": "VALENTES DE SIÃO",
-    "area": "DBV",
-    "regiao": "15ª R – ÁREA 6 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 57796,
-    "clube": "GUERREIROS DO REINO",
-    "area": "DBV",
-    "regiao": "15ª R – ÁREA 6 / DBV RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 598,
-    "clube": "ANJOS DE LUZ - NOVA CIDADE IV",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 600,
-    "clube": "SANTUARIO CELESTE -  FLORESTAL",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 604,
-    "clube": "SOCIEDADE JOVENS ADVENTISTAS EU SOU SJAES",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 608,
@@ -3379,132 +1467,12 @@ const JOVENS_DADOS = [
     "pontos": 11400
   },
   {
-    "id": 610,
-    "clube": "OS LEVITAS - RENOVO",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 614,
-    "clube": "TRANSFORMADOS POR JESUS - RESIDENCIAL SEBASTIÃO",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 688,
-    "clube": "HERDEIROS DA PROMESSA - RIO PIORINI I",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 689,
-    "clube": "IDE - COMUNIDADE SÃO JOÃO",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 690,
-    "clube": "GUERREIROS DO ALTÍSSIMO - CAMPOS ELÍSEOS",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 691,
-    "clube": "BOPE - BATALHÃO ORANDO PELA ETERNIDADE - RAIO DO SOL",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 692,
-    "clube": "NAÇÃO ELEITA - CAMPO DOURADO II",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 696,
-    "clube": "ÔNIX",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 698,
-    "clube": "ATALAIAS DO ADVENTO - VALE DO SINAI II",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 701,
-    "clube": "HERDEIROS DO REI - NOVO MUNDO II",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 702,
-    "clube": "BRILHA EM MIM - PARQUE DAS NAÇÕES",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 705,
-    "clube": "PRÍNCIPE DA PAZ - NOVA CIDADE III",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 713,
     "clube": "ESTRELAS DE ÓRION - VIVER MELHOR",
     "area": "JA",
     "regiao": "05ª R – ÁREA 2 / MJ AM",
     "classificacao": "MRNT ADVANCE",
     "pontos": 7500
-  },
-  {
-    "id": 715,
-    "clube": "SANTA CRUZ - SANTA CRUZ",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 720,
-    "clube": "JADE - BEIJA FLOR II",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 721,
-    "clube": "AMAR - REDENÇÃO II",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 726,
@@ -3515,76 +1483,12 @@ const JOVENS_DADOS = [
     "pontos": 10900
   },
   {
-    "id": 748,
-    "clube": "AÇÃO JOVEM - NOVO MILÊNIO",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 749,
-    "clube": "VOZ DA VERDADE - BAIRRO DA PAZ",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 751,
-    "clube": "ELITE JOVEM - RIACHO DOCE I",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 752,
-    "clube": "GUARDIÕES DO PARAISO - SHANGRILÁ",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 753,
     "clube": "APÓSTOLOS - MUNDO NOVO",
     "area": "JA",
     "regiao": "02ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT ADVANCE",
     "pontos": 10800
-  },
-  {
-    "id": 767,
-    "clube": "UNIÃO ALFA - TERRA NOVA II",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 787,
-    "clube": "SOJAM - MISSIONARIOS",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 797,
-    "clube": "SOMOS TEUS",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 807,
-    "clube": "SOCIEDADE ANJOS GUERREIROS ADVENTISTAS",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 810,
@@ -3595,68 +1499,12 @@ const JOVENS_DADOS = [
     "pontos": 6200
   },
   {
-    "id": 818,
-    "clube": "ANJOS DA FRONTEIRA",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 831,
-    "clube": "LIGADOS A VIDEIRA",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 836,
-    "clube": "LUMINARES - RAIAR DO SOL",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 839,
-    "clube": "HAZIEL",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 840,
-    "clube": "ALIANÇA - SENADOR HÉLIO CAMPOS",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 841,
     "clube": "DUNAMIS - JARDIM PRIMAVERA II",
     "area": "JA",
     "regiao": "18ª R – ÁREA 7 / MJ RR",
     "classificacao": "MRNT ADVANCE",
     "pontos": 7500
-  },
-  {
-    "id": 842,
-    "clube": "SOCIEDADE JOVEM SHAMÁ",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 843,
-    "clube": "CANAÃ CELESTIAL",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 844,
@@ -3683,156 +1531,12 @@ const JOVENS_DADOS = [
     "pontos": 4600
   },
   {
-    "id": 847,
-    "clube": "HERÓIS DA FÉ - SANTA TEREZA(RR)",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 848,
-    "clube": "SOCIEDADE ADVENTISTA BAIRRO DOS ESTADOS REMANESCENTES",
-    "area": "JA",
-    "regiao": "15ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 849,
     "clube": "GERAÇÃO PULSAR - CENTRAL  DO CARANÃ",
     "area": "JA",
     "regiao": "18ª R – ÁREA 7 / MJ RR",
     "classificacao": "MRNT STANDARD",
     "pontos": 5100
-  },
-  {
-    "id": 851,
-    "clube": "EMINUS",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 852,
-    "clube": "JOVENS DO ADVENTO",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 853,
-    "clube": "ATALAIA",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 854,
-    "clube": "GETSEMANI - 66º",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 855,
-    "clube": "JOVENS SUPER JA",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 858,
-    "clube": "JASPE - REDENÇÃO I",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 865,
-    "clube": "MENSAGEIROS DA ESPERANÇA - PARQUE SANTA ETELVINA",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 866,
-    "clube": "SIJASE - SANTA ETELVINA",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 869,
-    "clube": "FIEL A TODA PROVA - MONTE SINAI",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
-    "id": 873,
-    "clube": "APOLO SEVEN - SANTA MARTA",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 875,
-    "clube": "SÓ JOVENS",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 879,
-    "clube": "ADVENTO - COLÔNIA REAL",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 885,
-    "clube": "JUMP - NOVA CIDADE II",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 886,
-    "clube": "ANJOS DA ESPERANÇA - TERRA NOVA IV",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 892,
-    "clube": "LEÃO DE JUDÁ - MONTE PASCOAL",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 893,
-    "clube": "GUERREIROS DA PAZ - TERRA NOVA III",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 894,
@@ -3843,14 +1547,6 @@ const JOVENS_DADOS = [
     "pontos": 5900
   },
   {
-    "id": 905,
-    "clube": "A ÚLTIMA GERACÃO - PARQUE SOLIMÕES",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 1800
-  },
-  {
     "id": 915,
     "clube": "NEW JOVEM - NOVA CIDADE I",
     "area": "JA",
@@ -3859,60 +1555,12 @@ const JOVENS_DADOS = [
     "pontos": 3500
   },
   {
-    "id": 963,
-    "clube": "JOVENS DO ADVENTOS - MONTE DAS OLIVEIRA IV",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 992,
-    "clube": "SOCIEDADE LUZES - REDENÇÃO IV",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1005,
-    "clube": "JOVENS DA PAZ -  BAIRRO DA PAZ II",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1006,
-    "clube": "VOZ DO ARCANJO - 2ª ETAPA",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1007,
-    "clube": "GETSEMANI - RIO PIORINI II",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 1500
-  },
-  {
     "id": 1008,
     "clube": "NOVA SIÃO - CENTRAL AAMAR",
     "area": "JA",
     "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "MRNT ADVANCE",
-    "pontos": 11100
-  },
-  {
-    "id": 1009,
-    "clube": "GALILEUS - NOVA GALILÉIA",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "MRNT PRO",
+    "pontos": 11900
   },
   {
     "id": 1011,
@@ -3921,22 +1569,6 @@ const JOVENS_DADOS = [
     "regiao": "04ª R – ÁREA 2 / MJ AM",
     "classificacao": "MRNT BASIC",
     "pontos": 3800
-  },
-  {
-    "id": 1012,
-    "clube": "ADORADORES A SERVIÇO DE CRISTO - TERRA NOVA I",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1013,
-    "clube": "MORIÁ - RIACHO DOCE III",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 1014,
@@ -3955,36 +1587,12 @@ const JOVENS_DADOS = [
     "pontos": 12200
   },
   {
-    "id": 1022,
-    "clube": "KERIGMA - LAGO AZUL",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 1024,
     "clube": "SAL E LUZ - ISMAIL AZIZ",
     "area": "JA",
     "regiao": "04ª R – ÁREA 2 / MJ AM",
     "classificacao": "MRNT ADVANCE",
     "pontos": 8300
-  },
-  {
-    "id": 1027,
-    "clube": "JASD - RIACHO DOCE II",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1033,
-    "clube": "ELÉCTOS - PARQUE CANAÃ",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 1035,
@@ -3995,68 +1603,12 @@ const JOVENS_DADOS = [
     "pontos": 5000
   },
   {
-    "id": 1042,
-    "clube": "RELUZIR - NOVO ISRAEL III",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1047,
-    "clube": "ADORADORES - VALE DO SINAI",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1048,
-    "clube": "SOCIEDADE 360° - TERRA NOVA V",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1057,
-    "clube": "JUVENTUDE ATIVA - PARQUE SÃO PEDRO I",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 1060,
     "clube": "PRIMICIAS DO REI - PARQUE SÃO PEDRO III",
     "area": "JA",
     "regiao": "04ª R – ÁREA 2 / MJ AM",
     "classificacao": "MRNT BASIC",
     "pontos": 2500
-  },
-  {
-    "id": 1072,
-    "clube": "JOVENS UNIDOS EM CRISTO - MONTE DAS OLIVEIRAS V",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1074,
-    "clube": "SIJOF - OSVALDO FROTA I",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1076,
-    "clube": "TERCEIRO ANJO - PARINTINS I",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 1077,
@@ -4071,64 +1623,8 @@ const JOVENS_DADOS = [
     "clube": "SUNLIGHT - JOSÉ BONIFÁCIO",
     "area": "JA",
     "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1081,
-    "clube": "MAANAIM - NOVO ISRAEL I",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1083,
-    "clube": "VIVENDO A ETERNIDADE - REDENÇÃO VII",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1085,
-    "clube": "INCOMUM - RAMAL DO PARAÍBA",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1086,
-    "clube": "JAAD - AGNUS DEI",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1095,
-    "clube": "SHEKINAH -  4ºREGIÃO",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1099,
-    "clube": "ZOÉ",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1101,
-    "clube": "SEGUIDORES DE JESUS - SJ",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
+    "classificacao": "MRNT BASIC",
+    "pontos": 2900
   },
   {
     "id": 1102,
@@ -4139,124 +1635,12 @@ const JOVENS_DADOS = [
     "pontos": 3800
   },
   {
-    "id": 1106,
-    "clube": "MARANATA",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1114,
-    "clube": "REMANESCENTES - ITAUNA",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1115,
-    "clube": "FORÇA JOVEM ADVENTISTA - ITAUNA II",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1118,
-    "clube": "SOCIEDADE JOVEM ARAUTOS DE CRISTO - SOJAC",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1119,
-    "clube": "ORION",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1122,
-    "clube": "LIRIO DO VALE - EDUARDO BRAGA I",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1123,
-    "clube": "HERDEIROS DO REINO - SÃO FRANCISCO",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1124,
-    "clube": "PÉROLA - SÃO CRISTOVÃO",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1127,
-    "clube": "VENCEDORES EM CRISTO - PRESIDENTE FIGUEIREDO II",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 1145,
     "clube": "MOCIDADE ADVENTISTA UNIDA EM CRISTO- MAUC",
     "area": "JA",
     "regiao": "15ª R – ÁREA 6 / MJ RR",
     "classificacao": "MRNT STANDARD",
     "pontos": 5600
-  },
-  {
-    "id": 1146,
-    "clube": "PÉROLAS DO REINO DE DEUS",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1148,
-    "clube": "ÁGUIA",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1150,
-    "clube": "REACENDER",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1151,
-    "clube": "LEO HALLIWEL",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 1152,
-    "clube": "FORTES",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 1500
   },
   {
     "id": 1153,
@@ -4275,22 +1659,6 @@ const JOVENS_DADOS = [
     "pontos": 5600
   },
   {
-    "id": 1157,
-    "clube": "KADOSH",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1158,
-    "clube": "MOCIDADE ADVENTISTA CHAYAS- MAC",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 1161,
     "clube": "EMBAIXADORES - CONJ. CIDADÃO XII",
     "area": "JA",
@@ -4307,180 +1675,12 @@ const JOVENS_DADOS = [
     "pontos": 4100
   },
   {
-    "id": 1209,
-    "clube": "EMBAIXADORES DE CRISTO - BVR",
-    "area": "JA",
-    "regiao": "09ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1297,
-    "clube": "PORTO SEGURO - PONTAL DA CACHOEIRA",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1299,
-    "clube": "SOCIEDADE CHOSEN",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1300,
-    "clube": "SOCIEDADE ATALAIS DO ADVENTO",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 1305,
-    "clube": "ÓRION - CONJ. JOÃO PAULO",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 1525,
     "clube": "ALIANÇA JOVEM - CAMPOS SALES",
     "area": "JA",
     "regiao": "04ª R – ÁREA 2 / MJ AM",
     "classificacao": "MRNT BASIC",
     "pontos": 3600
-  },
-  {
-    "id": 1539,
-    "clube": "O SENHOR É O MEU PASTOR  =  PARQUE PORANGA",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2145,
-    "clube": "MENSAGEIROS DA FÉ",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2155,
-    "clube": "GERAÇÃO DE DAVI",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2157,
-    "clube": "BEYTH-EL - URUCARÁ I",
-    "area": "JA",
-    "regiao": "10ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2158,
-    "clube": "SOL DA JUSTIÇA",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2504,
-    "clube": "HERDEIROS DO REINO - URUCURITUBA I",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2505,
-    "clube": "GUARDIÕES DA VERDADE - ITACOATIARA",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2509,
-    "clube": "EM ACÃO - WLLISES GUIMARÃES",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2511,
-    "clube": "A ÚNICA ESPERANCA - NOVA CONQUISTA (BAE)",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 2518,
-    "clube": "EMANUEL - MORIA",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3587,
-    "clube": "O CÉU É NOSSA HERANÇA - ITAPIRANGA I",
-    "area": "JA",
-    "regiao": "11ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3595,
-    "clube": "SOCIEDADE EVANGELISTA DOS JOVENS ADVENTISTA DE ANDARAÍ",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3596,
-    "clube": "MINISTÉRIO JOVEM MIZPA",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3598,
-    "clube": "ALABASTRO - NOVO HORIZONTE",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3600,
-    "clube": "SOCIEDADE JOVEM OURO DE OUFIR",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3601,
-    "clube": "RENASCER",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 3603,
@@ -4491,156 +1691,12 @@ const JOVENS_DADOS = [
     "pontos": 4800
   },
   {
-    "id": 3604,
-    "clube": "GERAÇÃO 3:16",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3605,
-    "clube": "VALDENSES",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3606,
-    "clube": "HERÓIS DA FÉ - JARD. OLÍMPICO",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3607,
-    "clube": "EXÉRCITO DO SENHOR",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3608,
-    "clube": "7º ESQUADRÃO DE CRISTO",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3609,
-    "clube": "SOCIEDADE JOVEM REMANESCENTE",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3610,
-    "clube": "BERIT",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3651,
-    "clube": "JOVENS ADVENTISTAS DE RIO PRETO DA EVA - JARPE",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3654,
-    "clube": "UZIEL - RIACHELO I",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 3659,
-    "clube": "SOCIEDADE ANJOS",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 4105,
-    "clube": "JUC - JOVENS UNIDOS EM CRISTO",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 4127,
-    "clube": "PRINCÍPIO - PARQUE DOS COQUEIROS",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 4397,
-    "clube": "SOCIEDADE SHEKINAH",
-    "area": "JA",
-    "regiao": "15ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 4558,
-    "clube": "ÔMEGA - JAUARY",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 4642,
-    "clube": "JOVENS DO ADVENTO - SOL NASCENTE",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 5406,
-    "clube": "HARPIA",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 5486,
     "clube": "LIBERTOS",
     "area": "JA",
     "regiao": "22ª R – ÁREA 9 / MJ RR",
     "classificacao": "MRNT STANDARD",
     "pontos": 4500
-  },
-  {
-    "id": 5487,
-    "clube": "ANJOS DA ESPERANÇA - TIRADENTES",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8085,
-    "clube": "19ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 8343,
@@ -4651,276 +1707,12 @@ const JOVENS_DADOS = [
     "pontos": 2500
   },
   {
-    "id": 8344,
-    "clube": "SOCIEDADE JOVEM VALOINS - VALOR E INSPIRAÇÃO",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8345,
-    "clube": "SEVEN",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8346,
-    "clube": "SOCIEDADE INTEGRADA DE JOVENS ADVENTISTAS EVAGELISTA SIJAE",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8414,
-    "clube": "LEÕES DA ESPERANÇA - CACHOEIRA DO LEÃO",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 8487,
-    "clube": "UNIDOS NA FÉ - VIVER MELHOR I",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 9034,
-    "clube": "PACIFICADORES - LAGO DO SERPA",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 9053,
-    "clube": "JUVENTUDE E FÉ - TARUMÃ I",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 9055,
-    "clube": "FONTE DE LUZ - JARDIM FLORESTAL",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 9128,
-    "clube": "LUZ DA ESPERANÇA - BANANAL",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 9319,
-    "clube": "BANDEIRANTES - BANDEIRANTES",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 11488,
-    "clube": "MEU FAROL -  PARQUE DOS BURITIS",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 11510,
-    "clube": "ADON OLAM - NOVO ISRAEL II",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 11670,
-    "clube": "IMITADORES DE CRISTO - MONTE CASTELO II",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 11682,
-    "clube": "TRIUNFANTES- UNIÃO DA VITÓRIA",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 11686,
-    "clube": "SJA CENTRAL  - PRESIDENTE FIGUEIREDO II",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 12188,
-    "clube": "ADVENTOS - SANTO ANTÔNIO",
-    "area": "JA",
-    "regiao": "08ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 12216,
-    "clube": "ADVENTHUS - SÃO SEBASTIÃO DO UATUMÃ",
-    "area": "JA",
-    "regiao": "10ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 12428,
-    "clube": "ALIANÇA ETERNA - CAMPOS SALES II",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 12458,
-    "clube": "MOREKUAT-KORÓ",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 13000,
-    "clube": "GERAÇÃO ELEITA",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 13216,
-    "clube": "JASPE - TERRA PRETA DO LIMÃO",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 13474,
-    "clube": "MENSAGEIROS DO SENHOR - FÁBIO LUCENA",
-    "area": "JA",
-    "regiao": "09ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 14567,
-    "clube": "SOCIEDADE JOVEM LUZ DO MUNDO -NHAMUNDA",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 14577,
-    "clube": "ESTRELA DO ORIENTE - EDUARDO BRAGA II",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 14613,
-    "clube": "NOVA ESPERANÇA",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 14869,
-    "clube": "UNIDOS PELO AMOR - UNIÃO",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 15567,
-    "clube": "ATALAIAS",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 16418,
-    "clube": "VOU TESTEMUNHAR - JEFERSON PERES",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 16976,
-    "clube": "MINISTÉRIO JOVEM - URUCURITUBA II",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 17022,
-    "clube": "MORADA CELESTIAL - URUCARA II",
-    "area": "JA",
-    "regiao": "10ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 17186,
-    "clube": "HERDEIROS DA FÉ - BOA F",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 17196,
-    "clube": "JOVENS EM AÇÃO",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 17198,
     "clube": "OFIR - BARREIRINHA",
     "area": "JA",
     "regiao": "13ª R – ÁREA 5 / MJ AM",
     "classificacao": "MRNT BASIC",
     "pontos": 2000
-  },
-  {
-    "id": 17214,
-    "clube": "HERDEIROS DO REINO - ABBI",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 17354,
@@ -4931,156 +1723,12 @@ const JOVENS_DADOS = [
     "pontos": 2500
   },
   {
-    "id": 17470,
-    "clube": "SENTINELAS DO ALTISSIMO - GALO DA SERRA",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 17516,
     "clube": "KAIRÓS",
     "area": "JA",
     "regiao": "19ª R – ÁREA 8 / MJ RR",
     "classificacao": "MRNT BASIC",
     "pontos": 2000
-  },
-  {
-    "id": 18382,
-    "clube": "DISCÍPULOS EM CRISTO",
-    "area": "JA",
-    "regiao": "22ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 18870,
-    "clube": "JOVENS AMIGOS UNIDOS PELO EVANGELHO - JAUPE",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 18884,
-    "clube": "MENSAGEIROS",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 18885,
-    "clube": "JOVENS UNIDOS DE FÉ - JAPHÉ",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 18947,
-    "clube": "GERAÇÃO FORTE - KM 126",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 19007,
-    "clube": "ÁGUIAS DA PAZ - BAIRRO DA PAZ (ITA)",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 19008,
-    "clube": "JOVEM ALFA",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 19038,
-    "clube": "SOCIEDADE DE JOVENS ADVENTISTAS ÓRION",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 19097,
-    "clube": "CORAÇÃO VALENTE",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 20712,
-    "clube": "SOCIEDADE WONDER POWER",
-    "area": "JA",
-    "regiao": "15ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 20744,
-    "clube": "JOASS -  SÃO SEBASTIÃO DO UATUMÃ",
-    "area": "JA",
-    "regiao": "10ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 21002,
-    "clube": "DEUS CONOSCO",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 21300,
-    "clube": "ATALAIOS DA FÉ - NORMANDIA",
-    "area": "JA",
-    "regiao": "16ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22126,
-    "clube": "GUIADOS POR CRISTO",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22176,
-    "clube": "MENSAGEIROS DO REI - MAMOUD",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22286,
-    "clube": "SOCIEDADE INTEGRADA MUNICÍPIO DE BALIZA",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22400,
-    "clube": "LUZ DE ISRAEL - ELDOURADO",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
   },
   {
     "id": 22474,
@@ -5091,971 +1739,11 @@ const JOVENS_DADOS = [
     "pontos": 3500
   },
   {
-    "id": 22480,
-    "clube": "CONECTADOS COM CRISTO - MONTE DAS OLIVEIRAS II",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22561,
-    "clube": "ENOQUE",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22563,
-    "clube": "LUZ DO MUNDO 4°",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22584,
-    "clube": "ELITE DO REI",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22637,
-    "clube": "FIEL TESTEMUNHA",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22666,
-    "clube": "GÊNESIS",
-    "area": "JA",
-    "regiao": "15ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22671,
-    "clube": "MARANATA - JARDIM SÃO LUIZ TERRA NOVA III",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 22823,
-    "clube": "ÁGUIAS DO ADVENTO - PARQUE RIACHUELO II",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 1000
-  },
-  {
-    "id": 23157,
-    "clube": "SALT - SOCIEDADE ADVENTISTA LEAIS AO TESTEMUNHO",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 23163,
-    "clube": "GUARDIÕES DA FÉ",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24191,
-    "clube": "FORJADOS POR CRISTO - CENTRAL",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24237,
-    "clube": "CASTELO FORTE -  PANTANAL",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24271,
-    "clube": "BARUCH",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24285,
-    "clube": "SAL E LUZ - ARACELIS",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24291,
-    "clube": "GERAÇÃO ESCOLHIDA - PIONEIROS",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24315,
-    "clube": "SOCIEDADE GIDEÕES - SÃO LUIZ DO ANAUÁ",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24337,
-    "clube": "MINISTÉRIO JOVEM - CANTA",
-    "area": "JA",
-    "regiao": "15ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24479,
-    "clube": "JOVENS ADVENTISTAS DE BARCELOS - CENTRAL",
-    "area": "JA",
-    "regiao": "08ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24489,
-    "clube": "ÁGUIAS DO CORDEIRO",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 24595,
-    "clube": "SAVE - SOCIEDADE ADVENTISTA VIVENDO PARA A ETERNIDADE",
-    "area": "JA",
-    "regiao": "22ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 25105,
-    "clube": "AMIGOS DE DANIEL",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 25603,
-    "clube": "ADVENTO - SILVES II",
-    "area": "JA",
-    "regiao": "11ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26485,
-    "clube": "RENASCIDOS",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26527,
-    "clube": "TOCHA DA SALVAÇÃO",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26628,
-    "clube": "MENSAGEIROS DA PAZ",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26727,
-    "clube": "ALPHA - COMUNIDADE 23 DE SETEMBRO",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26745,
-    "clube": "EMUNAH",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26785,
-    "clube": "CONECTADOS EM CRISTO",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26880,
-    "clube": "GUERREIROS DE CRISTO",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 26955,
-    "clube": "20ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 27829,
-    "clube": "ALPHAS -PRICUMÃ",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 27969,
-    "clube": "JERUSALÉM - COMUNIDADE NOBRE",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 29470,
-    "clube": "REMANESCENTES - BALBINA",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 30386,
-    "clube": "VIDA JOVEM",
-    "area": "JA",
-    "regiao": "15ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 33920,
-    "clube": "FREGUESIA",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 34084,
-    "clube": "NOVA GERAÇÃO - GETÚLIO VARGAS",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 35006,
-    "clube": "MARANATA  - IRACEMA II",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 35128,
-    "clube": "ADVENTO DE JESUS - ITAPIRANGA II",
-    "area": "JA",
-    "regiao": "11ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 38812,
-    "clube": "NOVA CANAÃ - BARREIRINHA",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 39670,
-    "clube": "OS ESCOLHIDOS - BELA VISTA",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 42362,
-    "clube": "SOCIEDADE ORGANIZADA DOS JOVENS ADVENTISTAS DO RUMO CERTO - SOJARC",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 43326,
-    "clube": "SEMEADORES - SANTANA",
-    "area": "JA",
-    "regiao": "11ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 44070,
-    "clube": "SHALLON - SHALON BVR",
-    "area": "JA",
-    "regiao": "09ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 44638,
-    "clube": "UNIDOS EM CRISTO - TARUMÃ II",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 44652,
-    "clube": "TAXI",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 45454,
-    "clube": "UBUNTU - ROXINHO",
-    "area": "JA",
-    "regiao": "20ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 45458,
-    "clube": "CRISTO VIVE EM MIM",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 45464,
-    "clube": "MARANATA (NOVA COLINA)",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 61434,
-    "clube": "GERAÇÃO LUZ - MORADA DO SOL",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 61455,
-    "clube": "OS ESCOLHIDOS - TARUMÂ III",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 1800
-  },
-  {
-    "id": 61459,
-    "clube": "ANJOS DE SALÉM - JESUS ME DEU",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 61526,
-    "clube": "SOCIEDADE DE JOVENS ARCANJO",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 61596,
-    "clube": "ROCHA ETERNA - SANTA RITA",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62220,
-    "clube": "JOVEM ADORADORES - JA",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62222,
-    "clube": "ALFA E ÔMEGA -  BELA VISTA",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62256,
-    "clube": "PARUSIA",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62291,
-    "clube": "ROCHA ETERNA - NOVA CIDADE II (RR)",
-    "area": "JA",
-    "regiao": "19ª R – ÁREA 8 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62313,
-    "clube": "ÁGUIA DA MONTANHA",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62317,
-    "clube": "TRIBOS DA MONTANHA - SÁBIA",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62324,
-    "clube": "SOCIEDADE JOVEM ÁGAPE",
-    "area": "JA",
-    "regiao": "16ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62463,
-    "clube": "RIO ÁGUA DA VIDA",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 62682,
-    "clube": "GUERREIROS EM ASCENSÃO - MARCOS FREIRE",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 500
-  },
-  {
-    "id": 63262,
-    "clube": "YAHWEH - PEDRA PINTADA",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63275,
-    "clube": "JEOVÁ RAPHÁ -CAMPOS SALES IV",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63278,
-    "clube": "LINDO AMANHECER - MOURA",
-    "area": "JA",
-    "regiao": "08ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63407,
-    "clube": "EMBAIXADORES DE CRISTO",
-    "area": "JA",
-    "regiao": "16ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63409,
-    "clube": "EBENÉZER",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63445,
-    "clube": "HERÓIS - SÃO JOSÉ OPERÁRUI",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63491,
-    "clube": "TOPÁZIO - CENTRAL DE CARACARAÍ",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63569,
-    "clube": "ESTRELA DE DAVI - ESTRELA DE DAVI",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63662,
-    "clube": "CONEXÃO - ITAPIRANGA 5",
-    "area": "JA",
-    "regiao": "11ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63689,
-    "clube": "GUERREIROS DA CRUZ - GRUPO JABOTE",
-    "area": "JA",
-    "regiao": "11ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63695,
-    "clube": "LIBERTOS - CIDADE ALTA",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63749,
-    "clube": "SIJA - MANANCIAL PAU ROSA",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63761,
-    "clube": "REMANESCENTES DO NORTE",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63816,
-    "clube": "RECOMEÇAR - ESPAÇO RECOMEÇAR",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63818,
-    "clube": "KERIGMA - SÃO SEBASTIÃO",
-    "area": "JA",
-    "regiao": "08ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63951,
-    "clube": "EMUNÁ",
-    "area": "JA",
-    "regiao": "15ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 63953,
-    "clube": "ESCUDO DA FÉ - CAMARAREM",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 64104,
-    "clube": "HERDEIROS DE DEUS",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65075,
-    "clube": "JOVENS ÁGAPE",
-    "area": "JA",
-    "regiao": "22ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65130,
-    "clube": "ENVIADOS PARA BATALHA - RAMAL CASA BRANCA",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65139,
-    "clube": "MENSAGEIROS DO ALTO - ALTO RIO",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65239,
-    "clube": "CONECTADOS POR DEUS - PARQUE RIACHUELO III",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65313,
-    "clube": "JOVENS DISCÍPULOS - MONTE SIÃO",
-    "area": "JA",
-    "regiao": "09ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65579,
-    "clube": "GUERREIROS DO ALTISSIMO - VIVER MELHOR II",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65580,
-    "clube": "ALPINISTA - JESUS ME DEU III",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65619,
-    "clube": "DESPERTOS - COQUEIRAL",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65738,
-    "clube": "INABALÁVEIS - GALO DA SERRA",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65739,
-    "clube": "ILHA DA ESPERANÇA - SILVES CENTRAL",
-    "area": "JA",
-    "regiao": "11ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65784,
-    "clube": "FORTALEZA",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 65786,
-    "clube": "DISCÍPULOS DE DEUS",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 67396,
-    "clube": "CONEXÃO CELESTE",
-    "area": "JA",
-    "regiao": "08ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 67458,
-    "clube": "SAAJ AVIVA JOVEM - PARAÍSO VERDE",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69940,
-    "clube": "01° REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "01ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69941,
-    "clube": "02ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69942,
-    "clube": "03ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "03ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69943,
-    "clube": "04ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69946,
-    "clube": "05ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69948,
-    "clube": "06ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "06ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69949,
-    "clube": "07ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "07ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69952,
-    "clube": "08ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "08ª R – ÁREA 3 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69954,
-    "clube": "09ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "09ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69956,
-    "clube": "10ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "10ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69958,
-    "clube": "11ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "11ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69959,
-    "clube": "12ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "12ª R – ÁREA 4 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69960,
-    "clube": "13ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69961,
-    "clube": "14ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "14ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69963,
-    "clube": "15ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "15ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69965,
-    "clube": "16ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "16ª R – ÁREA 6 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69967,
-    "clube": "17ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "17ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69968,
-    "clube": "18ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69970,
-    "clube": "21ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "21ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69972,
-    "clube": "22ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "22ª R – ÁREA 9 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69973,
-    "clube": "23ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "23ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69975,
-    "clube": "24ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 69977,
-    "clube": "25ª REGIÃO - MJ",
-    "area": "JA",
-    "regiao": "25ª R – ÁREA 11 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 70337,
-    "clube": "UNIÃO CELESTIAL  - NOVA UNIÃO",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
     "id": 70496,
     "clube": "GERAÇÃO APLHA",
     "area": "JA",
     "regiao": "01ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT STANDARD",
     "pontos": 4900
-  },
-  {
-    "id": 70510,
-    "clube": "VITORIOSOS - IASD DE COATA",
-    "area": "JA",
-    "regiao": "13ª R – ÁREA 5 / MJ AM",
-    "classificacao": "",
-    "pontos": 0
-  },
-  {
-    "id": 70518,
-    "clube": "KALEO - CENTRAL DE CAROEBE",
-    "area": "JA",
-    "regiao": "24ª R – ÁREA 10 / MJ RR",
-    "classificacao": "",
-    "pontos": 0
   }
 ];
