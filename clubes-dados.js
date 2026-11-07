@@ -1,8 +1,29 @@
 // Dados dos clubes — gerado pelo painel administrativo (⚙️) do dashboard
 // area: "DBV" = Desbravadores | "AVT" = Aventureiros
 // CLUBES_ATUALIZADO_EM = data desta atualização | CLUBES_HISTORICO = foto de cada atualização (evolução por estado AM/RR)
-const CLUBES_ATUALIZADO_EM = '2026-11-04';
+const CLUBES_ATUALIZADO_EM = '2026-11-07';
 const CLUBES = [
+  {
+    "id": 8468,
+    "clube": "ANAVILHANAS",
+    "area": "AVT",
+    "regiao": "02ª R – ÁREA 1 / AVT AM",
+    "sgc": 1000
+  },
+  {
+    "id": 52066,
+    "clube": "AQUARELA KIDS",
+    "area": "AVT",
+    "regiao": "03ª R – ÁREA 2 / AVT AM",
+    "sgc": 1000
+  },
+  {
+    "id": 39188,
+    "clube": "FORMIGUINHAS",
+    "area": "AVT",
+    "regiao": "04ª R – ÁREA 2 / AVT AM",
+    "sgc": 1000
+  },
   {
     "id": 21670,
     "clube": "GERAÇÃO DO ADVENTO",
@@ -46,32 +67,32 @@ const CLUBES = [
     "sgc": 997.12
   },
   {
-    "id": 8601,
-    "clube": "EMUNAH",
+    "id": 33518,
+    "clube": "GUERREIROS DA VIDA",
     "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "sgc": 993
+    "regiao": "15ª R – ÁREA 6 / DBV RR",
+    "sgc": 995.24
+  },
+  {
+    "id": 51431,
+    "clube": "LUZES DA AURORA",
+    "area": "AVT",
+    "regiao": "03ª R – ÁREA 2 / AVT AM",
+    "sgc": 995
   },
   {
     "id": 55572,
     "clube": "GUARDIÕES DA VERDADE",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "sgc": 992.66
+    "sgc": 993.44
   },
   {
-    "id": 8468,
-    "clube": "ANAVILHANAS",
-    "area": "AVT",
-    "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "sgc": 992.11
-  },
-  {
-    "id": 33518,
-    "clube": "GUERREIROS DA VIDA",
+    "id": 8601,
+    "clube": "EMUNAH",
     "area": "DBV",
-    "regiao": "15ª R – ÁREA 6 / DBV RR",
-    "sgc": 991.46
+    "regiao": "18ª R – ÁREA 7 / DBV RR",
+    "sgc": 993
   },
   {
     "id": 30933,
@@ -81,18 +102,32 @@ const CLUBES = [
     "sgc": 987.5
   },
   {
-    "id": 14152,
-    "clube": "INFANTES DE DAVI",
+    "id": 8163,
+    "clube": "PIONEIROS DA FÉ BV",
     "area": "DBV",
-    "regiao": "15ª R – ÁREA 6 / DBV RR",
-    "sgc": 983.33
+    "regiao": "17ª R – ÁREA 7 / DBV RR",
+    "sgc": 985.98
+  },
+  {
+    "id": 52086,
+    "clube": "ALFORJE",
+    "area": "DBV",
+    "regiao": "05ª R – ÁREA 2 / DBV AM",
+    "sgc": 985.71
   },
   {
     "id": 50267,
     "clube": "ALVORECER",
     "area": "DBV",
     "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "sgc": 982.69
+    "sgc": 985
+  },
+  {
+    "id": 14152,
+    "clube": "INFANTES DE DAVI",
+    "area": "DBV",
+    "regiao": "15ª R – ÁREA 6 / DBV RR",
+    "sgc": 983.33
   },
   {
     "id": 8203,
@@ -116,25 +151,11 @@ const CLUBES = [
     "sgc": 981
   },
   {
-    "id": 8163,
-    "clube": "PIONEIROS DA FÉ BV",
-    "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "sgc": 979.12
-  },
-  {
     "id": 8288,
     "clube": "MONTE SINAI",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
     "sgc": 977.63
-  },
-  {
-    "id": 52066,
-    "clube": "AQUARELA KIDS",
-    "area": "AVT",
-    "regiao": "03ª R – ÁREA 2 / AVT AM",
-    "sgc": 975
   },
   {
     "id": 8198,
@@ -148,7 +169,7 @@ const CLUBES = [
     "clube": "PEDRINHA ANGULAR - RP",
     "area": "AVT",
     "regiao": "06ª R – ÁREA 3 / AVT AM",
-    "sgc": 971.12
+    "sgc": 973.39
   },
   {
     "id": 8569,
@@ -158,6 +179,13 @@ const CLUBES = [
     "sgc": 969.57
   },
   {
+    "id": 8104,
+    "clube": "BRILHO DO SOL",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "sgc": 967.5
+  },
+  {
     "id": 53747,
     "clube": "PEQUENOS GUARDIÕES",
     "area": "AVT",
@@ -165,25 +193,18 @@ const CLUBES = [
     "sgc": 966.67
   },
   {
-    "id": 8104,
-    "clube": "BRILHO DO SOL",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "sgc": 966.36
-  },
-  {
-    "id": 39188,
-    "clube": "FORMIGUINHAS",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "sgc": 962.5
-  },
-  {
     "id": 8402,
     "clube": "ASTROS",
     "area": "DBV",
     "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "sgc": 962.1
+    "sgc": 963.18
+  },
+  {
+    "id": 8093,
+    "clube": "PEQUENOS GIGANTES",
+    "area": "AVT",
+    "regiao": "03ª R – ÁREA 2 / AVT AM",
+    "sgc": 961.67
   },
   {
     "id": 14299,
@@ -207,13 +228,6 @@ const CLUBES = [
     "sgc": 959.09
   },
   {
-    "id": 57432,
-    "clube": "QUERUBINS DO ADVENTO",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "sgc": 954.75
-  },
-  {
     "id": 55677,
     "clube": "GUARDIÕES DA PROMESSA",
     "area": "DBV",
@@ -221,11 +235,18 @@ const CLUBES = [
     "sgc": 953.57
   },
   {
+    "id": 8392,
+    "clube": "FALCÕES DA AMAZÔNIA",
+    "area": "DBV",
+    "regiao": "19ª R – ÁREA 8 / DBV RR",
+    "sgc": 947.39
+  },
+  {
     "id": 8229,
     "clube": "LEÃO DE JUDÁ",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "sgc": 948.04
+    "sgc": 945.99
   },
   {
     "id": 57045,
@@ -256,11 +277,11 @@ const CLUBES = [
     "sgc": 941.67
   },
   {
-    "id": 8093,
-    "clube": "PEQUENOS GIGANTES",
+    "id": 57432,
+    "clube": "QUERUBINS DO ADVENTO",
     "area": "AVT",
-    "regiao": "03ª R – ÁREA 2 / AVT AM",
-    "sgc": 935
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "sgc": 941.12
   },
   {
     "id": 21591,
@@ -270,18 +291,18 @@ const CLUBES = [
     "sgc": 934.82
   },
   {
+    "id": 57382,
+    "clube": "GUARDIÕES DA ESPERANÇA",
+    "area": "DBV",
+    "regiao": "16ª R – ÁREA 6 / DBV RR",
+    "sgc": 934.07
+  },
+  {
     "id": 26228,
     "clube": "GUARDIÃO DO ADVENTO",
     "area": "DBV",
     "regiao": "10ª R – ÁREA 4 / DBV AM",
     "sgc": 933.33
-  },
-  {
-    "id": 8392,
-    "clube": "FALCÕES DA AMAZÔNIA",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "sgc": 924.89
   },
   {
     "id": 8059,
@@ -298,6 +319,13 @@ const CLUBES = [
     "sgc": 917.44
   },
   {
+    "id": 8097,
+    "clube": "ESTRELA CELESTE",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "sgc": 913.61
+  },
+  {
     "id": 8130,
     "clube": "ÁGAPE",
     "area": "DBV",
@@ -312,25 +340,18 @@ const CLUBES = [
     "sgc": 913.11
   },
   {
-    "id": 57382,
-    "clube": "GUARDIÕES DA ESPERANÇA",
-    "area": "DBV",
-    "regiao": "16ª R – ÁREA 6 / DBV RR",
-    "sgc": 911.43
-  },
-  {
-    "id": 51431,
-    "clube": "LUZES DA AURORA",
+    "id": 46316,
+    "clube": "PEDRAS PRECIOSAS RR",
     "area": "AVT",
-    "regiao": "03ª R – ÁREA 2 / AVT AM",
-    "sgc": 904.83
+    "regiao": "23ª R – ÁREA 10 / AVT RR",
+    "sgc": 909.29
   },
   {
     "id": 8196,
     "clube": "GUARDIÕES CELESTES - MUNDO NOVO",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "sgc": 903.28
+    "sgc": 904.62
   },
   {
     "id": 8214,
@@ -347,6 +368,13 @@ const CLUBES = [
     "sgc": 900.62
   },
   {
+    "id": 8171,
+    "clube": "ARAUTOS DO REI",
+    "area": "DBV",
+    "regiao": "17ª R – ÁREA 7 / DBV RR",
+    "sgc": 899.75
+  },
+  {
     "id": 34619,
     "clube": "ÁGUIA DO NORTE",
     "area": "DBV",
@@ -361,11 +389,11 @@ const CLUBES = [
     "sgc": 897.73
   },
   {
-    "id": 46316,
-    "clube": "PEDRAS PRECIOSAS RR",
-    "area": "AVT",
-    "regiao": "23ª R – ÁREA 10 / AVT RR",
-    "sgc": 895.95
+    "id": 24684,
+    "clube": "ASES DE RORAIMA",
+    "area": "DBV",
+    "regiao": "18ª R – ÁREA 7 / DBV RR",
+    "sgc": 896.43
   },
   {
     "id": 8152,
@@ -375,11 +403,11 @@ const CLUBES = [
     "sgc": 895.74
   },
   {
-    "id": 24691,
-    "clube": "BRAVOS",
+    "id": 55996,
+    "clube": "YESHUÁ",
     "area": "DBV",
-    "regiao": "20ª R – ÁREA 8 / DBV RR",
-    "sgc": 892.5
+    "regiao": "14ª R – ÁREA 5 / DBV AM",
+    "sgc": 893.29
   },
   {
     "id": 8413,
@@ -389,18 +417,32 @@ const CLUBES = [
     "sgc": 892.18
   },
   {
-    "id": 8171,
-    "clube": "ARAUTOS DO REI",
+    "id": 24691,
+    "clube": "BRAVOS",
     "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "sgc": 892.12
+    "regiao": "20ª R – ÁREA 8 / DBV RR",
+    "sgc": 890.5
+  },
+  {
+    "id": 8086,
+    "clube": "QUERUBINS DO ÉDEN",
+    "area": "AVT",
+    "regiao": "04ª R – ÁREA 2 / AVT AM",
+    "sgc": 886.9
+  },
+  {
+    "id": 34614,
+    "clube": "ÁGAPE KIDS",
+    "area": "AVT",
+    "regiao": "06ª R – ÁREA 3 / AVT AM",
+    "sgc": 882.5
   },
   {
     "id": 8213,
     "clube": "GUERREIROS DE DAVI",
     "area": "DBV",
     "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "sgc": 879.05
+    "sgc": 879.6
   },
   {
     "id": 24045,
@@ -410,18 +452,11 @@ const CLUBES = [
     "sgc": 876.92
   },
   {
-    "id": 24684,
-    "clube": "ASES DE RORAIMA",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "sgc": 876.43
-  },
-  {
     "id": 8141,
     "clube": "LEÕES DA MONTANHA",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "sgc": 874.64
+    "sgc": 876.03
   },
   {
     "id": 14426,
@@ -438,18 +473,18 @@ const CLUBES = [
     "sgc": 871.88
   },
   {
+    "id": 8306,
+    "clube": "HERANÇA DO SENHOR - URUCURITUBA I",
+    "area": "AVT",
+    "regiao": "12ª R – ÁREA 4 / AVT AM",
+    "sgc": 871.45
+  },
+  {
     "id": 8400,
     "clube": "ADVENTURES - ITAÚNA II",
     "area": "DBV",
     "regiao": "14ª R – ÁREA 5 / DBV AM",
     "sgc": 869.45
-  },
-  {
-    "id": 34614,
-    "clube": "ÁGAPE KIDS",
-    "area": "AVT",
-    "regiao": "06ª R – ÁREA 3 / AVT AM",
-    "sgc": 869.25
   },
   {
     "id": 21148,
@@ -466,18 +501,25 @@ const CLUBES = [
     "sgc": 867.92
   },
   {
-    "id": 8306,
-    "clube": "HERANÇA DO SENHOR - URUCURITUBA I",
-    "area": "AVT",
-    "regiao": "12ª R – ÁREA 4 / AVT AM",
-    "sgc": 866.78
+    "id": 34635,
+    "clube": "SÉTIMUS",
+    "area": "DBV",
+    "regiao": "19ª R – ÁREA 8 / DBV RR",
+    "sgc": 865.26
   },
   {
-    "id": 8477,
-    "clube": "AMIGOS DE JESUS",
+    "id": 8030,
+    "clube": "CASTELO FORTE - PRES. FIGUEREDO I",
     "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "sgc": 860
+    "regiao": "07ª R – ÁREA 3 / AVT AM",
+    "sgc": 861.35
+  },
+  {
+    "id": 24683,
+    "clube": "PEQUENOS REMANESCENTES",
+    "area": "AVT",
+    "regiao": "19ª R – ÁREA 8 / AVT RR",
+    "sgc": 860.83
   },
   {
     "id": 8233,
@@ -487,13 +529,6 @@ const CLUBES = [
     "sgc": 859.81
   },
   {
-    "id": 52086,
-    "clube": "ALFORJE",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "sgc": 859.64
-  },
-  {
     "id": 8045,
     "clube": "QUERUBINS GUARDADORES",
     "area": "DBV",
@@ -501,18 +536,39 @@ const CLUBES = [
     "sgc": 858.5
   },
   {
-    "id": 24683,
-    "clube": "PEQUENOS REMANESCENTES",
-    "area": "AVT",
-    "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "sgc": 855.83
-  },
-  {
     "id": 8421,
     "clube": "GETSEMANI.SANTA TEREZA",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "sgc": 849.91
+    "sgc": 857.61
+  },
+  {
+    "id": 8308,
+    "clube": "JÓIAS DE CRISTO - PSP",
+    "area": "AVT",
+    "regiao": "04ª R – ÁREA 2 / AVT AM",
+    "sgc": 854.01
+  },
+  {
+    "id": 8477,
+    "clube": "AMIGOS DE JESUS",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "sgc": 852.5
+  },
+  {
+    "id": 8094,
+    "clube": "PEQUENOS GIDEÕES",
+    "area": "AVT",
+    "regiao": "07ª R – ÁREA 3 / AVT AM",
+    "sgc": 852.21
+  },
+  {
+    "id": 8253,
+    "clube": "FALCÕES DO NORTE",
+    "area": "DBV",
+    "regiao": "10ª R – ÁREA 4 / DBV AM",
+    "sgc": 851.6
   },
   {
     "id": 8511,
@@ -536,18 +592,11 @@ const CLUBES = [
     "sgc": 842.38
   },
   {
-    "id": 8094,
-    "clube": "PEQUENOS GIDEÕES",
-    "area": "AVT",
-    "regiao": "07ª R – ÁREA 3 / AVT AM",
-    "sgc": 839.71
-  },
-  {
-    "id": 8253,
-    "clube": "FALCÕES DO NORTE",
+    "id": 22123,
+    "clube": "KADOSH",
     "area": "DBV",
-    "regiao": "10ª R – ÁREA 4 / DBV AM",
-    "sgc": 839.1
+    "regiao": "14ª R – ÁREA 5 / DBV AM",
+    "sgc": 841.67
   },
   {
     "id": 47600,
@@ -557,11 +606,11 @@ const CLUBES = [
     "sgc": 835.83
   },
   {
-    "id": 45273,
-    "clube": "HERÓIS DA VIDA",
-    "area": "AVT",
-    "regiao": "15ª R – ÁREA 6 / AVT RR",
-    "sgc": 831.04
+    "id": 26278,
+    "clube": "ÔMEGA",
+    "area": "DBV",
+    "regiao": "12ª R – ÁREA 4 / DBV AM",
+    "sgc": 831.43
   },
   {
     "id": 22326,
@@ -578,11 +627,18 @@ const CLUBES = [
     "sgc": 830
   },
   {
+    "id": 45273,
+    "clube": "HERÓIS DA VIDA",
+    "area": "AVT",
+    "regiao": "15ª R – ÁREA 6 / AVT RR",
+    "sgc": 829.48
+  },
+  {
     "id": 8415,
     "clube": "SEMENTINHAS DE JESUS",
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "sgc": 827.5
+    "sgc": 825.59
   },
   {
     "id": 21682,
@@ -606,6 +662,13 @@ const CLUBES = [
     "sgc": 821.54
   },
   {
+    "id": 8396,
+    "clube": "MASTER",
+    "area": "DBV",
+    "regiao": "19ª R – ÁREA 8 / DBV RR",
+    "sgc": 820.92
+  },
+  {
     "id": 45129,
     "clube": "HERANÇA DO SENHOR - BV",
     "area": "AVT",
@@ -613,11 +676,11 @@ const CLUBES = [
     "sgc": 820.71
   },
   {
-    "id": 34635,
-    "clube": "SÉTIMUS",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "sgc": 820.26
+    "id": 8051,
+    "clube": "TESOUROS DE JESUS",
+    "area": "AVT",
+    "regiao": "02ª R – ÁREA 1 / AVT AM",
+    "sgc": 817.55
   },
   {
     "id": 48486,
@@ -634,27 +697,6 @@ const CLUBES = [
     "sgc": 816.88
   },
   {
-    "id": 8396,
-    "clube": "MASTER",
-    "area": "DBV",
-    "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "sgc": 815.92
-  },
-  {
-    "id": 22123,
-    "clube": "KADOSH",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "sgc": 814.17
-  },
-  {
-    "id": 8278,
-    "clube": "ÔNIX",
-    "area": "DBV",
-    "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "sgc": 810.65
-  },
-  {
     "id": 8111,
     "clube": "PEQUENOS EXPLORADORES",
     "area": "AVT",
@@ -662,11 +704,18 @@ const CLUBES = [
     "sgc": 809.31
   },
   {
-    "id": 26278,
-    "clube": "ÔMEGA",
+    "id": 25342,
+    "clube": "PUMA",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "sgc": 808.93
+    "sgc": 808.18
+  },
+  {
+    "id": 8073,
+    "clube": "DEFENSORES DA NATUREZA",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "sgc": 807.73
   },
   {
     "id": 54269,
@@ -676,18 +725,11 @@ const CLUBES = [
     "sgc": 807.52
   },
   {
-    "id": 8051,
-    "clube": "TESOUROS DE JESUS",
-    "area": "AVT",
-    "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "sgc": 806.89
-  },
-  {
     "id": 8091,
     "clube": "ÁGAPE - [12ª /AVT]",
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
-    "sgc": 806.46
+    "sgc": 807.5
   },
   {
     "id": 17541,
@@ -709,6 +751,27 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
     "sgc": 805.22
+  },
+  {
+    "id": 15984,
+    "clube": "PÉROLAS DO REI",
+    "area": "DBV",
+    "regiao": "12ª R – ÁREA 4 / DBV AM",
+    "sgc": 805
+  },
+  {
+    "id": 8270,
+    "clube": "TRILHA DOS PIONEIROS",
+    "area": "DBV",
+    "regiao": "01ª R – ÁREA 1 / DBV AM",
+    "sgc": 805
+  },
+  {
+    "id": 8278,
+    "clube": "ÔNIX",
+    "area": "DBV",
+    "regiao": "01ª R – ÁREA 1 / DBV AM",
+    "sgc": 803.15
   },
   {
     "id": 21650,
@@ -746,18 +809,11 @@ const CLUBES = [
     "sgc": 800.69
   },
   {
-    "id": 17393,
-    "clube": "ÁGUIA BRANCA SENEI",
+    "id": 36769,
+    "clube": "PORTADORES DA UNIÃO",
     "area": "DBV",
-    "regiao": "25ª R – ÁREA 11 / DBV RR",
-    "sgc": 800.02
-  },
-  {
-    "id": 8030,
-    "clube": "CASTELO FORTE - PRES. FIGUEREDO I",
-    "area": "AVT",
-    "regiao": "07ª R – ÁREA 3 / AVT AM",
-    "sgc": 796.94
+    "regiao": "04ª R – ÁREA 2 / DBV AM",
+    "sgc": 796.58
   },
   {
     "id": 8226,
@@ -767,11 +823,18 @@ const CLUBES = [
     "sgc": 794.72
   },
   {
-    "id": 15984,
-    "clube": "PÉROLAS DO REI",
+    "id": 17393,
+    "clube": "ÁGUIA BRANCA SENEI",
+    "area": "DBV",
+    "regiao": "25ª R – ÁREA 11 / DBV RR",
+    "sgc": 793.68
+  },
+  {
+    "id": 8215,
+    "clube": "ITA",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "sgc": 789.37
+    "sgc": 787.49
   },
   {
     "id": 8159,
@@ -795,25 +858,11 @@ const CLUBES = [
     "sgc": 774.17
   },
   {
-    "id": 8270,
-    "clube": "TRILHA DOS PIONEIROS",
-    "area": "DBV",
-    "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "sgc": 772.92
-  },
-  {
     "id": 24682,
     "clube": "GERAÇÃO DE DAVI KIDS",
     "area": "AVT",
     "regiao": "19ª R – ÁREA 8 / AVT RR",
     "sgc": 765.83
-  },
-  {
-    "id": 8215,
-    "clube": "ITA",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "sgc": 765.38
   },
   {
     "id": 43946,
@@ -830,18 +879,18 @@ const CLUBES = [
     "sgc": 758.57
   },
   {
+    "id": 8526,
+    "clube": "GERAÇÃO DE DAVI",
+    "area": "AVT",
+    "regiao": "04ª R – ÁREA 2 / AVT AM",
+    "sgc": 758.33
+  },
+  {
     "id": 8092,
     "clube": "PEQUENINOS DO REI",
     "area": "AVT",
     "regiao": "23ª R – ÁREA 10 / AVT RR",
     "sgc": 753.43
-  },
-  {
-    "id": 25342,
-    "clube": "PUMA",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "sgc": 753.4
   },
   {
     "id": 8304,
@@ -851,25 +900,18 @@ const CLUBES = [
     "sgc": 752.5
   },
   {
-    "id": 8073,
-    "clube": "DEFENSORES DA NATUREZA",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "sgc": 739.83
+    "id": 43944,
+    "clube": "ESTRELA DE DAVI",
+    "area": "DBV",
+    "regiao": "05ª R – ÁREA 2 / DBV AM",
+    "sgc": 749.42
   },
   {
     "id": 8279,
     "clube": "300 DE GIDEÃO",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "sgc": 732.83
-  },
-  {
-    "id": 8097,
-    "clube": "ESTRELA CELESTE",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "sgc": 730.22
+    "sgc": 730.33
   },
   {
     "id": 44084,
@@ -890,7 +932,7 @@ const CLUBES = [
     "clube": "AGUELLÓS",
     "area": "DBV",
     "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "sgc": 723.75
+    "sgc": 721.07
   },
   {
     "id": 8145,
@@ -900,18 +942,18 @@ const CLUBES = [
     "sgc": 719.56
   },
   {
-    "id": 43944,
-    "clube": "ESTRELA DE DAVI",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "sgc": 719.42
-  },
-  {
     "id": 44061,
     "clube": "HERDEIROS DA ALIANÇA",
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "sgc": 719
+  },
+  {
+    "id": 8355,
+    "clube": "SENTINELAS DA RENDENÇÃO",
+    "area": "DBV",
+    "regiao": "02ª R – ÁREA 1 / DBV AM",
+    "sgc": 716.99
   },
   {
     "id": 8356,
@@ -921,18 +963,11 @@ const CLUBES = [
     "sgc": 713.24
   },
   {
-    "id": 8086,
-    "clube": "QUERUBINS DO ÉDEN",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "sgc": 708.33
-  },
-  {
-    "id": 36769,
-    "clube": "PORTADORES DA UNIÃO",
+    "id": 8133,
+    "clube": "MAANAIM",
     "area": "DBV",
-    "regiao": "04ª R – ÁREA 2 / DBV AM",
-    "sgc": 700.75
+    "regiao": "01ª R – ÁREA 1 / DBV AM",
+    "sgc": 704.82
   },
   {
     "id": 8061,
@@ -942,13 +977,6 @@ const CLUBES = [
     "sgc": 700.67
   },
   {
-    "id": 55996,
-    "clube": "YESHUÁ",
-    "area": "DBV",
-    "regiao": "14ª R – ÁREA 5 / DBV AM",
-    "sgc": 698.57
-  },
-  {
     "id": 17575,
     "clube": "FRUTO DA CRIAÇÃO",
     "area": "AVT",
@@ -956,11 +984,32 @@ const CLUBES = [
     "sgc": 687.91
   },
   {
+    "id": 31153,
+    "clube": "JÓIAS PRECIOSAS DO REI",
+    "area": "AVT",
+    "regiao": "14ª R – ÁREA 5 / AVT AM",
+    "sgc": 678.17
+  },
+  {
     "id": 8205,
     "clube": "SANTA CRUZ",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "sgc": 677.19
+  },
+  {
+    "id": 47860,
+    "clube": "ESCUDEIROS DA PALAVRA",
+    "area": "DBV",
+    "regiao": "12ª R – ÁREA 4 / DBV AM",
+    "sgc": 676.01
+  },
+  {
+    "id": 33098,
+    "clube": "ÓRION - AC",
+    "area": "AVT",
+    "regiao": "12ª R – ÁREA 4 / AVT AM",
+    "sgc": 675.39
   },
   {
     "id": 8425,
@@ -977,18 +1026,25 @@ const CLUBES = [
     "sgc": 667.87
   },
   {
-    "id": 33098,
-    "clube": "ÓRION - AC",
-    "area": "AVT",
-    "regiao": "12ª R – ÁREA 4 / AVT AM",
-    "sgc": 666.39
-  },
-  {
     "id": 8173,
     "clube": "ATLÂNTICO NORTE - ITAÚNA I",
     "area": "DBV",
     "regiao": "14ª R – ÁREA 5 / DBV AM",
     "sgc": 664.41
+  },
+  {
+    "id": 29221,
+    "clube": "ILUMINADOS EM CRISTO",
+    "area": "DBV",
+    "regiao": "07ª R – ÁREA 3 / DBV AM",
+    "sgc": 664.16
+  },
+  {
+    "id": 44127,
+    "clube": "BETEL",
+    "area": "DBV",
+    "regiao": "03ª R – ÁREA 2 / DBV AM",
+    "sgc": 659.38
   },
   {
     "id": 25026,
@@ -1012,18 +1068,32 @@ const CLUBES = [
     "sgc": 651.6
   },
   {
-    "id": 29221,
-    "clube": "ILUMINADOS EM CRISTO",
-    "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "sgc": 650.83
+    "id": 47594,
+    "clube": "ÁGUIA DO NORTE KIDS",
+    "area": "AVT",
+    "regiao": "04ª R – ÁREA 2 / AVT AM",
+    "sgc": 646.69
   },
   {
-    "id": 8133,
-    "clube": "MAANAIM",
+    "id": 8357,
+    "clube": "GUARDIÕES DO GENESIS",
     "area": "DBV",
-    "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "sgc": 644.82
+    "regiao": "03ª R – ÁREA 2 / DBV AM",
+    "sgc": 646
+  },
+  {
+    "id": 8208,
+    "clube": "FALCÕES DA SERRA",
+    "area": "DBV",
+    "regiao": "07ª R – ÁREA 3 / DBV AM",
+    "sgc": 645.66
+  },
+  {
+    "id": 8553,
+    "clube": "PEQUENOS CURIOSOS",
+    "area": "AVT",
+    "regiao": "18ª R – ÁREA 7 / AVT RR",
+    "sgc": 644.23
   },
   {
     "id": 14688,
@@ -1033,11 +1103,11 @@ const CLUBES = [
     "sgc": 640.94
   },
   {
-    "id": 47860,
-    "clube": "ESCUDEIROS DA PALAVRA",
+    "id": 21649,
+    "clube": "OS PIONEIROS",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "sgc": 640.68
+    "sgc": 636.41
   },
   {
     "id": 8502,
@@ -1047,39 +1117,11 @@ const CLUBES = [
     "sgc": 629.67
   },
   {
-    "id": 8357,
-    "clube": "GUARDIÕES DO GENESIS",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "sgc": 627.96
-  },
-  {
-    "id": 31153,
-    "clube": "JÓIAS PRECIOSAS DO REI",
-    "area": "AVT",
-    "regiao": "14ª R – ÁREA 5 / AVT AM",
-    "sgc": 625.67
-  },
-  {
-    "id": 21649,
-    "clube": "OS PIONEIROS",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "sgc": 621
-  },
-  {
     "id": 36561,
     "clube": "O VÔO DA ÁGUIA",
     "area": "DBV",
     "regiao": "11ª R – ÁREA 4 / DBV AM",
     "sgc": 618.02
-  },
-  {
-    "id": 44127,
-    "clube": "BETEL",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "sgc": 613.96
   },
   {
     "id": 8266,
@@ -1089,25 +1131,11 @@ const CLUBES = [
     "sgc": 610.81
   },
   {
-    "id": 8308,
-    "clube": "JÓIAS DE CRISTO - PSP",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "sgc": 597.68
-  },
-  {
     "id": 29267,
     "clube": "SEMENTINHAS DE JESUS- NHAMUNDÁ",
     "area": "AVT",
     "regiao": "14ª R – ÁREA 5 / AVT AM",
     "sgc": 595.52
-  },
-  {
-    "id": 8553,
-    "clube": "PEQUENOS CURIOSOS",
-    "area": "AVT",
-    "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "sgc": 589.43
   },
   {
     "id": 8194,
@@ -1117,11 +1145,25 @@ const CLUBES = [
     "sgc": 588.38
   },
   {
-    "id": 8208,
-    "clube": "FALCÕES DA SERRA",
+    "id": 8192,
+    "clube": "FRUTOS DO ESPIRITO",
     "area": "DBV",
-    "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "sgc": 586.29
+    "regiao": "06ª R – ÁREA 3 / DBV AM",
+    "sgc": 585.12
+  },
+  {
+    "id": 26619,
+    "clube": "ESTRELAS DO NORTE 55ª",
+    "area": "AVT",
+    "regiao": "24ª R – ÁREA 10 / AVT RR",
+    "sgc": 580.9
+  },
+  {
+    "id": 8036,
+    "clube": "ESTRELINHA DO REI",
+    "area": "AVT",
+    "regiao": "17ª R – ÁREA 7 / AVT RR",
+    "sgc": 580.87
   },
   {
     "id": 30002,
@@ -1129,13 +1171,6 @@ const CLUBES = [
     "area": "DBV",
     "regiao": "19ª R – ÁREA 8 / DBV RR",
     "sgc": 577.39
-  },
-  {
-    "id": 8192,
-    "clube": "FRUTOS DO ESPIRITO",
-    "area": "DBV",
-    "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "sgc": 576.25
   },
   {
     "id": 41671,
@@ -1173,11 +1208,39 @@ const CLUBES = [
     "sgc": 562.14
   },
   {
+    "id": 8028,
+    "clube": "EBENÉZER",
+    "area": "DBV",
+    "regiao": "01ª R – ÁREA 1 / DBV AM",
+    "sgc": 561.67
+  },
+  {
+    "id": 38100,
+    "clube": "JÓIAS DA NATUREZA",
+    "area": "AVT",
+    "regiao": "12ª R – ÁREA 4 / AVT AM",
+    "sgc": 557.39
+  },
+  {
     "id": 8188,
     "clube": "ARAUTOS DA VERDADE",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "sgc": 557.02
+  },
+  {
+    "id": 36459,
+    "clube": "GUARDIÕES DA MORADA",
+    "area": "DBV",
+    "regiao": "06ª R – ÁREA 3 / DBV AM",
+    "sgc": 556.82
+  },
+  {
+    "id": 50984,
+    "clube": "ESTRELINHAS DO AMANHÃ",
+    "area": "AVT",
+    "regiao": "13ª R – ÁREA 5 / AVT AM",
+    "sgc": 556.31
   },
   {
     "id": 16988,
@@ -1194,32 +1257,18 @@ const CLUBES = [
     "sgc": 553.54
   },
   {
-    "id": 38100,
-    "clube": "JÓIAS DA NATUREZA",
-    "area": "AVT",
-    "regiao": "12ª R – ÁREA 4 / AVT AM",
-    "sgc": 553.44
-  },
-  {
-    "id": 8036,
-    "clube": "ESTRELINHA DO REI",
-    "area": "AVT",
-    "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "sgc": 551.44
-  },
-  {
-    "id": 8028,
-    "clube": "EBENÉZER",
+    "id": 8149,
+    "clube": "BEIJA-FLOR",
     "area": "DBV",
-    "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "sgc": 549.82
+    "regiao": "02ª R – ÁREA 1 / DBV AM",
+    "sgc": 551.25
   },
   {
     "id": 43113,
     "clube": "NOVA JERUSALÉM CDNJ",
     "area": "DBV",
     "regiao": "19ª R – ÁREA 8 / DBV RR",
-    "sgc": 549.19
+    "sgc": 551.23
   },
   {
     "id": 8377,
@@ -1229,18 +1278,18 @@ const CLUBES = [
     "sgc": 545.36
   },
   {
+    "id": 24958,
+    "clube": "CONSTELAÇÃO DO REI",
+    "area": "DBV",
+    "regiao": "18ª R – ÁREA 7 / DBV RR",
+    "sgc": 545.05
+  },
+  {
     "id": 43124,
     "clube": "SANTOS DO SENHOR",
     "area": "DBV",
     "regiao": "13ª R – ÁREA 5 / DBV AM",
     "sgc": 544.5
-  },
-  {
-    "id": 24958,
-    "clube": "CONSTELAÇÃO DO REI",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "sgc": 543.32
   },
   {
     "id": 51018,
@@ -1264,18 +1313,11 @@ const CLUBES = [
     "sgc": 532.07
   },
   {
-    "id": 17869,
-    "clube": "FILHOS DE ISRAEL - PARQUE SOLIMÕES",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "sgc": 528.82
-  },
-  {
-    "id": 8526,
-    "clube": "GERAÇÃO DE DAVI",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "sgc": 527.27
+    "id": 8223,
+    "clube": "GUARDIÕES DA FÉ",
+    "area": "DBV",
+    "regiao": "05ª R – ÁREA 2 / DBV AM",
+    "sgc": 522.18
   },
   {
     "id": 21544,
@@ -1285,11 +1327,18 @@ const CLUBES = [
     "sgc": 519.13
   },
   {
-    "id": 8223,
-    "clube": "GUARDIÕES DA FÉ",
+    "id": 8316,
+    "clube": "TRILHA DOS AMIGUINHOS",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "sgc": 515.56
+  },
+  {
+    "id": 8161,
+    "clube": "BANDEIRANTES DA FÉ",
     "area": "DBV",
     "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "sgc": 519.05
+    "sgc": 514.02
   },
   {
     "id": 49199,
@@ -1299,20 +1348,6 @@ const CLUBES = [
     "sgc": 513.89
   },
   {
-    "id": 26619,
-    "clube": "ESTRELAS DO NORTE 55ª",
-    "area": "AVT",
-    "regiao": "24ª R – ÁREA 10 / AVT RR",
-    "sgc": 512.21
-  },
-  {
-    "id": 8161,
-    "clube": "BANDEIRANTES DA FÉ",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "sgc": 510.07
-  },
-  {
     "id": 8207,
     "clube": "VANGUARDA DO REI",
     "area": "DBV",
@@ -1320,11 +1355,25 @@ const CLUBES = [
     "sgc": 509.58
   },
   {
-    "id": 8355,
-    "clube": "SENTINELAS DA RENDENÇÃO",
+    "id": 55997,
+    "clube": "PEQUENOS DO ALTISSIMO",
+    "area": "AVT",
+    "regiao": "05ª R – ÁREA 2 / AVT AM",
+    "sgc": 509.57
+  },
+  {
+    "id": 52885,
+    "clube": "PEQUENO GUARDIÃO DO ADVETHUS",
+    "area": "AVT",
+    "regiao": "11ª R – ÁREA 4 / AVT AM",
+    "sgc": 508.42
+  },
+  {
+    "id": 49741,
+    "clube": "PIONEIROS DA SUDAM",
     "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "sgc": 507.88
+    "regiao": "12ª R – ÁREA 4 / DBV AM",
+    "sgc": 507.35
   },
   {
     "id": 47902,
@@ -1341,13 +1390,6 @@ const CLUBES = [
     "sgc": 501.39
   },
   {
-    "id": 8149,
-    "clube": "BEIJA-FLOR",
-    "area": "DBV",
-    "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "sgc": 501.25
-  },
-  {
     "id": 39542,
     "clube": "ÁGUIAS DO MONTE",
     "area": "DBV",
@@ -1362,39 +1404,11 @@ const CLUBES = [
     "sgc": 498.12
   },
   {
-    "id": 36459,
-    "clube": "GUARDIÕES DA MORADA",
-    "area": "DBV",
-    "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "sgc": 497.41
-  },
-  {
-    "id": 55997,
-    "clube": "PEQUENOS DO ALTISSIMO",
-    "area": "AVT",
-    "regiao": "05ª R – ÁREA 2 / AVT AM",
-    "sgc": 497.07
-  },
-  {
-    "id": 47594,
-    "clube": "ÁGUIA DO NORTE KIDS",
+    "id": 17869,
+    "clube": "FILHOS DE ISRAEL - PARQUE SOLIMÕES",
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "sgc": 496.69
-  },
-  {
-    "id": 52885,
-    "clube": "PEQUENO GUARDIÃO DO ADVETHUS",
-    "area": "AVT",
-    "regiao": "11ª R – ÁREA 4 / AVT AM",
-    "sgc": 495.92
-  },
-  {
-    "id": 50984,
-    "clube": "ESTRELINHAS DO AMANHÃ",
-    "area": "AVT",
-    "regiao": "13ª R – ÁREA 5 / AVT AM",
-    "sgc": 493.19
+    "sgc": 493.29
   },
   {
     "id": 8410,
@@ -1402,6 +1416,13 @@ const CLUBES = [
     "area": "DBV",
     "regiao": "03ª R – ÁREA 2 / DBV AM",
     "sgc": 493.14
+  },
+  {
+    "id": 8210,
+    "clube": "GUERREIROS DE JUDÁ",
+    "area": "DBV",
+    "regiao": "05ª R – ÁREA 2 / DBV AM",
+    "sgc": 491.71
   },
   {
     "id": 32948,
@@ -1453,25 +1474,11 @@ const CLUBES = [
     "sgc": 482.05
   },
   {
-    "id": 8316,
-    "clube": "TRILHA DOS AMIGUINHOS",
-    "area": "AVT",
-    "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "sgc": 478.06
-  },
-  {
     "id": 8200,
     "clube": "NOVO TEMPO",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "sgc": 477.19
-  },
-  {
-    "id": 8449,
-    "clube": "GUERREIROS DA FRONTEIRA",
-    "area": "DBV",
-    "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "sgc": 476.75
+    "sgc": 476.51
   },
   {
     "id": 39448,
@@ -1479,6 +1486,13 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "sgc": 474.24
+  },
+  {
+    "id": 8449,
+    "clube": "GUERREIROS DA FRONTEIRA",
+    "area": "DBV",
+    "regiao": "17ª R – ÁREA 7 / DBV RR",
+    "sgc": 472.91
   },
   {
     "id": 51120,
@@ -1516,13 +1530,6 @@ const CLUBES = [
     "sgc": 454.72
   },
   {
-    "id": 8210,
-    "clube": "GUERREIROS DE JUDÁ",
-    "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "sgc": 453.5
-  },
-  {
     "id": 8175,
     "clube": "PRIMÍCIAS DO UNIVERSO",
     "area": "DBV",
@@ -1537,6 +1544,13 @@ const CLUBES = [
     "sgc": 450.89
   },
   {
+    "id": 17070,
+    "clube": "ABELHINHAS DO REI",
+    "area": "AVT",
+    "regiao": "15ª R – ÁREA 6 / AVT RR",
+    "sgc": 450.35
+  },
+  {
     "id": 23053,
     "clube": "FILHOS DE ISRAEL-  SILVIO BOTELHO",
     "area": "DBV",
@@ -1544,18 +1558,18 @@ const CLUBES = [
     "sgc": 449.02
   },
   {
+    "id": 34585,
+    "clube": "JÓIAS PRECIOSAS - BVR",
+    "area": "AVT",
+    "regiao": "09ª R – ÁREA 4 / AVT AM",
+    "sgc": 448.58
+  },
+  {
     "id": 44924,
     "clube": "BETELGEUSE",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
     "sgc": 448.33
-  },
-  {
-    "id": 17070,
-    "clube": "ABELHINHAS DO REI",
-    "area": "AVT",
-    "regiao": "15ª R – ÁREA 6 / AVT RR",
-    "sgc": 447.91
   },
   {
     "id": 22376,
@@ -1570,13 +1584,6 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "19ª R – ÁREA 8 / AVT RR",
     "sgc": 442.74
-  },
-  {
-    "id": 49741,
-    "clube": "PIONEIROS DA SUDAM",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "sgc": 439.85
   },
   {
     "id": 34204,
@@ -1600,6 +1607,13 @@ const CLUBES = [
     "sgc": 435.23
   },
   {
+    "id": 8251,
+    "clube": "ESTRELA DO MAR",
+    "area": "DBV",
+    "regiao": "13ª R – ÁREA 5 / DBV AM",
+    "sgc": 435.07
+  },
+  {
     "id": 57274,
     "clube": "ÁGUA DA VIDA",
     "area": "AVT",
@@ -1612,6 +1626,13 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "02ª R – ÁREA 1 / AVT AM",
     "sgc": 433.64
+  },
+  {
+    "id": 21095,
+    "clube": "SEMENTES DO AMOR",
+    "area": "AVT",
+    "regiao": "13ª R – ÁREA 5 / AVT AM",
+    "sgc": 433.24
   },
   {
     "id": 17536,
@@ -1726,6 +1747,13 @@ const CLUBES = [
     "sgc": 413.81
   },
   {
+    "id": 41939,
+    "clube": "ESCRITORES DA VERDADE",
+    "area": "AVT",
+    "regiao": "04ª R – ÁREA 2 / AVT AM",
+    "sgc": 411.67
+  },
+  {
     "id": 26002,
     "clube": "ADVENTHUS",
     "area": "DBV",
@@ -1740,6 +1768,13 @@ const CLUBES = [
     "sgc": 408.71
   },
   {
+    "id": 33216,
+    "clube": "BEM AVENTURADOS",
+    "area": "DBV",
+    "regiao": "06ª R – ÁREA 3 / DBV AM",
+    "sgc": 407.19
+  },
+  {
     "id": 8083,
     "clube": "CORDEIROS DE DEUS",
     "area": "DBV",
@@ -1747,11 +1782,11 @@ const CLUBES = [
     "sgc": 405.95
   },
   {
-    "id": 34585,
-    "clube": "JÓIAS PRECIOSAS - BVR",
-    "area": "AVT",
-    "regiao": "09ª R – ÁREA 4 / AVT AM",
-    "sgc": 404.83
+    "id": 35043,
+    "clube": "MENSAGEIROS DO REI- AC",
+    "area": "DBV",
+    "regiao": "12ª R – ÁREA 4 / DBV AM",
+    "sgc": 403.54
   },
   {
     "id": 8329,
@@ -1759,13 +1794,6 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "25ª R – ÁREA 11 / AVT RR",
     "sgc": 402.16
-  },
-  {
-    "id": 43400,
-    "clube": "BEER LAAI ROI",
-    "area": "DBV",
-    "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "sgc": 401.19
   },
   {
     "id": 26061,
@@ -1810,6 +1838,13 @@ const CLUBES = [
     "sgc": 395.36
   },
   {
+    "id": 43400,
+    "clube": "BEER LAAI ROI",
+    "area": "DBV",
+    "regiao": "18ª R – ÁREA 7 / DBV RR",
+    "sgc": 394.05
+  },
+  {
     "id": 8545,
     "clube": "MONTE SINAI (ITA)",
     "area": "DBV",
@@ -1838,32 +1873,11 @@ const CLUBES = [
     "sgc": 392.24
   },
   {
-    "id": 33216,
-    "clube": "BEM AVENTURADOS",
-    "area": "DBV",
-    "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "sgc": 392.19
-  },
-  {
     "id": 33038,
     "clube": "ATALAIA DE DEUS",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
     "sgc": 390.83
-  },
-  {
-    "id": 8251,
-    "clube": "ESTRELA DO MAR",
-    "area": "DBV",
-    "regiao": "13ª R – ÁREA 5 / DBV AM",
-    "sgc": 390.14
-  },
-  {
-    "id": 35043,
-    "clube": "MENSAGEIROS DO REI- AC",
-    "area": "DBV",
-    "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "sgc": 390
   },
   {
     "id": 23974,
@@ -1878,6 +1892,13 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "01ª R – ÁREA 1 / AVT AM",
     "sgc": 389.58
+  },
+  {
+    "id": 8138,
+    "clube": "HERÓIS DA FÉ",
+    "area": "DBV",
+    "regiao": "05ª R – ÁREA 2 / DBV AM",
+    "sgc": 389.1
   },
   {
     "id": 44207,
@@ -1922,11 +1943,11 @@ const CLUBES = [
     "sgc": 379.47
   },
   {
-    "id": 8138,
-    "clube": "HERÓIS DA FÉ",
+    "id": 8371,
+    "clube": "ÁGUIA DA PAZ",
     "area": "DBV",
-    "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "sgc": 379.03
+    "regiao": "06ª R – ÁREA 3 / DBV AM",
+    "sgc": 377.99
   },
   {
     "id": 8178,
@@ -1934,13 +1955,6 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "02ª R – ÁREA 1 / AVT AM",
     "sgc": 377.5
-  },
-  {
-    "id": 41939,
-    "clube": "ESCRITORES DA VERDADE",
-    "area": "AVT",
-    "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "sgc": 376.25
   },
   {
     "id": 29365,
@@ -1962,13 +1976,6 @@ const CLUBES = [
     "area": "DBV",
     "regiao": "04ª R – ÁREA 2 / DBV AM",
     "sgc": 374.14
-  },
-  {
-    "id": 8371,
-    "clube": "ÁGUIA DA PAZ",
-    "area": "DBV",
-    "regiao": "06ª R – ÁREA 3 / DBV AM",
-    "sgc": 373.64
   },
   {
     "id": 8384,
@@ -2055,6 +2062,13 @@ const CLUBES = [
     "sgc": 361.31
   },
   {
+    "id": 54136,
+    "clube": "PIONEIROS DA MONTANHA",
+    "area": "DBV",
+    "regiao": "25ª R – ÁREA 11 / DBV RR",
+    "sgc": 361.18
+  },
+  {
     "id": 26944,
     "clube": "ACARÍ",
     "area": "DBV",
@@ -2090,17 +2104,17 @@ const CLUBES = [
     "sgc": 356.67
   },
   {
-    "id": 54136,
-    "clube": "PIONEIROS DA MONTANHA",
-    "area": "DBV",
-    "regiao": "25ª R – ÁREA 11 / DBV RR",
-    "sgc": 356.57
-  },
-  {
     "id": 8119,
     "clube": "CORDEIRINHOS DE JESUS",
     "area": "AVT",
     "regiao": "05ª R – ÁREA 2 / AVT AM",
+    "sgc": 355
+  },
+  {
+    "id": 56122,
+    "clube": "MANANCIAL DE LUZ",
+    "area": "DBV",
+    "regiao": "03ª R – ÁREA 2 / DBV AM",
     "sgc": 355
   },
   {
@@ -2137,20 +2151,6 @@ const CLUBES = [
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
     "sgc": 350
-  },
-  {
-    "id": 21095,
-    "clube": "SEMENTES DO AMOR",
-    "area": "AVT",
-    "regiao": "13ª R – ÁREA 5 / AVT AM",
-    "sgc": 347.92
-  },
-  {
-    "id": 56122,
-    "clube": "MANANCIAL DE LUZ",
-    "area": "DBV",
-    "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "sgc": 347.5
   },
   {
     "id": 25033,
@@ -2221,13 +2221,6 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "25ª R – ÁREA 11 / AVT RR",
     "sgc": 342.5
-  },
-  {
-    "id": 41857,
-    "clube": "EMBAIXADORES DO REI",
-    "area": "DBV",
-    "regiao": "11ª R – ÁREA 4 / DBV AM",
-    "sgc": 340.53
   },
   {
     "id": 14838,
@@ -2328,6 +2321,13 @@ const CLUBES = [
     "sgc": 325
   },
   {
+    "id": 41857,
+    "clube": "EMBAIXADORES DO REI",
+    "area": "DBV",
+    "regiao": "11ª R – ÁREA 4 / DBV AM",
+    "sgc": 324.58
+  },
+  {
     "id": 35138,
     "clube": "GUARDIÕES DA FÉ - CARACARAÍ",
     "area": "DBV",
@@ -2382,6 +2382,13 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "19ª R – ÁREA 8 / AVT RR",
     "sgc": 314.08
+  },
+  {
+    "id": 43269,
+    "clube": "ATALAIAS DO RIO NEGRO",
+    "area": "AVT",
+    "regiao": "08ª R – ÁREA 3 / AVT AM",
+    "sgc": 312.32
   },
   {
     "id": 14829,
@@ -2461,18 +2468,18 @@ const CLUBES = [
     "sgc": 300
   },
   {
+    "id": 41823,
+    "clube": "WOLF PACK",
+    "area": "DBV",
+    "regiao": "21ª R – ÁREA 9 / DBV RR",
+    "sgc": 298.44
+  },
+  {
     "id": 8206,
     "clube": "HERDEIROS DA PROMESSA",
     "area": "DBV",
     "regiao": "04ª R – ÁREA 2 / DBV AM",
     "sgc": 296.5
-  },
-  {
-    "id": 41823,
-    "clube": "WOLF PACK",
-    "area": "DBV",
-    "regiao": "21ª R – ÁREA 9 / DBV RR",
-    "sgc": 295.31
   },
   {
     "id": 44515,
@@ -2487,13 +2494,6 @@ const CLUBES = [
     "area": "AVT",
     "regiao": "14ª R – ÁREA 5 / AVT AM",
     "sgc": 293.1
-  },
-  {
-    "id": 43269,
-    "clube": "ATALAIAS DO RIO NEGRO",
-    "area": "AVT",
-    "regiao": "08ª R – ÁREA 3 / AVT AM",
-    "sgc": 288.75
   },
   {
     "id": 47605,
@@ -2556,7 +2556,7 @@ const CLUBES = [
     "clube": "RAIOS DO NORTE",
     "area": "DBV",
     "regiao": "22ª R – ÁREA 9 / DBV RR",
-    "sgc": 252.03
+    "sgc": 256.5
   },
   {
     "id": 8604,
@@ -2696,14 +2696,14 @@ const CLUBES = [
     "clube": "PEQUENOS SERVOS",
     "area": "AVT",
     "regiao": "22ª R – ÁREA 9 / AVT RR",
-    "sgc": 161.54
+    "sgc": 160
   },
   {
-    "id": 34921,
-    "clube": "ADVENT ANGELS",
-    "area": "DBV",
-    "regiao": "15ª R – ÁREA 6 / DBV RR",
-    "sgc": 152.08
+    "id": 8575,
+    "clube": "ARCO ÍRIS DA ESPERANÇA",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "sgc": 150
   },
   {
     "id": 50390,
@@ -2942,6 +2942,51 @@ const CLUBES_HISTORICO = {
         "cinco": {
           "AVT": 14,
           "DBV": 26
+        }
+      },
+      "ND": {
+        "avaliados": 0,
+        "estrelas": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "cinco": {
+          "AVT": 0,
+          "DBV": 0
+        }
+      }
+    },
+    {
+      "data": "2026-11-07",
+      "AM": {
+        "avaliados": 253,
+        "estrelas": [
+          0,
+          14,
+          103,
+          60,
+          76
+        ],
+        "cinco": {
+          "AVT": 35,
+          "DBV": 41
+        }
+      },
+      "RR": {
+        "avaliados": 136,
+        "estrelas": [
+          3,
+          20,
+          50,
+          24,
+          39
+        ],
+        "cinco": {
+          "AVT": 14,
+          "DBV": 25
         }
       },
       "ND": {
