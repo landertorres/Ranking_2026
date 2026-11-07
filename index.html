@@ -596,6 +596,7 @@
   @media (max-width: 520px) {
     .ev-meta, .ev-meta-estados { grid-template-columns: 1fr; }
   }
+  .pontos-ocultos { font-weight: 400; font-style: italic; color: #9a978d; }
 </style>
 </head>
 <body>
@@ -616,7 +617,7 @@
   </div>
   </div>
   <div class="corpo">
-  <p class="subtitle">Ranking Geral · Selo de 5 estrela SGC<span id="data-dados"></span></p>
+  <p class="subtitle">Ranking Geral · Selo de 5 estrela<span id="data-dados"></span></p>
   <p id="status-import" class="status-import"></p>
 
   <div class="stats">
@@ -638,7 +639,7 @@
     <button class="tab-btn ativo" id="tab-btn-departamentos" onclick="mostrarAba('departamentos')">Por Departamento</button>
     <button class="tab-btn" id="tab-btn-regioes" onclick="mostrarAba('regioes')">Por Região</button>
     <button class="tab-btn" id="tab-btn-classificacao" onclick="mostrarAba('classificacao')">Classificação</button>
-    <button class="tab-btn" id="tab-btn-jovens" onclick="mostrarAba('jovens')">Ranking do Campo</button>
+    <button class="tab-btn" id="tab-btn-jovens" onclick="mostrarAba('jovens')">Ranking do AAmaR</button>
     <button class="tab-btn" id="tab-btn-evolucao" onclick="mostrarAba('evolucao')">Evolução por Estado</button>
   </div>
 
@@ -749,7 +750,7 @@
   </div>
 
   <div id="aba-jovens" class="aba">
-    <p class="subtitle" style="margin: 0 0 4px;">Ranking do Campo · Resultados Classificação Geral 2026</p>
+    <p class="subtitle" style="margin: 0 0 4px;">Ranking do AAmaR · Resultados Classificação Geral 2026</p>
     <p id="status-import-jovens" class="status-import"></p>
 
     <div class="stats quatro">
@@ -814,7 +815,7 @@
   </div>
 
   <div id="aba-evolucao" class="aba">
-    <p class="subtitle" style="margin: 0 0 4px;">Evolução dos clubes 5 estrelas por estado Amazonas e Roraima)</p>
+    <p class="subtitle" style="margin: 0 0 4px;">Evolução dos clubes 5 estrelas por estado · o estado vem da Região: AM (Amazonas) e RR (Roraima)</p>
     <p id="status-evolucao" class="status-import"></p>
 
     <div class="stats">
@@ -992,7 +993,7 @@ function linhaTabelaRegiao(clube) {
   if (clube.area === 'JA') {
     const n = infoNivel(clube.classificacao);
     const nivel = n ? `<div class="sub-nivel">${escapeHtml(n.classe === 'nv0' ? n.bruto : 'MRNT ' + n.rotulo)}</div>` : '';
-    return `<tr><td>${escapeHtml(String(clube.id))}</td><td>${escapeHtml(clube.clube)}${nivel}</td><td><span class="badge-area ja">JA</span></td><td>${clube.pontos.toLocaleString('pt-BR')}</td></tr>`;
+    return `<tr><td>${escapeHtml(String(clube.id))}</td><td>${escapeHtml(clube.clube)}${nivel}</td><td><span class="badge-area ja">JA</span></td><td>${pontosHtml(clube)}</td></tr>`;
   }
   const classeArea = clube.area === 'AVT' ? 'avt' : 'dbv';
   return `<tr><td>${clube.id}</td><td>${escapeHtml(clube.clube)}</td><td><span class="badge-area ${classeArea}">${clube.area}</span></td><td>${clube.sgc.toFixed(2)}</td></tr>`;
@@ -1397,6 +1398,17 @@ function converterEBaixar() {
 
 /* ---------- aba Jovens: Resultados Classificação Geral (base própria: jovens-dados.js) ---------- */
 
+/* níveis mais altos do Ranking (Padrão Excelência e MRNT Pro): os pontos ficam ocultos na tela */
+function pontosOcultos(classificacao) {
+  const n = infoNivel(classificacao);
+  return !!n && (n.rotulo === 'Pro' || n.rotulo === 'Excelência');
+}
+function pontosHtml(c) {
+  return pontosOcultos(c.classificacao)
+    ? '<span class="pontos-ocultos" title="Pontuação oculta">oculto</span>'
+    : Number(c.pontos).toLocaleString('pt-BR');
+}
+
 function badgeNivel(classificacao) {
   const n = infoNivel(classificacao);
   if (!n) return '<span class="badge-nivel nv0">—</span>';
@@ -1404,7 +1416,7 @@ function badgeNivel(classificacao) {
 }
 
 function linhaJovens(c) {
-  return `<tr><td>${escapeHtml(String(c.id))}</td><td>${escapeHtml(c.clube)}</td><td>${escapeHtml(nomeRegiao(c.regiao))}</td><td>${badgeNivel(c.classificacao)}</td><td>${c.pontos.toLocaleString('pt-BR')}</td></tr>`;
+  return `<tr><td>${escapeHtml(String(c.id))}</td><td>${escapeHtml(c.clube)}</td><td>${escapeHtml(nomeRegiao(c.regiao))}</td><td>${badgeNivel(c.classificacao)}</td><td>${pontosHtml(c)}</td></tr>`;
 }
 
 function resumoNiveis(grupo) {
