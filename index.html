@@ -1032,7 +1032,7 @@ function aplicarFiltroRegiao() {
 
   container.innerHTML = chaves.map(chave => {
     const valor = c => c.area === 'JA' ? c.pontos : c.sgc;
-    const clubes = grupos[chave].sort((a, b) => ((a.area === 'JA') - (b.area === 'JA')) || (valor(b) - valor(a)));
+    const clubes = grupos[chave].sort((a, b) => ((a.area === 'JA') - (b.area === 'JA')) || (a.area === 'JA' && b.area === 'JA' ? compararRanking(a, b) : valor(b) - valor(a)));
     const nJa = clubes.filter(c => c.area === 'JA').length;
     const nCinco = clubes.length - nJa;
     const partes = [];
@@ -1403,6 +1403,13 @@ function pontosOcultos(classificacao) {
   const n = infoNivel(classificacao);
   return !!n && (n.rotulo === 'Pro' || n.rotulo === 'Excelência');
 }
+/* ordem do Ranking: Excelência e MRNT Pro primeiro, em ordem de ID (os pontos estão ocultos); os demais, pela pontuação */
+function compararRanking(a, b) {
+  const topoA = pontosOcultos(a.classificacao), topoB = pontosOcultos(b.classificacao);
+  if (topoA !== topoB) return topoA ? -1 : 1;
+  if (topoA) return String(a.id).localeCompare(String(b.id), 'pt-BR', { numeric: true });
+  return b.pontos - a.pontos;
+}
 function pontosHtml(c) {
   return pontosOcultos(c.classificacao)
     ? '<span class="pontos-ocultos" title="Pontuação oculta">oculto</span>'
@@ -1440,7 +1447,7 @@ function renderizarJovens(lista) {
   [['AVT', 'avt'], ['DBV', 'dbv'], ['JA', 'ja']].forEach(([area, id]) => {
     const todosArea = validos.filter(c => c.area === area);
     const classArea = todosArea.filter(c => c.classificacao);
-    const exibir = (mostrarTodos ? todosArea : classArea).slice().sort((a, b) => b.pontos - a.pontos);
+    const exibir = (mostrarTodos ? todosArea : classArea).slice().sort(compararRanking);
 
     document.getElementById('valor-' + id + '-jovens').textContent = classArea.length;
     document.getElementById('sub-' + id + '-jovens').textContent = resumoNiveis(classArea) || 'sem classificados';
@@ -1456,7 +1463,7 @@ function renderizarJovens(lista) {
 function atualizarJovensNasAbas() {
   jovensClassificados = listaJovens
     .filter(c => c.area === 'JA' && c.classificacao)
-    .sort((a, b) => b.pontos - a.pontos);
+    .sort(compararRanking);
   document.getElementById('contagem-ja-dep').textContent = `(${jovensClassificados.length} classificados no MRNT)`;
   document.getElementById('tabela-ja-dep').innerHTML = jovensClassificados.length
     ? jovensClassificados.map(linhaJovens).join('')
