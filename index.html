@@ -639,7 +639,7 @@
     <button class="tab-btn ativo" id="tab-btn-departamentos" onclick="mostrarAba('departamentos')">Por Departamento</button>
     <button class="tab-btn" id="tab-btn-regioes" onclick="mostrarAba('regioes')">Por Região</button>
     <button class="tab-btn" id="tab-btn-classificacao" onclick="mostrarAba('classificacao')">Classificação</button>
-    <button class="tab-btn" id="tab-btn-jovens" onclick="mostrarAba('jovens')">Ranking do AAmaR</button>
+    <button class="tab-btn" id="tab-btn-jovens" onclick="mostrarAba('jovens')">Ranking AAmaR</button>
     <button class="tab-btn" id="tab-btn-evolucao" onclick="mostrarAba('evolucao')">Evolução por Estado</button>
   </div>
 
@@ -750,7 +750,7 @@
   </div>
 
   <div id="aba-jovens" class="aba">
-    <p class="subtitle" style="margin: 0 0 4px;">Ranking do AAmaR · Resultados Classificação Geral 2026</p>
+    <p class="subtitle" style="margin: 0 0 4px;">Ranking AAmaR · Resultados Classificação Geral 2026</p>
     <p id="status-import-jovens" class="status-import"></p>
 
     <div class="stats quatro">
@@ -940,7 +940,7 @@ const NIVEIS_JOVENS = {
 /* ordem dos níveis, do mais baixo ao mais alto (usada para ordenar os resumos) */
 const ORDEM_NIVEIS = ['Iniciante', 'Modelo', 'Destaque', 'Excelência', 'Basic', 'Standard', 'Advance', 'Pro'];
 
-/* ---------- regras de classificação do Ranking do AAmaR (pela pontuação total) ----------
+/* ---------- regras de classificação do Ranking AAmaR (pela pontuação total) ----------
    cada lista vai do nível mais alto ao mais baixo: [pontuação mínima, classificação] */
 const RANKING_REGRAS = {
   AVT: [[13050, 'PADRÃO EXCELÊNCIA'], [10876, 'CLUBE DESTAQUE'], [7250, 'CLUBE MODELO'], [2000, 'CLUBE INICIANTE']],
@@ -1349,7 +1349,7 @@ function gerarConteudoJovensJs(registros) {
   const limpos = registros.map(r => ({ id: numeroOuTexto(r.id), clube: r.clube, area: r.area, regiao: r.regiao, classificacao: r.classificacao || '', pontos: r.pontos }));
   return '// Base de dados da aba Jovens — Resultados Classificação Geral\n'
        + '// area: "AVT" = Aventureiros | "DBV" = Desbravadores | "JA" = Jovens\n'
-       + '// classificacao: calculada pelos pontos (regras do Ranking do AAmaR); vazio = abaixo de 2.000 pontos\n'
+       + '// classificacao: calculada pelos pontos (regras do Ranking AAmaR); vazio = abaixo de 2.000 pontos\n'
        + 'const JOVENS_DADOS = ' + JSON.stringify(limpos, null, 2) + ';\n';
 }
 
