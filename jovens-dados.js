@@ -23,8 +23,8 @@ const JOVENS_DADOS = [
     "clube": "TESOUROS DE JESUS",
     "area": "AVT",
     "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 10800
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11300
   },
   {
     "id": 8053,
@@ -40,7 +40,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8600
+    "pontos": 10600
   },
   {
     "id": 8055,
@@ -80,7 +80,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11400
+    "pontos": 12900
   },
   {
     "id": 8091,
@@ -88,7 +88,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 9900
+    "pontos": 10700
   },
   {
     "id": 8092,
@@ -104,7 +104,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 10900
+    "pontos": 11400
   },
   {
     "id": 8094,
@@ -128,7 +128,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "01ª R – ÁREA 1 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7500
+    "pontos": 10500
   },
   {
     "id": 8101,
@@ -143,8 +143,8 @@ const JOVENS_DADOS = [
     "clube": "BRILHO DO SOL",
     "area": "AVT",
     "regiao": "01ª R – ÁREA 1 / AVT AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 9400
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11700
   },
   {
     "id": 8110,
@@ -159,8 +159,8 @@ const JOVENS_DADOS = [
     "clube": "PEQUENOS EXPLORADORES",
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 9200
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 12500
   },
   {
     "id": 8121,
@@ -184,15 +184,15 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 9100
+    "pontos": 10100
   },
   {
     "id": 8308,
     "clube": "JÓIAS DE CRISTO - PSP",
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 6200
+    "classificacao": "CLUBE MODELO",
+    "pontos": 9000
   },
   {
     "id": 8310,
@@ -200,7 +200,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 12400
+    "pontos": 12900
   },
   {
     "id": 8312,
@@ -211,12 +211,20 @@ const JOVENS_DADOS = [
     "pontos": 2600
   },
   {
+    "id": 8316,
+    "clube": "TRILHA DOS AMIGUINHOS",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "classificacao": "CLUBE MODELO",
+    "pontos": 9500
+  },
+  {
     "id": 8318,
     "clube": "JÓIAS DE CRISTO - BEIJA FLOR",
     "area": "AVT",
     "regiao": "02ª R – ÁREA 1 / AVT AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 6800
+    "classificacao": "CLUBE MODELO",
+    "pontos": 7300
   },
   {
     "id": 8329,
@@ -231,8 +239,8 @@ const JOVENS_DADOS = [
     "clube": "SEMENTINHAS DE JESUS",
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 10400
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11900
   },
   {
     "id": 8461,
@@ -256,7 +264,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "01ª R – ÁREA 1 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4400
+    "pontos": 5400
   },
   {
     "id": 8482,
@@ -264,15 +272,23 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "02ª R – ÁREA 1 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2800
+    "pontos": 3300
+  },
+  {
+    "id": 8526,
+    "clube": "GERAÇÃO DE DAVI",
+    "area": "AVT",
+    "regiao": "04ª R – ÁREA 2 / AVT AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 5800
   },
   {
     "id": 8553,
     "clube": "PEQUENOS CURIOSOS",
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 7000
+    "classificacao": "CLUBE MODELO",
+    "pontos": 7500
   },
   {
     "id": 14806,
@@ -289,6 +305,14 @@ const JOVENS_DADOS = [
     "regiao": "13ª R – ÁREA 5 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 6000
+  },
+  {
+    "id": 17070,
+    "clube": "ABELHINHAS DO REI",
+    "area": "AVT",
+    "regiao": "15ª R – ÁREA 6 / AVT RR",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 3100
   },
   {
     "id": 17509,
@@ -311,8 +335,8 @@ const JOVENS_DADOS = [
     "clube": "PEQUENOS DISCIPULOS",
     "area": "AVT",
     "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 7100
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11600
   },
   {
     "id": 17560,
@@ -327,8 +351,8 @@ const JOVENS_DADOS = [
     "clube": "ALIANÇA DO SENHOR",
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 2600
+    "classificacao": "CLUBE MODELO",
+    "pontos": 8100
   },
   {
     "id": 17575,
@@ -336,7 +360,15 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "13ª R – ÁREA 5 / AVT AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8200
+    "pontos": 9100
+  },
+  {
+    "id": 17608,
+    "clube": "PEQUENOS CORAJOSOS",
+    "area": "AVT",
+    "regiao": "17ª R – ÁREA 7 / AVT RR",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 2300
   },
   {
     "id": 17860,
@@ -359,8 +391,8 @@ const JOVENS_DADOS = [
     "clube": "MENSAGEIROS DO REI KIDS",
     "area": "AVT",
     "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11500
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 13500
   },
   {
     "id": 21095,
@@ -368,15 +400,15 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "13ª R – ÁREA 5 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2300
+    "pontos": 2800
   },
   {
     "id": 21148,
     "clube": "ANJOS CELESTES",
     "area": "AVT",
     "regiao": "17ª R – ÁREA 7 / AVT RR",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 4300
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 12400
   },
   {
     "id": 21587,
@@ -407,8 +439,8 @@ const JOVENS_DADOS = [
     "clube": "ESTRELINHAS DO NORTE",
     "area": "AVT",
     "regiao": "14ª R – ÁREA 5 / AVT AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 7900
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11700
   },
   {
     "id": 23368,
@@ -431,8 +463,8 @@ const JOVENS_DADOS = [
     "clube": "PEQUENOS REMANESCENTES",
     "area": "AVT",
     "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 6400
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 12200
   },
   {
     "id": 28852,
@@ -451,12 +483,28 @@ const JOVENS_DADOS = [
     "pontos": 3500
   },
   {
+    "id": 29309,
+    "clube": "ADORADORES DO REI 16° (PARINTINS)",
+    "area": "AVT",
+    "regiao": "14ª R – ÁREA 5 / AVT AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 3800
+  },
+  {
     "id": 29315,
     "clube": "PEQUENO HERDEIROS",
     "area": "AVT",
     "regiao": "14ª R – ÁREA 5 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 2000
+  },
+  {
+    "id": 29755,
+    "clube": "QUERUBINS",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 3100
   },
   {
     "id": 30933,
@@ -480,7 +528,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 3800
+    "pontos": 5800
   },
   {
     "id": 33098,
@@ -488,7 +536,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 3300
+    "pontos": 4800
   },
   {
     "id": 34614,
@@ -512,7 +560,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "02ª R – ÁREA 1 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2500
+    "pontos": 2900
   },
   {
     "id": 38100,
@@ -520,7 +568,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "12ª R – ÁREA 4 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4500
+    "pontos": 5500
   },
   {
     "id": 39188,
@@ -536,7 +584,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2500
+    "pontos": 2800
   },
   {
     "id": 41671,
@@ -544,7 +592,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "14ª R – ÁREA 5 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4500
+    "pontos": 5000
   },
   {
     "id": 41939,
@@ -568,15 +616,15 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "04ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4800
+    "pontos": 7200
   },
   {
     "id": 44084,
     "clube": "ARCO ÍRIS DO SENHOR",
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 2000
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11600
   },
   {
     "id": 44205,
@@ -591,8 +639,8 @@ const JOVENS_DADOS = [
     "clube": "HERANÇA DO SENHOR - BV",
     "area": "AVT",
     "regiao": "19ª R – ÁREA 8 / AVT RR",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 9200
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11900
   },
   {
     "id": 45273,
@@ -615,8 +663,8 @@ const JOVENS_DADOS = [
     "clube": "NASCIDOS PARA CRISTO",
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 10800
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 12400
   },
   {
     "id": 48496,
@@ -632,7 +680,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "25ª R – ÁREA 11 / AVT RR",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2800
+    "pontos": 6100
   },
   {
     "id": 50984,
@@ -640,7 +688,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "13ª R – ÁREA 5 / AVT AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2600
+    "pontos": 5900
   },
   {
     "id": 51118,
@@ -648,7 +696,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "19ª R – ÁREA 8 / AVT RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7400
+    "pontos": 10700
   },
   {
     "id": 51431,
@@ -656,7 +704,7 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11400
+    "pontos": 11900
   },
   {
     "id": 51657,
@@ -671,8 +719,8 @@ const JOVENS_DADOS = [
     "clube": "AQUARELA KIDS",
     "area": "AVT",
     "regiao": "03ª R – ÁREA 2 / AVT AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 10200
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11700
   },
   {
     "id": 53747,
@@ -680,7 +728,15 @@ const JOVENS_DADOS = [
     "area": "AVT",
     "regiao": "18ª R – ÁREA 7 / AVT RR",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11200
+    "pontos": 12700
+  },
+  {
+    "id": 57432,
+    "clube": "QUERUBINS DO ADVENTO",
+    "area": "AVT",
+    "regiao": "01ª R – ÁREA 1 / AVT AM",
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 14200
   },
   {
     "id": 8028,
@@ -688,7 +744,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 3800
+    "pontos": 6800
   },
   {
     "id": 8045,
@@ -720,7 +776,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 7400
+    "pontos": 9700
   },
   {
     "id": 8135,
@@ -728,7 +784,15 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 9300
+    "pontos": 10300
+  },
+  {
+    "id": 8138,
+    "clube": "HERÓIS DA FÉ",
+    "area": "DBV",
+    "regiao": "05ª R – ÁREA 2 / DBV AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 2500
   },
   {
     "id": 8141,
@@ -751,16 +815,24 @@ const JOVENS_DADOS = [
     "clube": "ESTRELAS DE PODER",
     "area": "DBV",
     "regiao": "07ª R – ÁREA 3 / DBV AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 9200
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 10700
   },
   {
     "id": 8159,
     "clube": "OS VALDENSES",
     "area": "DBV",
     "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 7100
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 12800
+  },
+  {
+    "id": 8160,
+    "clube": "GUERREIROS DA VERDADE",
+    "area": "DBV",
+    "regiao": "05ª R – ÁREA 2 / DBV AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 2800
   },
   {
     "id": 8163,
@@ -811,12 +883,20 @@ const JOVENS_DADOS = [
     "pontos": 13100
   },
   {
+    "id": 8187,
+    "clube": "ESTRELA DA MANHÃ",
+    "area": "DBV",
+    "regiao": "02ª R – ÁREA 1 / DBV AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 2000
+  },
+  {
     "id": 8188,
     "clube": "ARAUTOS DA VERDADE",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 3500
+    "pontos": 5500
   },
   {
     "id": 8192,
@@ -824,7 +904,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4500
+    "pontos": 5300
   },
   {
     "id": 8194,
@@ -847,8 +927,8 @@ const JOVENS_DADOS = [
     "clube": "GUARDIÕES CELESTES - MUNDO NOVO",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11300
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 12800
   },
   {
     "id": 8198,
@@ -863,8 +943,8 @@ const JOVENS_DADOS = [
     "clube": "PLÊIADES",
     "area": "DBV",
     "regiao": "17ª R – ÁREA 7 / DBV RR",
-    "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11000
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 12800
   },
   {
     "id": 8205,
@@ -872,7 +952,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8300
+    "pontos": 9400
   },
   {
     "id": 8207,
@@ -888,7 +968,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "07ª R – ÁREA 3 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2800
+    "pontos": 4300
   },
   {
     "id": 8213,
@@ -911,16 +991,16 @@ const JOVENS_DADOS = [
     "clube": "ITA",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 9000
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 12800
   },
   {
     "id": 8226,
     "clube": "ALBATROZ",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 8600
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11400
   },
   {
     "id": 8229,
@@ -967,8 +1047,8 @@ const JOVENS_DADOS = [
     "clube": "ÔNIX",
     "area": "DBV",
     "regiao": "01ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 6900
+    "classificacao": "CLUBE MODELO",
+    "pontos": 10000
   },
   {
     "id": 8279,
@@ -976,7 +1056,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4300
+    "pontos": 5300
   },
   {
     "id": 8288,
@@ -991,8 +1071,8 @@ const JOVENS_DADOS = [
     "clube": "SENTINELAS DA RENDENÇÃO",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 6000
+    "classificacao": "CLUBE MODELO",
+    "pontos": 9500
   },
   {
     "id": 8357,
@@ -1040,7 +1120,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "14ª R – ÁREA 5 / DBV AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8900
+    "pontos": 10500
   },
   {
     "id": 8406,
@@ -1079,16 +1159,16 @@ const JOVENS_DADOS = [
     "clube": "GETSEMANI.SANTA TEREZA",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 8800
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11300
   },
   {
     "id": 8425,
     "clube": "GUARDIÕES DO PARAÍSO",
     "area": "DBV",
     "regiao": "02ª R – ÁREA 1 / DBV AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 10400
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 10900
   },
   {
     "id": 8449,
@@ -1097,6 +1177,14 @@ const JOVENS_DADOS = [
     "regiao": "17ª R – ÁREA 7 / DBV RR",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 3100
+  },
+  {
+    "id": 8458,
+    "clube": "AGUELLÓS",
+    "area": "DBV",
+    "regiao": "14ª R – ÁREA 5 / DBV AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 6400
   },
   {
     "id": 8502,
@@ -1112,15 +1200,15 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "10ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 5700
+    "pontos": 6200
   },
   {
     "id": 8545,
     "clube": "MONTE SINAI (ITA)",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 5000
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 12800
   },
   {
     "id": 8569,
@@ -1144,7 +1232,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "15ª R – ÁREA 6 / DBV RR",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 10800
+    "pontos": 11800
   },
   {
     "id": 14299,
@@ -1167,16 +1255,16 @@ const JOVENS_DADOS = [
     "clube": "ÁGUIAS DO REI - ITA",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 5400
+    "classificacao": "CLUBE MODELO",
+    "pontos": 8500
   },
   {
     "id": 15984,
     "clube": "PÉROLAS DO REI",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 5300
+    "classificacao": "CLUBE MODELO",
+    "pontos": 10500
   },
   {
     "id": 17576,
@@ -1199,8 +1287,8 @@ const JOVENS_DADOS = [
     "clube": "OS PIONEIROS",
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 2300
+    "classificacao": "CLUBE MODELO",
+    "pontos": 9200
   },
   {
     "id": 21650,
@@ -1216,7 +1304,23 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "04ª R – ÁREA 2 / DBV AM",
     "classificacao": "CLUBE DESTAQUE",
-    "pontos": 11500
+    "pontos": 12000
+  },
+  {
+    "id": 22129,
+    "clube": "GUERREIROS DO SENHOR - BVR",
+    "area": "DBV",
+    "regiao": "09ª R – ÁREA 4 / DBV AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 6300
+  },
+  {
+    "id": 22761,
+    "clube": "GUERREIROS DO VALE",
+    "area": "DBV",
+    "regiao": "01ª R – ÁREA 1 / DBV AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 6100
   },
   {
     "id": 23053,
@@ -1232,7 +1336,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "15ª R – ÁREA 6 / DBV RR",
     "classificacao": "CLUBE MODELO",
-    "pontos": 9300
+    "pontos": 9800
   },
   {
     "id": 24045,
@@ -1247,8 +1351,8 @@ const JOVENS_DADOS = [
     "clube": "ASES DE RORAIMA",
     "area": "DBV",
     "regiao": "18ª R – ÁREA 7 / DBV RR",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 8500
+    "classificacao": "CLUBE DESTAQUE",
+    "pontos": 11000
   },
   {
     "id": 24958,
@@ -1296,7 +1400,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "12ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE MODELO",
-    "pontos": 8300
+    "pontos": 8600
   },
   {
     "id": 29221,
@@ -1323,12 +1427,20 @@ const JOVENS_DADOS = [
     "pontos": 3000
   },
   {
+    "id": 33040,
+    "clube": "GUARDIÕES DA LIBERDADE",
+    "area": "DBV",
+    "regiao": "03ª R – ÁREA 2 / DBV AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 6300
+  },
+  {
     "id": 33216,
     "clube": "BEM AVENTURADOS",
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 3000
+    "pontos": 4500
   },
   {
     "id": 33518,
@@ -1351,8 +1463,16 @@ const JOVENS_DADOS = [
     "clube": "ÁGUIA DO NORTE",
     "area": "DBV",
     "regiao": "04ª R – ÁREA 2 / DBV AM",
+    "classificacao": "CLUBE MODELO",
+    "pontos": 7800
+  },
+  {
+    "id": 35043,
+    "clube": "MENSAGEIROS DO REI- AC",
+    "area": "DBV",
+    "regiao": "12ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 5800
+    "pontos": 2000
   },
   {
     "id": 36459,
@@ -1360,7 +1480,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "06ª R – ÁREA 3 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2900
+    "pontos": 3200
   },
   {
     "id": 36561,
@@ -1395,20 +1515,36 @@ const JOVENS_DADOS = [
     "pontos": 12200
   },
   {
+    "id": 43729,
+    "clube": "ESQUADRÃO ÁGUIA",
+    "area": "DBV",
+    "regiao": "10ª R – ÁREA 4 / DBV AM",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 2000
+  },
+  {
     "id": 43944,
     "clube": "ESTRELA DE DAVI",
     "area": "DBV",
     "regiao": "05ª R – ÁREA 2 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 4300
+    "pontos": 5700
   },
   {
     "id": 44127,
     "clube": "BETEL",
     "area": "DBV",
     "regiao": "03ª R – ÁREA 2 / DBV AM",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 5400
+    "classificacao": "CLUBE MODELO",
+    "pontos": 8700
+  },
+  {
+    "id": 44924,
+    "clube": "BETELGEUSE",
+    "area": "DBV",
+    "regiao": "12ª R – ÁREA 4 / DBV AM",
+    "classificacao": "CLUBE MODELO",
+    "pontos": 7300
   },
   {
     "id": 47860,
@@ -1417,6 +1553,14 @@ const JOVENS_DADOS = [
     "regiao": "12ª R – ÁREA 4 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
     "pontos": 4100
+  },
+  {
+    "id": 47902,
+    "clube": "GUERREIROS DE ÓRION RR",
+    "area": "DBV",
+    "regiao": "18ª R – ÁREA 7 / DBV RR",
+    "classificacao": "CLUBE INICIANTE",
+    "pontos": 2000
   },
   {
     "id": 48486,
@@ -1455,8 +1599,8 @@ const JOVENS_DADOS = [
     "clube": "ALFORJE",
     "area": "DBV",
     "regiao": "05ª R – ÁREA 2 / DBV AM",
-    "classificacao": "CLUBE MODELO",
-    "pontos": 8200
+    "classificacao": "PADRÃO EXCELÊNCIA",
+    "pontos": 13500
   },
   {
     "id": 54136,
@@ -1504,7 +1648,7 @@ const JOVENS_DADOS = [
     "area": "DBV",
     "regiao": "03ª R – ÁREA 2 / DBV AM",
     "classificacao": "CLUBE INICIANTE",
-    "pontos": 2800
+    "pontos": 3300
   },
   {
     "id": 57045,
@@ -1519,8 +1663,8 @@ const JOVENS_DADOS = [
     "clube": "GUARDIÕES DA ESPERANÇA",
     "area": "DBV",
     "regiao": "16ª R – ÁREA 6 / DBV RR",
-    "classificacao": "CLUBE INICIANTE",
-    "pontos": 6100
+    "classificacao": "CLUBE MODELO",
+    "pontos": 7600
   },
   {
     "id": 608,
@@ -1528,15 +1672,15 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "02ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT PRO",
-    "pontos": 13700
+    "pontos": 15000
   },
   {
     "id": 713,
     "clube": "ESTRELAS DE ÓRION - VIVER MELHOR",
     "area": "JA",
     "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "MRNT ADVANCE",
-    "pontos": 7500
+    "classificacao": "MRNT PRO",
+    "pontos": 12700
   },
   {
     "id": 726,
@@ -1544,15 +1688,15 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "01ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT PRO",
-    "pontos": 11400
+    "pontos": 13200
   },
   {
     "id": 753,
     "clube": "APÓSTOLOS - MUNDO NOVO",
     "area": "JA",
     "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "MRNT ADVANCE",
-    "pontos": 11100
+    "classificacao": "MRNT PRO",
+    "pontos": 13600
   },
   {
     "id": 810,
@@ -1567,8 +1711,8 @@ const JOVENS_DADOS = [
     "clube": "DUNAMIS - JARDIM PRIMAVERA II",
     "area": "JA",
     "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "MRNT ADVANCE",
-    "pontos": 9800
+    "classificacao": "MRNT PRO",
+    "pontos": 12600
   },
   {
     "id": 844,
@@ -1576,15 +1720,15 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "18ª R – ÁREA 7 / MJ RR",
     "classificacao": "MRNT PRO",
-    "pontos": 12400
+    "pontos": 13400
   },
   {
     "id": 845,
     "clube": "BETEL",
     "area": "JA",
     "regiao": "18ª R – ÁREA 7 / MJ RR",
-    "classificacao": "MRNT BASIC",
-    "pontos": 3300
+    "classificacao": "MRNT ADVANCE",
+    "pontos": 10300
   },
   {
     "id": 846,
@@ -1592,7 +1736,15 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "18ª R – ÁREA 7 / MJ RR",
     "classificacao": "MRNT STANDARD",
-    "pontos": 4600
+    "pontos": 7000
+  },
+  {
+    "id": 847,
+    "clube": "HERÓIS DA FÉ - SANTA TEREZA(RR)",
+    "area": "JA",
+    "regiao": "18ª R – ÁREA 7 / MJ RR",
+    "classificacao": "MRNT ADVANCE",
+    "pontos": 8100
   },
   {
     "id": 849,
@@ -1615,8 +1767,8 @@ const JOVENS_DADOS = [
     "clube": "NEW JOVEM - NOVA CIDADE I",
     "area": "JA",
     "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "MRNT BASIC",
-    "pontos": 3500
+    "classificacao": "MRNT STANDARD",
+    "pontos": 6100
   },
   {
     "id": 1008,
@@ -1631,8 +1783,8 @@ const JOVENS_DADOS = [
     "clube": "QUERUBINS CELESTES - PARQUE SÃO PEDRO II",
     "area": "JA",
     "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "MRNT BASIC",
-    "pontos": 3800
+    "classificacao": "MRNT ADVANCE",
+    "pontos": 10000
   },
   {
     "id": 1014,
@@ -1648,15 +1800,15 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "02ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT PRO",
-    "pontos": 13000
+    "pontos": 15000
   },
   {
     "id": 1024,
     "clube": "SAL E LUZ - ISMAIL AZIZ",
     "area": "JA",
     "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "MRNT ADVANCE",
-    "pontos": 8300
+    "classificacao": "MRNT PRO",
+    "pontos": 11600
   },
   {
     "id": 1035,
@@ -1665,6 +1817,14 @@ const JOVENS_DADOS = [
     "regiao": "01ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT STANDARD",
     "pontos": 5000
+  },
+  {
+    "id": 1057,
+    "clube": "JUVENTUDE ATIVA - PARQUE SÃO PEDRO I",
+    "area": "JA",
+    "regiao": "04ª R – ÁREA 2 / MJ AM",
+    "classificacao": "MRNT ADVANCE",
+    "pontos": 7500
   },
   {
     "id": 1060,
@@ -1679,8 +1839,8 @@ const JOVENS_DADOS = [
     "clube": "ADVENTUS - JESUS ME DEU II",
     "area": "JA",
     "regiao": "04ª R – ÁREA 2 / MJ AM",
-    "classificacao": "MRNT STANDARD",
-    "pontos": 4900
+    "classificacao": "MRNT PRO",
+    "pontos": 12400
   },
   {
     "id": 1080,
@@ -1719,16 +1879,16 @@ const JOVENS_DADOS = [
     "clube": "UNIJAD  - UNIÃO",
     "area": "JA",
     "regiao": "02ª R – ÁREA 1 / MJ AM",
-    "classificacao": "MRNT STANDARD",
-    "pontos": 5600
+    "classificacao": "MRNT ADVANCE",
+    "pontos": 7700
   },
   {
     "id": 1161,
     "clube": "EMBAIXADORES - CONJ. CIDADÃO XII",
     "area": "JA",
     "regiao": "05ª R – ÁREA 2 / MJ AM",
-    "classificacao": "MRNT BASIC",
-    "pontos": 3300
+    "classificacao": "MRNT STANDARD",
+    "pontos": 5400
   },
   {
     "id": 1162,
@@ -1771,6 +1931,14 @@ const JOVENS_DADOS = [
     "pontos": 2500
   },
   {
+    "id": 11682,
+    "clube": "TRIUNFANTES- UNIÃO DA VITÓRIA",
+    "area": "JA",
+    "regiao": "04ª R – ÁREA 2 / MJ AM",
+    "classificacao": "MRNT BASIC",
+    "pontos": 3900
+  },
+  {
     "id": 17198,
     "clube": "OFIR - BARREIRINHA",
     "area": "JA",
@@ -1784,7 +1952,7 @@ const JOVENS_DADOS = [
     "area": "JA",
     "regiao": "02ª R – ÁREA 1 / MJ AM",
     "classificacao": "MRNT BASIC",
-    "pontos": 2500
+    "pontos": 4100
   },
   {
     "id": 17516,
